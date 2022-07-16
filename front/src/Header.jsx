@@ -5,7 +5,7 @@ import axios from "axios";
 import $ from "jquery";
 import {} from "jquery.cookie";
 axios.defaults.withCredentials = true;
-const headers = { withCredentials: true };
+const headers = { };
 
 class Header extends Component {
   state = {
@@ -26,7 +26,7 @@ class Header extends Component {
 
   logout = () => {
     axios
-      .get("http://localhost:8080/member/logout", {
+      .get("http://192.249.18.146:443/member/logout", {
         headers
       })
       .then(returnData => {
