@@ -60,7 +60,7 @@ class LoginForm extends Component {
       password: this.joinPw.value
     };
     axios
-      .post("http://192.249.18.146:443/member/join", send_param, {headers: {'Content-Type': 'text/plain'}})
+      .post("http://192.249.18.146:80/member/join", send_param, {headers: {'Content-Type': 'text/plain'}})
       //정상 수행
       .then(returnData => {
         if (returnData.data.message) {
@@ -103,7 +103,7 @@ class LoginForm extends Component {
       password: this.loginPw.value
     };
     axios
-      .post("http://192.249.18.146:443/member/login", send_param)
+      .post("http://192.249.18.146:80/member/login", send_param)
       //정상 수행
       .then(returnData => {
         console.log(returnData.data.message)

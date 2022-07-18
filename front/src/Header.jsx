@@ -26,7 +26,7 @@ class Header extends Component {
 
   logout = () => {
     axios
-      .get("http://192.249.18.146:443/member/logout", {
+      .get("http://192.249.18.146:80/member/logout", {
         headers
       })
       .then(returnData => {
@@ -49,11 +49,6 @@ class Header extends Component {
           <Navbar.Brand href="/">Today I Learned</Navbar.Brand>
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
-            {/* <NavLink to="/mypage">
-              <Button style={buttonStyle} variant="primary">
-                회원정보 수정
-              </Button>
-            </NavLink> */}
             <NavLink to="/">
               <Button style={buttonStyle} variant="primary">
                 글목록

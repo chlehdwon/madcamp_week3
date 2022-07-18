@@ -45,7 +45,7 @@ class BoardForm extends Component {
       _id: $.cookie("login_id")
     };
     axios
-      .post("http://192.249.18.146:443/board/getBoardList", send_param)
+      .post("http://192.249.18.146:80/board/getBoardList", send_param)
       .then(returnData => {
         let boardList;
         if (returnData.data.list.length > 0) {

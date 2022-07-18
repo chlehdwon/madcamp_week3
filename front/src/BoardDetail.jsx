@@ -12,6 +12,7 @@ class BoardDetail extends Component {
 
   componentDidMount() {
     if (this.props.location.query !== undefined) {
+      console.log(this.props.location.query._id)
       this.getDetail();
     } else {
       window.location.href = "/";
@@ -25,7 +26,7 @@ class BoardDetail extends Component {
     };
     if (window.confirm("정말 삭제하시겠습니까?")) {
       axios
-        .post("http://192.249.18.146:443/board/delete", send_param)
+        .post("http://192.249.18.146:80/board/delete", send_param)
         //정상 수행
         .then(returnData => {
           alert("게시글이 삭제 되었습니다.");
@@ -48,10 +49,11 @@ class BoardDetail extends Component {
       marginBottom: 5
     };
     axios
-      .post("http://192.249.18.146:443/board/detail", send_param)
+      .post("http://192.249.18.146:80/board/detail", send_param)
       //정상 수행
       .then(returnData => {
         if (returnData.data.board[0]) {
+          console.log(returnData.data.board[0])
           const board = (
             <div>
               <Table striped bordered hover>
@@ -77,7 +79,17 @@ class BoardDetail extends Component {
                     query: {
                       title: returnData.data.board[0].title,
                       content: returnData.data.board[0].content,
-                      _id: this.props.location.query._id
+                      _id: this.props.location.query._id,
+                      user_id: returnData.data.board[0].user_id,
+                      user_pwd: returnData.data.board[0].user_pwd,
+                      qtitle: returnData.data.board[0].qtitle,
+                      qcontent: returnData.data.board[0].qcontent,
+                      qtag: returnData.data.board[0].qtag,
+                      stackoverflow: returnData.data.board[0].stackoverflow,
+                      serverfault: returnData.data.board[0].serverfault,
+                      superuser: returnData.data.board[0].superuser,
+                      askubuntu: returnData.data.board[0].askubuntu,
+                      askdifferent: returnData.data.board[0].askdifferent,
                     }
                   }}
                 >
