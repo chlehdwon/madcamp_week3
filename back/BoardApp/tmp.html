@@ -1,0 +1,1996 @@
+<html class="html__responsive html__unpinned-leftnav" lang="en"><head>
+
+        <title>How can I use add_experimentail_option in javascript? - Stack Overflow</title>
+        <link rel="shortcut icon" href="https://cdn.sstatic.net/Sites/stackoverflow/Img/favicon.ico?v=ec617d715196">
+        <link rel="apple-touch-icon" href="https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon.png?v=c78bd457575a">
+        <link rel="image_src" href="https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon.png?v=c78bd457575a"> 
+        <link rel="search" type="application/opensearchdescription+xml" title="Stack Overflow" href="/opensearch.xml">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://stackoverflow.com/questions/ask">
+        <meta property="og:site_name" content="Stack Overflow">
+        <meta property="og:image" itemprop="image primaryImageOfPage" content="https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded">
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:domain" content="stackoverflow.com">
+        <meta name="twitter:title" property="og:title" itemprop="name" content="Ask a Question">
+        <meta name="twitter:description" property="og:description" itemprop="description" content="Stack Overflow | The World’s Largest Online Community for Developers">
+    <script id="webpack-public-path" type="text/uri-list">https://cdn.sstatic.net/</script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script async="" src="https://cdn.sstatic.net/Js/third-party/npm/@stackoverflow/stacks/dist/js/stacks.min.js?v=6cc27826a5fd"></script>
+    <script src="https://cdn.sstatic.net/Js/stub.en.js?v=e6d116cd69f1"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.sstatic.net/Shared/stacks.css?v=3bbf3c79def9">
+    <link rel="stylesheet" type="text/css" href="https://cdn.sstatic.net/Sites/stackoverflow/primary.css?v=05792009f5ef">
+
+        <link rel="stylesheet" type="text/css" href="https://cdn.sstatic.net/Sites/stackoverflow/secondary.css?v=6793be5668e3">
+
+    
+    <script src="https://cdn.sstatic.net/Js/ask.en.js?v=7ff9a9068fd6"></script>
+
+        
+        
+        
+        <link rel="stylesheet" type="text/css" href="https://cdn.sstatic.net/Shared/Channels/channels.css?v=f039f0b977b7">
+        
+        
+        
+
+
+    <script type="application/json" data-role="module-args" data-module-name="Shared/options.mod">{"options":{"locale":"en","serverTime":1658121755,"routeName":"Questions/Ask","stackAuthUrl":"https://stackauth.com","networkMetaHostname":"meta.stackexchange.com","site":{"name":"Stack Overflow","description":"Q\u0026A for professional and enthusiast programmers","isNoticesTabEnabled":true,"enableNewTagCreationWarning":true,"insertSpaceAfterNameTabCompletion":false,"id":1,"cookieDomain":".stackoverflow.com","childUrl":"https://meta.stackoverflow.com","negativeVoteScoreFloor":null,"enableSocialMediaInSharePopup":true,"protocol":"https"},"user":{"fkey":"30a3ab7e3261b7b8e72fd1071608b2b70e4fb58c673173fad9b87a61261f632c","tid":"d42f429b-0b08-f440-5dda-55348034e702","rep":1,"isRegistered":true,"userType":3,"userId":19546538,"accountId":25804848,"gravatar":"\u003cdiv class=\u0022gravatar-wrapper-32\u0022\u003e\u003cimg src=\u0022https://lh3.googleusercontent.com/a-/AFdZucpvFrAA8O9WuBtzQqh2T_SQ_5awamgqEgfFKmXy=k-s32\u0022 alt=\u0022user avatar\u0022 width=\u002232\u0022 height=\u002232\u0022 class=\u0022bar-sm\u0022\u003e\u003c/div\u003e","profileUrl":"https://stackoverflow.com/users/19546538/yoon-changho","canSeeDeletedPosts":false},"events":{"postType":{"question":1},"postEditionSection":{"title":1,"body":2,"tags":3}},"svgIconPath":"https://cdn.sstatic.net/Img/stacks-icons","svgIconHash":"e07884e71a43"}}</script>
+<script type="application/json" data-role="module-args" data-module-name="Shared/settings.mod">{"settings":{"userMessaging":{"showNewFeatureNotice":true},"tags":{},"subscriptions":{"defaultBasicMaxTrueUpSeats":250,"defaultFreemiumMaxTrueUpSeats":50,"defaultMaxTrueUpSeats":1000},"snippets":{"renderDomain":"stacksnippets.net","snippetsEnabled":true},"site":{"allowImageUploads":true,"enableImgurHttps":true,"enableUserHovercards":true,"forceHttpsImages":true,"styleCode":true},"questions":{"enableQuestionTitleLengthLiveWarning":true,"maxTitleSize":150,"questionTitleLengthStartLiveWarningChars":50},"intercom":{"appId":"inf0secd","hostBaseUrl":"https://stacksnippets.net"},"paths":{},"monitoring":{"clientTimingsAbsoluteTimeout":30000,"clientTimingsDebounceTimeout":1000},"mentions":{"maxNumUsersInDropdown":50},"markdown":{"enableTables":true},"legal":{"oneTrustConfigId":"c3d9f1e3-55f3-4eba-b268-46cee4c6789c"},"flags":{"allowRetractingCommentFlags":true,"allowRetractingFlags":true},"elections":{"opaVoteResultsBaseUrl":"https://www.opavote.com/results/"},"comments":{},"accounts":{"currentPasswordRequiredForChangingStackIdPassword":true}}}</script>
+<script>StackExchange.init();</script>
+
+    <script>
+        StackExchange.using.setCacheBreakers({"Js/adops.en.js":"6da43f5e0a84","Js/ask.en.js":"7ff9a9068fd6","Js/begin-edit-event.en.js":"dd955babf04d","Js/copy-transpiled.en.js":"e7855bee94f2","Js/events.en.js":"","Js/explore-qlist.en.js":"2b1f34938b8b","Js/full-anon.en.js":"f2312e2f4665","Js/full.en.js":"39bd993bf30d","Js/highlightjs-loader.en.js":"a284064706b3","Js/inline-tag-editing.en.js":"77f922e6e562","Js/keyboard-shortcuts.en.js":"fa78d9020f1f","Js/markdown-it-loader.en.js":"5818ef89ff9d","Js/moderator.en.js":"df5a2eb14f4c","Js/postCollections-transpiled.en.js":"529276cfb7ae","Js/post-validation.en.js":"5dfbf70d3623","Js/question-editor.en.js":"","Js/review-v2-transpiled.en.js":"d5efdefd09e8","Js/revisions.en.js":"a86490719687","Js/stacks-editor.en.js":"230f551098fb","Js/tageditor.en.js":"825c9597ce2d","Js/tageditornew.en.js":"126f7e015aea","Js/tagsuggestions.en.js":"1bcff7d98f97","Js/unlimited-transpiled.en.js":"7ed67670b600","Js/wmd.en.js":"7014572a759f","Js/snippet-javascript-codemirror.en.js":"73fce5cc7219"});
+        StackExchange.using("gps", function() {
+             StackExchange.gps.init(false);
+        });
+    </script>
+    <noscript id="noscript-css"><style>body,.s-topbar{margin-top:1.9em}</style></noscript>
+    <script async="" src="https://cdn.sstatic.net/Js/full.en.js?v=39bd993bf30d"></script><script async="" src="https://cdn.sstatic.net/Js/tageditornew.en.js?v=126f7e015aea"></script><script async="" src="https://cdn.sstatic.net/Js/tagsuggestions.en.js?v=1bcff7d98f97"></script><script async="" src="https://cdn.sstatic.net/Js/wmd.en.js?v=7014572a759f"></script><script async="" src="https://cdn.sstatic.net/Js/begin-edit-event.en.js?v=dd955babf04d"></script><style type="text/css"> .wmd-snippet-button span { background-position: 0 0; } .wmd-snippet-button:hover span { background-position: 0 -40px; }</style><script async="" src="https://cdn.sstatic.net/Js/markdown-it-loader.en.js?v=5818ef89ff9d"></script></head>
+    <body class="ask-page unified-theme js-ask-page-v2 floating-content">
+    <div id="notify-container"></div>
+    <div id="custom-header"></div>
+        
+<header class="s-topbar ps-fixed t0 l0 js-top-bar">
+    <div class="s-topbar--container">
+            <a href="#" class="s-topbar--menu-btn js-left-sidebar-toggle" role="menuitem" aria-haspopup="true" aria-controls="left-sidebar" aria-expanded="false"><span></span></a>
+            <div class="topbar-dialog leftnav-dialog js-leftnav-dialog dno">
+                <div class="left-sidebar js-unpinned-left-sidebar" data-is-here-when="sm md lg" id="left-sidebar">
+    <div class="left-sidebar--sticky-container js-sticky-leftnav">
+        <nav role="navigation">
+            <ol class="nav-links">
+                    
+
+<li class="ps-relative">
+
+
+    <a href="/" class="pl8 js-gps-track nav-links--link" data-gps-track="top_nav.click({is_current: false, location:3, destination:8})" aria-controls="" data-controller="" data-s-popover-placement="right" data-s-popover-auto-show="true" data-s-popover-hide-on-outside-click="never">
+            <div class="d-flex ai-center">
+                <div class="flex--item truncate">
+                    Home
+                </div>
+            </div>
+    </a>
+</li>
+
+                <li>
+                    <ol class="nav-links">
+                            <li class="fs-fine tt-uppercase ml8 mt16 mb4 fc-light">Public</li>
+
+                            
+
+<li class="ps-relative">
+
+
+    <a id="nav-questions" href="/questions" class="pl8 js-gps-track nav-links--link -link__with-icon" data-gps-track="top_nav.click({is_current: false, location:3, destination:1})" aria-controls="" data-controller="" data-s-popover-placement="right" data-s-popover-auto-show="true" data-s-popover-hide-on-outside-click="never">
+<svg aria-hidden="true" class="svg-icon iconGlobe" width="18" height="18" viewBox="0 0 18 18"><path d="M9 1C4.64 1 1 4.64 1 9c0 4.36 3.64 8 8 8 4.36 0 8-3.64 8-8 0-4.36-3.64-8-8-8ZM8 15.32a6.46 6.46 0 0 1-4.3-2.74 6.46 6.46 0 0 1-.93-5.01L7 11.68v.8c0 .88.12 1.32 1 1.32v1.52Zm5.72-2c-.2-.66-1-1.32-1.72-1.32h-1v-2c0-.44-.56-1-1-1H6V7h1c.44 0 1-.56 1-1V5h2c.88 0 1.4-.72 1.4-1.6v-.33a6.45 6.45 0 0 1 3.83 4.51 6.45 6.45 0 0 1-1.51 5.73v.01Z"></path></svg>            <span class="-link--channel-name">Questions</span>
+    </a>
+</li>
+
+                                
+
+<li class="ps-relative">
+
+
+    <a id="nav-tags" href="/tags" class=" js-gps-track nav-links--link" data-gps-track="top_nav.click({is_current: false, location:3, destination:2})" aria-controls="" data-controller="" data-s-popover-placement="right" data-s-popover-auto-show="true" data-s-popover-hide-on-outside-click="never">
+            <div class="d-flex ai-center">
+                <div class="flex--item truncate">
+                    Tags
+                </div>
+            </div>
+    </a>
+</li>
+
+                                
+
+<li class="ps-relative">
+
+
+    <a id="nav-users" href="/users" class=" js-gps-track nav-links--link" data-gps-track="top_nav.click({is_current: false, location:3, destination:3})" aria-controls="" data-controller="" data-s-popover-placement="right" data-s-popover-auto-show="true" data-s-popover-hide-on-outside-click="never">
+            <div class="d-flex ai-center">
+                <div class="flex--item truncate">
+                    Users
+                </div>
+            </div>
+    </a>
+</li>
+
+                                    
+
+<li class="ps-relative">
+
+
+    <a id="nav-companies" href="https://stackoverflow.com/jobs/companies?so_medium=stackoverflow&amp;so_source=SiteNav" class=" js-gps-track nav-links--link" data-gps-track="top_nav.click({is_current: false, location:3, destination:12})" aria-controls="" data-controller="" data-s-popover-placement="right" data-s-popover-auto-show="true" data-s-popover-hide-on-outside-click="never">
+            <div class="d-flex ai-center">
+                <div class="flex--item truncate">
+                    Companies
+                </div>
+            </div>
+    </a>
+</li>
+
+                                <li class="d-flex ml8 mt16 jc-space-between">
+                                    <div class="flex--item tt-uppercase tt-uppercase fs-fine fc-light">Collectives</div>
+                                    <div class="flex--item fs-fine fc-light">
+                                        <a href="javascript:void(0)" class="s-link s-link__inherit mr8 js-gps-track js-collectives-navcta-toggle" role="button" aria-controls="popover-discover-collectives" data-controller="s-popover" data-action="s-popover#toggle" data-s-popover-placement="top" data-s-popover-toggle-class="is-selected" data-gps-track="top_nav.click({is_current:false, location:3, destination:17})" aria-expanded="false">
+                                            <svg aria-hidden="true" class="svg-icon iconInfoSm" width="14" height="14" viewBox="0 0 14 14"><path d="M7 1a6 6 0 1 1 0 12A6 6 0 0 1 7 1Zm1 10V6H6v5h2Zm0-6V3H6v2h2Z"></path></svg>
+                                        </a>
+                                    </div>
+                                </li>
+                                    
+
+<li class="ps-relative">
+
+
+    <a id="nav-collective-discover" href="/collectives" class="pl8 ai-center js-collectives-navcta-toggle js-gps-track nav-links--link -link__with-icon" data-gps-track="top_nav.click({is_current: false, location:3, destination:18})" aria-controls="" data-controller="" data-s-popover-placement="right" data-s-popover-auto-show="true" data-s-popover-hide-on-outside-click="never">
+<svg aria-hidden="true" class="mt-auto fc-orange-400 svg-icon iconStarVerified" width="18" height="18" viewBox="0 0 18 18"><path d="M9.86.89a1.14 1.14 0 0 0-1.72 0l-.5.58c-.3.35-.79.48-1.23.33l-.72-.25a1.14 1.14 0 0 0-1.49.85l-.14.76c-.1.45-.45.8-.9.9l-.76.14c-.67.14-1.08.83-.85 1.49l.25.72c.15.44.02.92-.33 1.23l-.58.5a1.14 1.14 0 0 0 0 1.72l.58.5c.35.3.48.79.33 1.23l-.25.72c-.23.66.18 1.35.85 1.49l.76.14c.45.1.8.45.9.9l.14.76c.14.67.83 1.08 1.49.85l.72-.25c.44-.15.92-.02 1.23.33l.5.58c.46.52 1.26.52 1.72 0l.5-.58c.3-.35.79-.48 1.23-.33l.72.25c.66.23 1.35-.18 1.49-.85l.14-.76c.1-.45.45-.8.9-.9l.76-.14c.67-.14 1.08-.83.85-1.49l-.25-.72c-.15-.44-.02-.92.33-1.23l.58-.5c.52-.46.52-1.26 0-1.72l-.58-.5c-.35-.3-.48-.79-.33-1.23l.25-.72a1.14 1.14 0 0 0-.85-1.49l-.76-.14c-.45-.1-.8-.45-.9-.9l-.14-.76a1.14 1.14 0 0 0-1.49-.85l-.72.25c-.44.15-.92.02-1.23-.33l-.5-.58Zm-.49 2.67L10.6 6.6c.05.15.19.24.34.25l3.26.22c.36.03.5.48.23.71l-2.5 2.1a.4.4 0 0 0-.14.4l.8 3.16a.4.4 0 0 1-.6.44L9.2 12.13a.4.4 0 0 0-.42 0l-2.77 1.74a.4.4 0 0 1-.6-.44l.8-3.16a.4.4 0 0 0-.13-.4l-2.5-2.1a.4.4 0 0 1 .22-.7l3.26-.23a.4.4 0 0 0 .34-.25l1.22-3.03a.4.4 0 0 1 .74 0Z"></path></svg>            <span class="-link--channel-name">Explore Collectives</span>
+    </a>
+</li>
+
+                    </ol>
+                </li>
+                   
+
+
+<li>
+    <ol class="nav-links">
+            <li class="d-flex ai-center jc-space-between ml8 mt24 mb4 js-create-team-cta">
+                <div class="flex--item tt-uppercase fs-fine fc-light">Teams</div>
+                <div class="flex--item">
+                    <a href="javascript:void(0)" class="s-link p12 fc-black-500 h:fc-black-800 js-gps-track" role="button" aria-controls="popover-teams-create-cta" data-controller="s-popover" data-action="s-popover#toggle" data-s-popover-placement="bottom-start" data-s-popover-toggle-class="is-selected" data-gps-track="teams.create.left-sidenav.click({ Action: ShowInfo })" data-ga="[&quot;teams left navigation&quot;,&quot;left nav show teams info&quot;,null,null,null]" aria-expanded="false">
+                        <svg aria-hidden="true" class="svg-icon iconInfoSm" width="14" height="14" viewBox="0 0 14 14"><path d="M7 1a6 6 0 1 1 0 12A6 6 0 0 1 7 1Zm1 10V6H6v5h2Zm0-6V3H6v2h2Z"></path></svg>
+                    </a>
+
+                </div>
+            </li>
+            <li class="ps-relative js-create-team-cta">
+                <a href="https://stackoverflow.com/teams/create/free?utm_source=so-owned&amp;utm_medium=side-bar&amp;utm_campaign=campaign-38&amp;utm_content=cta" class="pl8 js-gps-track nav-links--link" title="Stack Overflow for Teams is a private, secure spot for your organization's questions and answers." data-gps-track="teams.create.left-sidenav.click({ Action: FreemiumTeamsCreateClick })" data-ga="[&quot;teams left navigation&quot;,&quot;left nav team click&quot;,&quot;stackoverflow.com/teams/create/free&quot;,null,null]">
+                    <div class="d-flex ai-center">
+                        <div class="flex--item s-avatar va-middle bg-orange-400">
+                            <div class="s-avatar--letter mtn1">
+                                <svg aria-hidden="true" class="svg-icon iconBriefcaseSm" width="14" height="14" viewBox="0 0 14 14"><path d="M4 3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1h.5c.83 0 1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5h-7A1.5 1.5 0 0 1 2 10.5v-5C2 4.67 2.67 4 3.5 4H4V3Zm5 1V3H5v1h4Z"></path></svg>
+                            </div>
+                            <svg aria-hidden="true" class="native s-avatar--badge svg-icon iconShieldXSm" width="9" height="10" viewBox="0 0 9 10"><path d="M0 1.84 4.5 0 9 1.84v3.17C9 7.53 6.3 10 4.5 10 2.7 10 0 7.53 0 5.01V1.84Z" fill="var(--white)"></path><path d="M1 2.5 4.5 1 8 2.5v2.51C8 7.34 5.34 9 4.5 9 3.65 9 1 7.34 1 5.01V2.5Zm2.98 3.02L3.2 7h2.6l-.78-1.48a.4.4 0 0 1 .15-.38c.34-.24.73-.7.73-1.14 0-.71-.5-1.23-1.41-1.23-.92 0-1.39.52-1.39 1.23 0 .44.4.9.73 1.14.12.08.18.23.15.38Z" fill="var(--black-500)"></path></svg>
+                        </div>
+                        <div class="flex--item pl6">
+                            Create free Team
+                        </div>
+                    </div>
+                </a>
+            </li>
+    </ol>
+</li> 
+            </ol>
+        </nav>
+    </div>
+
+        <div class="s-popover ws2" id="popover-discover-collectives" role="menu">
+            <div class="s-popover--arrow"></div>
+            <div>
+                <svg aria-hidden="true" class="fc-orange-500 float-right ml24 svg-spot spotCollective" width="48" height="48" viewBox="0 0 48 48"><path d="M25.5 7a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5ZM14 18.25c0-.69.56-1.25 1.25-1.25h22.5c.69 0 1.25.56 1.25 1.25V37.5a1 1 0 0 1-1.6.8l-4.07-3.05a1.25 1.25 0 0 0-.75-.25H15.25c-.69 0-1.25-.56-1.25-1.25v-15.5ZM7 24.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0ZM25.5 48a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5ZM48 24.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z" opacity=".2"></path><path d="M21 3.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0ZM24.5 2a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3ZM0 23.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0ZM3.5 22a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3ZM21 44.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0Zm3.5-1.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Zm20-23a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7ZM43 23.5a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm-23.23-3.14a1 1 0 0 1-.13 1.4l-2.08 1.74 2.08 1.73a1 1 0 1 1-1.28 1.54l-2.42-2.02a1.63 1.63 0 0 1 0-2.5l2.42-2.02a1 1 0 0 1 1.4.13Zm7.59 1.41a1 1 0 1 1 1.28-1.54l2.42 2.02c.78.65.78 1.85 0 2.5l-2.42 2.02a1 1 0 1 1-1.28-1.54l2.08-1.73-2.08-1.73ZM24.12 18a1 1 0 0 1 .87 1.12l-1 8a1 1 0 1 1-1.98-.24l1-8a1 1 0 0 1 1.11-.87Zm-11.87-5C11.01 13 10 14 10 15.25v15.5c0 1.24 1 2.25 2.25 2.25h17.33c.06 0 .11.02.15.05l4.07 3.05a2 2 0 0 0 3.2-1.6V15.25c0-1.24-1-2.25-2.25-2.25h-22.5ZM12 15.25c0-.14.11-.25.25-.25h22.5c.14 0 .25.11.25.25V34.5l-4.07-3.05a2.2 2.2 0 0 0-1.35-.45H12.25a.25.25 0 0 1-.25-.25v-15.5Zm7.24-10.68a1 1 0 1 0-.48-1.94A22.04 22.04 0 0 0 2.91 17.7a1 1 0 1 0 1.92.58 20.04 20.04 0 0 1 14.4-13.72Zm11.05-1.66a1 1 0 0 0-.58 1.92c6.45 1.92 11.54 7 13.46 13.46a1 1 0 1 0 1.92-.58 22.05 22.05 0 0 0-14.8-14.8ZM4.57 28.76a1 1 0 0 0-1.94.48 22.03 22.03 0 0 0 16.13 16.13 1 1 0 1 0 .48-1.94A20.03 20.03 0 0 1 4.57 28.76Zm40.8.48a1 1 0 1 0-1.94-.48 20.04 20.04 0 0 1-13.72 14.41 1 1 0 0 0 .58 1.92 22.04 22.04 0 0 0 15.08-15.85Z"></path></svg>
+                <div class="pt4 fw-bold">Collectives™ on Stack Overflow</div>
+                <p class="my16 fs-caption fc-medium">Find centralized, trusted content and collaborate around the technologies you use most.</p>
+                <a href="/collectives" class="js-gps-track s-btn s-btn__primary s-btn__xs" data-gps-track="top_nav.click({is_current:false, location:3, destination:18})">
+                    Learn more
+                </a>
+            </div>
+        </div>
+
+
+        <div class="s-popover" id="popover-teams-create-cta" role="menu" aria-hidden="true">
+            <div class="s-popover--arrow"></div>
+
+            <div class="ps-relative overflow-hidden">
+                <p class="mb2"><strong>Teams</strong></p>
+                <p class="mb12 fs-caption fc-black-400">Q&amp;A for work</p>
+                <p class="mb12 fs-caption fc-medium">Connect and share knowledge within a single location that is structured and easy to search.</p>
+                <a href="https://stackoverflow.co/teams" class="js-gps-track s-btn s-btn__primary s-btn__xs" data-gps-track="teams.create.left-sidenav.click({ Action: CtaClick })" data-ga="[&quot;teams left navigation&quot;,&quot;left nav cta&quot;,&quot;stackoverflow.com/teams&quot;,null,null]">
+                    Learn more
+                </a>
+            </div>
+
+            <div class="ps-absolute t8 r8">
+                <svg aria-hidden="true" class="fc-orange-500 svg-spot spotPeople" width="48" height="48" viewBox="0 0 48 48"><path d="M13.5 28a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM7 30a1 1 0 0 1 1-1h11a1 1 0 0 1 1 1v5h11v-5a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v10a2 2 0 0 1-2 2H33v5a1 1 0 0 1-1 1H20a1 1 0 0 1-1-1v-5H8a1 1 0 0 1-1-1V30Zm25-6.5a4.5 4.5 0 1 0 9 0 4.5 4.5 0 0 0-9 0ZM24.5 34a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9Z" opacity=".2"></path><path d="M16.4 26.08A6 6 0 1 0 7.53 26C5.64 26.06 4 27.52 4 29.45V40a1 1 0 0 0 1 1h9a1 1 0 1 0 0-2h-4v-7a1 1 0 1 0-2 0v7H6v-9.55c0-.73.67-1.45 1.64-1.45H16a1 1 0 0 0 .4-1.92ZM12 18a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm16.47 14a6 6 0 1 0-8.94 0A3.6 3.6 0 0 0 16 35.5V46a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V35.5c0-1.94-1.64-3.42-3.53-3.5ZM20 28a4 4 0 1 1 8 0 4 4 0 0 1-8 0Zm-.3 6h8.6c1 0 1.7.75 1.7 1.5V45h-2v-7a1 1 0 1 0-2 0v7h-4v-7a1 1 0 1 0-2 0v7h-2v-9.5c0-.75.7-1.5 1.7-1.5ZM42 22c0 1.54-.58 2.94-1.53 4A3.5 3.5 0 0 1 44 29.45V40a1 1 0 0 1-1 1h-9a1 1 0 1 1 0-2h4v-7a1 1 0 1 1 2 0v7h2v-9.55A1.5 1.5 0 0 0 40.48 28H32a1 1 0 0 1-.4-1.92A6 6 0 1 1 42 22Zm-2 0a4 4 0 1 0-8 0 4 4 0 0 0 8 0Z"></path><g opacity=".35"><path d="M17 10a1 1 0 011-1h12a1 1 0 110 2H18a1 1 0 01-1-1Zm1-5a1 1 0 100 2h12a1 1 0 100-2H18ZM14 1a1 1 0 00-1 1v12a1 1 0 001 1h5.09l4.2 4.2a1 1 0 001.46-.04l3.7-4.16H34a1 1 0 001-1V2a1 1 0 00-1-1H14Zm1 12V3h18v10h-5a1 1 0 00-.75.34l-3.3 3.7-3.74-3.75a1 1 0 00-.71-.29H15Z"></path></g></svg>
+            </div>
+        </div>
+
+
+</div>
+            </div>
+                <a href="https://stackoverflow.com" class="s-topbar--logo js-gps-track" data-gps-track="top_nav.click({is_current:false, location:3, destination:8})">
+                    <span class="-img _glyph">Stack Overflow</span>
+                </a>
+
+
+
+            <ol class="s-navigation" role="presentation">
+
+
+                <li>
+                    <a href="#" class="s-navigation--item js-gps-track js-products-menu" aria-controls="products-popover" data-controller="s-popover" data-action="s-popover#toggle" data-s-popover-placement="bottom" data-s-popover-toggle-class="is-selected" data-gps-track="top_nav.products.click({location:3, destination:1})" data-ga="[&quot;top navigation&quot;,&quot;products menu click&quot;,null,null,null]" aria-expanded="false">
+                        Products
+                    </a>
+                </li>
+
+            </ol>
+            <div class="s-popover ws2 mtn2 p0" id="products-popover" role="menu" aria-hidden="true">
+                <div class="s-popover--arrow"></div>
+                <ol class="list-reset s-anchors s-anchors__inherit">
+                    <li class="m6">
+                        <a href="/" class="bar-sm p6 d-block h:bg-black-100 js-gps-track" data-gps-track="top_nav.products.click({location:3, destination:2})" data-ga="[&quot;top navigation&quot;,&quot;public qa submenu click&quot;,null,null,null]">
+                            <span class="fs-body1 d-block">Stack Overflow</span>
+                            <span class="fs-caption d-block fc-light">Public questions &amp; answers</span>
+                        </a>
+                    </li>
+                    <li class="m6">
+                        <a href="/teams" class="bar-sm p6 d-block h:bg-black-100 js-gps-track" data-gps-track="top_nav.products.click({location:3, destination:3})" data-ga="[&quot;top navigation&quot;,&quot;teams submenu click&quot;,null,null,null]">
+                            <span class="fs-body1 d-block">Stack Overflow for Teams</span>
+                            <span class="fs-caption d-block fc-light">Where developers &amp; technologists share private knowledge with coworkers</span>
+                        </a>
+                    </li>
+                    <li class="m6">
+                        <a href="https://stackoverflow.co/talent" class="bar-sm p6 d-block h:bg-black-100 js-gps-track" data-gps-track="top_nav.products.click({location:3, destination:5})" data-ga="[&quot;top navigation&quot;,&quot;talent submenu click&quot;,null,null,null]">
+                            <span class="fs-body1 d-block">Talent</span>
+                            <span class="fs-caption d-block fc-light">
+                                Build your employer brand
+                            </span>
+                        </a>
+                    </li>
+                    <li class="m6">
+                        <a href="https://stackoverflow.co/advertising" class="bar-sm p6 d-block h:bg-black-100 js-gps-track" data-gps-track="top_nav.products.click({location:3, destination:6})" data-ga="[&quot;top navigation&quot;,&quot;advertising submenu click&quot;,null,null,null]">
+                            <span class="fs-body1 d-block">Advertising</span>
+                            <span class="fs-caption d-block fc-light">Reach developers &amp; technologists worldwide</span>
+                        </a>
+                    </li>
+                    <li class="bg-black-025 bt bc-black-075 py6 px6 bbr-md">
+                        <a href="https://stackoverflow.co/" class="fc-light d-block py6 px6 h:fc-black-800 js-gps-track" data-gps-track="top_nav.products.click({location:3, destination:7})" data-ga="[&quot;top navigation&quot;,&quot;about submenu click&quot;,null,null,null]">About the company</a>
+                    </li>
+                </ol>
+            </div>
+
+            <form id="search" role="search" action="/search" class="s-topbar--searchbar js-searchbar " autocomplete="off">
+                    <div class="s-topbar--searchbar--input-group">
+                        <input name="q" type="text" placeholder="Search…" value="" autocomplete="off" maxlength="240" class="s-input s-input__search js-search-field " aria-label="Search" aria-controls="top-search" data-controller="s-popover" data-action="focus->s-popover#show" data-s-popover-placement="bottom-start" aria-expanded="false">
+                        <svg aria-hidden="true" class="s-input-icon s-input-icon__search svg-icon iconSearch" width="18" height="18" viewBox="0 0 18 18"><path d="m18 16.5-5.14-5.18h-.35a7 7 0 1 0-1.19 1.19v.35L16.5 18l1.5-1.5ZM12 7A5 5 0 1 1 2 7a5 5 0 0 1 10 0Z"></path></svg>
+                        <div class="s-popover p0 wmx100 wmn4 sm:wmn-initial js-top-search-popover" id="top-search" role="menu">
+    <div class="s-popover--arrow"></div>
+    <div class="js-spinner p24 d-flex ai-center jc-center d-none">
+        
+    </div>
+
+    <span class="v-visible-sr js-screen-reader-info"></span>
+    <div class="js-ac-results overflow-y-auto hmx3 d-none"></div>
+
+    <div class="js-search-hints" aria-describedby="Tips for searching"></div>
+</div>
+                    </div>
+            </form>
+
+        
+
+<ol class="s-topbar--content" role="presentation">
+            <li><a href="#" class="s-topbar--item s-btn s-btn__icon s-btn__muted d-none sm:d-inline-flex js-searchbar-trigger" role="button" aria-label="Search" aria-haspopup="true" aria-controls="search" title="Click to show search"><svg aria-hidden="true" class="svg-icon iconSearch" width="18" height="18" viewBox="0 0 18 18"><path d="m18 16.5-5.14-5.18h-.35a7 7 0 1 0-1.19 1.19v.35L16.5 18l1.5-1.5ZM12 7A5 5 0 1 1 2 7a5 5 0 0 1 10 0Z"></path></svg></a></li>
+
+            <li>
+                <a href="/users/19546538/yoon-changho" class="s-topbar--item s-user-card s-user-card__small m0 px12 js-gps-track" data-gps-track="profile_summary.click()">
+<div class="s-avatar s-avatar__24 s-user-card--avatar sm:m0" title="Yoon Changho"><img src="https://lh3.googleusercontent.com/a-/AFdZucpvFrAA8O9WuBtzQqh2T_SQ_5awamgqEgfFKmXy=k-s48" alt="user avatar" width="24" height="24" class="bar-sm s-avatar--image js-avatar-me"></div>                        <span class="v-visible-sr">Yoon Changho</span>
+
+        <div class="s-user-card--info sm:d-none">
+            <ul class="s-user-card--awards">
+                <li class="s-user-card--rep js-header-rep" title="your reputation: 1" aria-hidden="true">
+                    1
+                    <span class="v-visible-sr">, 1 reputation</span>
+                </li>
+                    <li class="-badges mr0">
+                    </li>
+            </ul>
+        </div>
+                </a>
+            </li>
+        <li>
+            <a href="https://stackexchange.com/users/25804848?tab=inbox" class="s-topbar--item js-inbox-button" aria-label="Inbox (1 unread message)" title="You have unread inbox messages" role="menuitem" aria-haspopup="true" aria-expanded="false" data-unread-count="1">
+                <svg aria-hidden="true" class="svg-icon iconInbox" width="20" height="18" viewBox="0 0 20 18"><path d="M4.63 1h10.56a2 2 0 0 1 1.94 1.35L20 10.79V15a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-4.21l2.78-8.44c.25-.8 1-1.36 1.85-1.35Zm8.28 12 2-2h2.95l-2.44-7.32a1 1 0 0 0-.95-.68H5.35a1 1 0 0 0-.95.68L1.96 11h2.95l2 2h6Z"></path></svg>
+                <span class="s-activity-indicator s-activity-indicator__danger js-unread-count">1</span>
+            </a>
+        </li>
+        <li>
+            <a href="https://stackexchange.com/users/25804848?tab=reputation" class="s-topbar--item js-achievements-button" data-unread-class="fc-success" aria-label="Achievements" title="Recent achievements: reputation, badges, and privileges earned" role="menuitem" aria-haspopup="true" aria-expanded="false" data-unread-count="0" data-lit-up="false">
+                <svg aria-hidden="true" class="svg-icon iconAchievements" width="18" height="18" viewBox="0 0 18 18"><path d="M15 2V1H3v1H0v4c0 1.6 1.4 3 3 3v1c.4 1.5 3 2.6 5 3v2H5s-1 1.5-1 2h10c0-.4-1-2-1-2h-3v-2c2-.4 4.6-1.5 5-3V9c1.6-.2 3-1.4 3-3V2h-3ZM3 7c-.5 0-1-.5-1-1V4h1v3Zm8.4 2.5L9 8 6.6 9.4l1-2.7L5 5h3l1-2.7L10 5h2.8l-2.3 1.8 1 2.7h-.1ZM16 6c0 .5-.5 1-1 1V4h1v2Z"></path></svg>
+                <span class="s-activity-indicator s-activity-indicator__success js-unread-count d-none">+0</span>
+            </a>
+        </li>
+        <li>
+            <a href="/help" class="s-topbar--item js-help-button" title="Help Center and other resources" role="menuitem" aria-haspopup="true" aria-controls="topbar-help-dialog" data-ga="[&quot;top navigation&quot;,&quot;help menu click&quot;,null,null,null]" aria-expanded="false"><svg aria-hidden="true" class="svg-icon iconHelp" width="18" height="18" viewBox="0 0 18 18"><path d="M9 1C4.64 1 1 4.64 1 9c0 4.36 3.64 8 8 8 4.36 0 8-3.64 8-8 0-4.36-3.64-8-8-8Zm.81 12.13c-.02.71-.55 1.15-1.24 1.13-.66-.02-1.17-.49-1.15-1.2.02-.72.56-1.18 1.22-1.16.7.03 1.2.51 1.17 1.23ZM11.77 8c-.59.66-1.78 1.09-2.05 1.97a4 4 0 0 0-.09.75c0 .05-.03.16-.18.16H7.88c-.16 0-.18-.1-.18-.15.06-1.35.66-2.2 1.83-2.88.39-.29.7-.75.7-1.24.01-1.24-1.64-1.82-2.35-.72-.21.33-.18.73-.18 1.1H5.75c0-1.97 1.03-3.26 3.03-3.26 1.75 0 3.47.87 3.47 2.83 0 .57-.2 1.05-.48 1.44Z"></path></svg></a>
+        </li>
+        <div class="topbar-dialog help-dialog js-help-dialog dno" id="topbar-help-dialog" role="menu">
+            <div class="modal-content">
+                <ul>
+                        <li>
+                            <a href="/tour" class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })" data-ga="[&quot;top navigation&quot;,&quot;tour submenu click&quot;,null,null,null]">
+                                Tour
+                                <span class="item-summary">
+                                    Start here for a quick overview of the site
+                                </span>
+                            </a>
+                        </li>
+                    <li>
+                        <a href="/help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })" data-ga="[&quot;top navigation&quot;,&quot;help center&quot;,null,null,null]">
+                            Help Center
+                            <span class="item-summary">
+                                Detailed answers to any questions you might have
+                            </span>
+                        </a>
+                    </li>
+                                <li>
+                                    <a href="https://meta.stackoverflow.com" class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })" data-ga="[&quot;top navigation&quot;,&quot;meta submenu click&quot;,null,null,null]">
+                                        Meta
+                                        <span class="item-summary">
+                                            Discuss the workings and policies of this site
+                                        </span>
+                                    </a>
+                                </li>
+                            <li>
+                                <a href="https://stackoverflow.co/" class="js-gps-track" data-gps-track="help_popup.click({ item_type:6 })" data-ga="[&quot;top navigation&quot;,&quot;about us submenu click&quot;,null,null,null]">
+                                    About Us
+                                    <span class="item-summary">
+                                        Learn more about Stack Overflow the company
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://stackoverflow.com/?products" class="js-gps-track" data-gps-track="help_popup.click({ item_type:7 })" data-ga="[&quot;top navigation&quot;,&quot;business submenu click&quot;,null,null,null]">
+                                    Business
+                                    <span class="item-summary">
+                                        Learn more about our products
+                                    </span>
+                                </a>
+                            </li>
+                </ul>
+            </div>
+        </div>
+        <li>
+            <a href="https://stackexchange.com" class="s-topbar--item js-site-switcher-button js-gps-track" data-gps-track="site_switcher.show" aria-label="Site switcher" title="A list of all 180 Stack Exchange sites" role="menuitem" aria-haspopup="true" aria-expanded="false" data-ga="[&quot;top navigation&quot;,&quot;stack exchange click&quot;,null,null,null]">
+                <svg aria-hidden="true" class="svg-icon iconStackExchange" width="18" height="18" viewBox="0 0 18 18"><path d="M15 1H3a2 2 0 0 0-2 2v2h16V3a2 2 0 0 0-2-2ZM1 13c0 1.1.9 2 2 2h8v3l3-3h1a2 2 0 0 0 2-2v-2H1v2Zm16-7H1v4h16V6Z"></path></svg>
+            </a>
+        </li>
+
+
+    <li class="js-topbar-dialog-corral" role="presentation">
+            
+
+    <div class="topbar-dialog siteSwitcher-dialog dno" role="menu">
+        <div class="header fw-wrap">
+            <h3 class="flex--item">
+                <a href="https://stackoverflow.com">current community</a>
+            </h3>
+            <div class="flex--item fl1">
+                <div class="ai-center d-flex jc-end">
+                    <button class="js-close-button s-btn s-btn__muted p0 ml8 d-none sm:d-block" type="button" aria-label="Close">
+                        <svg aria-hidden="true" class="svg-icon iconClear" width="18" height="18" viewBox="0 0 18 18"><path d="M15 4.41 13.59 3 9 7.59 4.41 3 3 4.41 7.59 9 3 13.59 4.41 15 9 10.41 13.59 15 15 13.59 10.41 9 15 4.41Z"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="modal-content bg-powder-050 current-site-container">
+                <div class="d-none sm:d-block">
+                    <div class="d-flex ai-end">
+                        <div class="s-user-card flex--item fl1">
+                            <a href="/users/19546538/yoon-changho" class="s-avatar s-avatar__32 s-user-card--avatar">
+                                <div class="gravatar-wrapper-32"><img src="https://lh3.googleusercontent.com/a-/AFdZucpvFrAA8O9WuBtzQqh2T_SQ_5awamgqEgfFKmXy=k-s32" alt="user avatar" width="32" height="32" class="bar-sm avatar s-avatar--image"></div>
+                            </a>
+                            <div class="s-user-card--info">
+                                <a href="/users/19546538/yoon-changho" class="s-user-card--link">Yoon Changho</a>
+                                <div class="s-user-card--awards lh-unset fc-black-700 fw-bold">
+                                    <span class="reputation-score" title="reputation score " dir="ltr">1</span>
+                                </div>
+                            </div>
+                        </div>
+                            <div class="related-links flex--item p8">
+                                <a href="https://stackoverflow.com/users/logout" data-gps-track="site_switcher.click({ item_type:8 })">log out</a>
+                            </div>
+                    </div>
+                </div>
+            <ul class="current-site ">
+                    <li class="d-flex">
+                            <div class="fl1">
+                <a href="https://stackoverflow.com" class="current-site-link site-link js-gps-track d-flex gs8 gsx" data-id="1" data-gps-track="site_switcher.click({ item_type:3 })">
+        <div class="favicon favicon-stackoverflow site-icon flex--item" title="Stack Overflow"></div>
+        <span class="flex--item fl1">
+            Stack Overflow
+        </span>
+    </a>
+
+    </div>
+    <div class="related-links">
+            <a href="https://stackoverflow.com/help" class="js-gps-track" data-gps-track="site_switcher.click({ item_type:14 })">help</a>
+            <a href="https://chat.stackoverflow.com/?tab=site&amp;host=stackoverflow.com" class="js-gps-track" data-gps-track="site_switcher.click({ item_type:6 })">chat</a>
+            <a href="https://stackoverflow.com/users/logout" class="js-gps-track" data-gps-track="site_switcher.click({ item_type:8 })">log out</a>
+    </div>
+
+                    </li>
+                    <li class="related-site d-flex">
+                            <div class="L-shaped-icon-container">
+        <span class="L-shaped-icon"></span>
+    </div>
+
+                            <a href="https://meta.stackoverflow.com" class=" site-link js-gps-track d-flex gs8 gsx" data-id="552" data-gps-track="site.switch({ target_site:552, item_type:3 }),site_switcher.click({ item_type:4 })">
+        <div class="favicon favicon-stackoverflowmeta site-icon flex--item" title="Meta Stack Overflow"></div>
+        <span class="flex--item fl1">
+            Meta Stack Overflow
+        </span>
+    </a>
+
+                    </li>
+            </ul>
+        </div>
+
+        <div class="header" id="your-communities-header">
+            <h3>
+                    <a href="https://stackexchange.com/users/25804848/?tab=accounts">your communities</a>
+            </h3>
+
+                <a href="#" id="edit-pinned-sites">edit</a>
+                <a href="#" id="cancel-pinned-sites" style="display: none;">cancel</a>
+        </div>
+        <div class="modal-content" id="your-communities-section">
+
+                <ul class="my-sites">
+                        <li>
+                                <a href="https://stackoverflow.com" class=" site-link js-gps-track d-flex gs8 gsx" data-id="1" data-gps-track="site.switch({ target_site:1, item_type:3 }),site_switcher.click({ item_type:1 })">
+        <div class="favicon favicon-stackoverflow site-icon flex--item" title="Stack Overflow"></div>
+        <span class="flex--item fl1">
+            Stack Overflow
+        </span>
+            <span class="rep-score flex--item">1</span>
+    </a>
+
+                        </li>
+                </ul>
+                    <div class="pinned-site-editor-container" style="display: none;">
+                        <input type="hidden" name="fkey" value="30a3ab7e3261b7b8e72fd1071608b2b70e4fb58c673173fad9b87a61261f632c">
+                        <div class="d-flex p12">
+                            <div class="flex--item fl1 ps-relative">
+                                <input id="js-site-search-txt" type="text" class="s-input s-input__sm w100 h100 site-filter-input" value="" placeholder="Add a Stack Exchange community">
+                                <ul class="js-found-sites found-sites hmx1 l0 r0 ps-absolute overflow-y-auto"></ul>
+                            </div>
+                            <button class="ml8 s-btn s-btn__sm" type="submit" id="pin-site-btn" disabled="disabled">Add</button>
+                        </div>
+                        <ul class="pinned-site-list sortable" data-custom-list="False">
+                        </ul>
+                        <div class="d-flex p12 jc-end">
+                            <a class="flex--item s-btn s-btn__sm js-reset-pinned-sites" href="#">Reset</a>
+                            <button class="ml8 flex--item s-btn s-btn__primary s-btn__sm" type="submit" id="save-pinned-sites-btn" disabled="disabled">Save</button>
+                        </div>
+                    </div>
+        </div>
+
+        <div class="header">
+            <h3><a href="https://stackexchange.com/sites">more stack exchange communities</a>
+            </h3>
+            <a href="https://stackoverflow.blog" class="float-right">company blog</a>
+        </div>
+        <div class="modal-content">
+                <div class="child-content"></div>
+        </div>        
+    </div>
+
+    </li>
+
+</ol>
+
+
+    </div>
+</header>
+
+    <script>
+        StackExchange.ready(function () { StackExchange.topbar.init(); });
+        StackExchange.scrollPadding.setPaddingTop(50, 10); 
+    </script>
+
+
+
+
+
+    <div class="container">
+            
+
+<div data-is-here-when="" class="left-sidebar js-pinned-left-sidebar ps-relative" data-can-be="left-sidebar"></div>
+
+
+
+
+        <div id="content" class="pt0 snippet-hidden">
+
+            
+<div class="d-flex ai-center py24 bg-no-repeat bg-right-bottom wide:bg-image-ask-v2 wide:h-ask-v2-background">
+        <div class="fs-headline1">
+            Ask a public question
+        </div>
+</div>
+<div class="md:d-block d-none mb24" data-controller="right-rail" data-action="s-expandable-control:show->right-rail#onShow s-expandable-control:hide->right-rail#onHide">
+    <div class="js-visible-before-review" style="display: none;">
+        <div class="s-sidebarwidget s-anchors mb0">
+            <div class="s-sidebarwidget--header py0 bbr-sm js-widget-header">
+                <button class="s-btn s-btn__unset d-flex ai-center w100 c-pointer py12 fs-body2 js-gps-track" type="button" data-controller="s-expandable-control" aria-expanded="false" aria-controls="mobile-ask-guidance-expandable" data-gps-track="askpage.open_guidance_section({number: 1})">
+                    <div class="flex--item fl1 ta-left">
+                        Step 1: Draft your question
+                    </div>
+                    <div class="flex--item">
+                        <div class="js-arrow-down"><svg aria-hidden="true" class="svg-icon iconArrowDownAlt" width="18" height="18" viewBox="0 0 18 18"><path d="m16.01 7.43-1.4-1.41L9 11.6 3.42 6l-1.4 1.42 7 7 7-7Z"></path></svg></div>
+                        <div class="d-none js-arrow-up"><svg aria-hidden="true" class="svg-icon iconArrowUpAlt" width="18" height="18" viewBox="0 0 18 18"><path d="m16.01 10.62-1.4 1.4L9 6.45l-5.59 5.59-1.4-1.41 7-7 7 7Z"></path></svg></div>
+                    </div>
+                </button>
+            </div>
+            <div class="s-expandable" id="mobile-ask-guidance-expandable">
+                <div class="s-expandable--content">
+                    <div class="s-sidebarwidget--content d-block pb0 bbr-sm bg-white" data-can-be="how-to-ask" data-is-here-when="sm md"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="js-visible-during-review" style="display: block;">
+        <div class="js-post-review-summary-container s-sidebarwidget s-anchors mb0">
+            <div class="s-sidebarwidget--header py0 bbr-sm js-widget-header">
+                <button class="s-btn s-btn__unset d-flex ai-center w100 c-pointer py12 fs-body2 js-gps-track" type="button" data-controller="s-expandable-control" aria-expanded="true" aria-controls="mobile-post-review-expandable">
+                    <div class="flex--item fl1 ta-left">
+                        Step 2: Review your question
+                    </div>
+                    <div class="flex--item">
+                        <div class="d-none js-arrow-down"><svg aria-hidden="true" class="svg-icon iconArrowDownAlt" width="18" height="18" viewBox="0 0 18 18"><path d="m16.01 7.43-1.4-1.41L9 11.6 3.42 6l-1.4 1.42 7 7 7-7Z"></path></svg></div>
+                        <div class="js-arrow-up"><svg aria-hidden="true" class="svg-icon iconArrowUpAlt" width="18" height="18" viewBox="0 0 18 18"><path d="m16.01 10.62-1.4 1.4L9 6.45l-5.59 5.59-1.4-1.41 7-7 7 7Z"></path></svg></div>
+                    </div>
+                </button>
+            </div>
+            <div class="s-expandable is-expanded" id="mobile-post-review-expandable">
+                <div class="s-expandable--content">
+                    <div class="s-sidebarwidget--content d-block bbr-sm bg-white" data-can-be="review-your-question" data-is-here-when="sm md"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="d-flex ai-start jc-space-between md:fd-column md:ai-stretch">
+    <div class="flex--item fl1 wmn0">
+
+
+
+        <form id="post-form" class="post-form js-post-form" action="/questions/ask/submit" method="post" data-validation-warnings="" data-validation-errors="" data-form-type="question" data-has-answer="false" data-delay-validation="true" data-required-tags="" data-force-heartbeat-at-body-length="220" data-enable-analytics="True.ToJson()" data-enable-warning-analytics="true" data-inbox-subscription="2" data-referrer="0">
+            <input type="hidden" name="qualityBanWarningShown" value="False">
+            <input type="hidden" name="priorAttemptCount" class="js-post-prior-attempt-count" value="1"> 
+            <input type="hidden" name="onboardingTemplate" value="">
+            <input type="hidden" name="warntags" class="js-warned-tags-field">
+            <div id="question-form">
+                <div class="bg-white bar-sm bs-md p16 ba bc-black-100">
+                    <div id="post-title" class="ps-relative mb16">
+                        <div class="d-flex fl1 fd-column js-stacks-validation">
+                            <label class="d-block s-label mb4" for="title">
+                                Title
+                                <div class="d-flex">
+                                    <p class="s-description mt2 flex--item9">Be specific and imagine you’re asking a question to another person</p>
+                                    <div class="flex--item3 ta-right text-counter mr0 fs-caption mt2 fl1 cool"></div>
+                                </div>
+                            </label>
+                            <div class="fl1 ps-relative">
+                                <input id="title" name="title" type="text" maxlength="300" tabindex="100" placeholder="e.g. Is there an R function for finding the index of an element in a vector?" class="s-input js-post-title-field" value="How can I use add_experimentail_option in javascript?" data-min-length="15" data-max-length="150" autocomplete="off">
+                                <svg aria-hidden="true" class="s-input-icon js-invalid-alert d-none svg-icon iconAlertCircle" width="18" height="18" viewBox="0 0 18 18"><path d="M9 17c-4.36 0-8-3.64-8-8 0-4.36 3.64-8 8-8 4.36 0 8 3.64 8 8 0 4.36-3.64 8-8 8ZM8 4v6h2V4H8Zm0 8v2h2v-2H8Z"></path></svg>
+                            </div>
+                            <div class="s-input-message mt4 d-none js-stacks-validation-message"></div>
+                        </div>
+                        <div id="question-suggestions" class="js-question-suggestions"></div>
+                    </div>
+                    <div class="ba js-similar-questions-outer-div bc-black-200 mb24 d-flex fd-column bar-sm">
+    <button class="js-similar-questions-title bg-black-025 bc-black-100 bb flex--item1 btr-sm s-btn s-btn__unset d-flex px16 py12 w100 c-pointer bblr0 bbrr0" type="button" data-right-rail-target="step" data-controller="s-expandable-control" aria-expanded="true" aria-controls="js-similar-questions-expandable-_39b25520-0652-448f-810b-c088ce798e79-8F6FCE1155AB0B2069419A929BD2056F">
+        <div class="flex--item fl1 ai-center fs-body2 fc-light ta-left">
+            Similar questions
+        </div>
+        <div>
+            <div class="js-arrow-down d-none"><svg aria-hidden="true" class="fc-light svg-icon iconArrowDownAlt" width="18" height="18" viewBox="0 0 18 18"><path d="m16.01 7.43-1.4-1.41L9 11.6 3.42 6l-1.4 1.42 7 7 7-7Z"></path></svg></div>
+            <div class="js-arrow-up "><svg aria-hidden="true" class="fc-light svg-icon iconArrowUpAlt" width="18" height="18" viewBox="0 0 18 18"><path d="m16.01 10.62-1.4 1.4L9 6.45l-5.59 5.59-1.4-1.41 7-7 7 7Z"></path></svg></div>
+        </div>
+    </button>
+    <div class="s-expandable is-expanded d-block" id="js-similar-questions-expandable-_39b25520-0652-448f-810b-c088ce798e79-8F6FCE1155AB0B2069419A929BD2056F">
+        <div class="js-similar-questions similar-questions bbw0 s-expandable--content">    <div class="overflow-y-scroll question-summary-scroll js-question-summary-scroll question-summary sm:fd-row narrow d-flex ai-start p0 bbw0 h100 sm:pl0 sm:pr0">
+        <div class="question-summary d-flex fd-column overflow-hidden p0 bbw0 sm:pl0 sm:pr0">
+
+                <aside class="s-notice s-notice__warning m4">
+                    <div class="d-flex">
+                        <div class="mr16"><svg aria-hidden="true" class="svg-icon iconAlert" width="18" height="18" viewBox="0 0 18 18"><path d="M7.95 2.71c.58-.94 1.52-.94 2.1 0l7.69 12.58c.58.94.15 1.71-.96 1.71H1.22C.1 17-.32 16.23.26 15.29L7.95 2.71ZM8 6v5h2V6H8Zm0 7v2h2v-2H8Z"></path></svg></div>
+                        <div>
+                            <div class="fw-bold mb4">
+                                Many similarly phrased questions have received feedback like downvotes or requests for improvements.
+                            </div>
+                            <div>
+                                Consider updating your question title and body to be more descriptive.
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+
+                <div class="question-summary sm:pr0 sm:fd-row">
+                    <div class="statscontainer ta-center">
+                        <div class="flex--item bar-sm py6 px6 mb48 fc-white bg-green-400" title="One of the answers was accepted as the correct answer">
+                            <div class="fs-body1">
+                                <span title="3 answers">3</span>
+                            </div>
+                            <div class="fs-fine">answers</div>
+                        </div>
+                    </div>
+                    <div class="summary flex--item mr8 js-similar-questions-data-track">
+                        <a href="/questions/4379359/how-can-i-use-return-in-javascript" class="js-gps-track js-link" target="_blank" data-gps-track="similarquestions.title_link_clicked">
+                            <h3 class="m0 mb6 s-link">How can I use return in javascript</h3>
+                            <p class="mb0 s-link s-link__grayscale">How can I use return in javascript
+
+function hello1() {
+
+    function hello2() {
+
+        if (condition) {
+            return; // How can I exit from hello1 function not hello2 ?
+        }
+
+    }
+
+}</p>
+                        </a>
+                        <div class="started fc-black-300">asked <a href="/questions/4379359/how-can-i-use-return-in-javascript/?lastactivity" target="_blank" class="started-link js-link"><span title="2010-12-07 16:59:54Z" class="relativetime">Dec 7, 2010 at 16:59</span></a> by <a href="/users/423903/faressoft" target="_blank">faressoft</a></div>
+                    </div>
+                </div>
+                <div class="question-summary sm:pr0 sm:fd-row">
+                    <div class="statscontainer ta-center">
+                        <div class="flex--item bar-sm py6 px6 mb48 fc-white bg-green-400" title="One of the answers was accepted as the correct answer">
+                            <div class="fs-body1">
+                                <span title="1 answer">1</span>
+                            </div>
+                            <div class="fs-fine">answer</div>
+                        </div>
+                    </div>
+                    <div class="summary flex--item mr8 js-similar-questions-data-track">
+                        <a href="/questions/25173674/how-can-i-use-defmacro-in-javascript" class="js-gps-track js-link" target="_blank" data-gps-track="similarquestions.title_link_clicked">
+                            <h3 class="m0 mb6 s-link">How can I use defmacro in Javascript?</h3>
+                            <p class="mb0 s-link s-link__grayscale">How can I use defmacro in Javascript?
+
+defmacro ()?
+Or, some other formats?</p>
+                        </a>
+                        <div class="started fc-black-300">asked <a href="/questions/25173674/how-can-i-use-defmacro-in-javascript/?lastactivity" target="_blank" class="started-link js-link"><span title="2014-08-07 03:33:28Z" class="relativetime">Aug 7, 2014 at 3:33</span></a> by <a href="/users/3916642/skywanker" target="_blank">skywanker</a></div>
+                    </div>
+                </div>
+                <div class="question-summary sm:pr0 sm:fd-row">
+                    <div class="statscontainer ta-center">
+                        <div class="flex--item bar-sm py6 px6 mb48 fc-white bg-green-400" title="One of the answers was accepted as the correct answer">
+                            <div class="fs-body1">
+                                <span title="1 answer">1</span>
+                            </div>
+                            <div class="fs-fine">answer</div>
+                        </div>
+                    </div>
+                    <div class="summary flex--item mr8 js-similar-questions-data-track">
+                        <a href="/questions/44029927/how-can-i-use-aync-await-in-javascript" class="js-gps-track js-link" target="_blank" data-gps-track="similarquestions.title_link_clicked">
+                            <h3 class="m0 mb6 s-link">How can I use aync/await in javascript?</h3>
+                            <p class="mb0 s-link s-link__grayscale">How can I use async/await in javascript?
+
+How can I do this?
+
+Any help is appropriated?</p>
+                        </a>
+                        <div class="started fc-black-300">asked <a href="/questions/44029927/how-can-i-use-aync-await-in-javascript/?lastactivity" target="_blank" class="started-link js-link"><span title="2017-05-17 16:08:49Z" class="relativetime">May 17, 2017 at 16:08</span></a> by <a href="/users/7818013/majid-parvin" target="_blank">Majid Parvin</a></div>
+                    </div>
+                </div>
+                <div class="question-summary sm:pr0 sm:fd-row">
+                    <div class="statscontainer ta-center">
+                        <div class="flex--item bar-sm py6 px6 mb48 fc-white bg-green-400" title="One of the answers was accepted as the correct answer">
+                            <div class="fs-body1">
+                                <span title="1 answer">1</span>
+                            </div>
+                            <div class="fs-fine">answer</div>
+                        </div>
+                    </div>
+                    <div class="summary flex--item mr8 js-similar-questions-data-track">
+                        <a href="/questions/17427492/how-can-i-use-vb-net-in-javascript" class="js-gps-track js-link" target="_blank" data-gps-track="similarquestions.title_link_clicked">
+                            <h3 class="m0 mb6 s-link">How can I use vb.net in javascript</h3>
+                            <p class="mb0 s-link s-link__grayscale">I have question about use vb.net in javascript.
+
+&lt;script runat="server"&gt;
+    Dim x As String
+    Function Addx(ByVal txt As String) As String
+        x = txt
+        Return x
+    End Function
+&lt;/script&gt;
+I use function "Addx" in javascript like this.
+
+&lt;script ...</p>
+                        </a>
+                        <div class="started fc-black-300">asked <a href="/questions/17427492/how-can-i-use-vb-net-in-javascript/?lastactivity" target="_blank" class="started-link js-link"><span title="2013-07-02 13:54:44Z" class="relativetime">Jul 2, 2013 at 13:54</span></a> by <a href="/users/2542789/%e0%b8%95%e0%b8%ad-%e0%b9%80%e0%b8%ad%e0%b9%8b%e0%b8%a2-%e0%b8%95%e0%b8%ad%e0%b9%80%e0%b8%95%e0%b8%a2" target="_blank">ตอ เอ๋ย ตอเตย</a></div>
+                    </div>
+                </div>
+                <div class="question-summary sm:pr0 sm:fd-row">
+                    <div class="statscontainer ta-center">
+                        <div class="flex--item bar-sm py6 px6 mb48 fc-green-400 ba bc-green-4 bg-white" title="4 answers">
+                            <div class="fs-body1">
+                                <span title="4 answers">4</span>
+                            </div>
+                            <div class="fs-fine">answers</div>
+                        </div>
+                    </div>
+                    <div class="summary flex--item mr8 js-similar-questions-data-track">
+                        <a href="/questions/2834929/how-can-i-use-html-tags-in-javascript" class="js-gps-track js-link" target="_blank" data-gps-track="similarquestions.title_link_clicked">
+                            <h3 class="m0 mb6 s-link">How can i use html tags in javascript</h3>
+                            <p class="mb0 s-link s-link__grayscale">I wrote an ajax program.when i am getting response, at that time i will display 
+that content in my web page using html tags.
+
+So how can I use html tags in javascript?</p>
+                        </a>
+                        <div class="started fc-black-300">asked <a href="/questions/2834929/how-can-i-use-html-tags-in-javascript/?lastactivity" target="_blank" class="started-link js-link"><span title="2010-05-14 14:33:27Z" class="relativetime">May 14, 2010 at 14:33</span></a> by <a href="/users/341322/chandrasekhar" target="_blank">Chandrasekhar</a></div>
+                    </div>
+                </div>
+                <div class="question-summary sm:pr0 sm:fd-row">
+                    <div class="statscontainer ta-center">
+                        <div class="flex--item bar-sm py6 px6 mb48 fc-white bg-green-400" title="One of the answers was accepted as the correct answer">
+                            <div class="fs-body1">
+                                <span title="2 answers">2</span>
+                            </div>
+                            <div class="fs-fine">answers</div>
+                        </div>
+                    </div>
+                    <div class="summary flex--item mr8 js-similar-questions-data-track">
+                        <a href="/questions/15598438/how-can-i-use-model-in-javascript" class="js-gps-track js-link" target="_blank" data-gps-track="similarquestions.title_link_clicked">
+                            <h3 class="m0 mb6 s-link">How can i use model in Javascript?</h3>
+                            <p class="mb0 s-link s-link__grayscale">Example :
+
+&lt;script type="text/javascript"&gt;
+        function abc() {
+            var t = document.getElementById("name").value;
+            @foreach(Player pl in Model){
+            if (t == pl.Name) {
+                alert("This name is already use!");
+            }         ...</p>
+                        </a>
+                        <div class="started fc-black-300">asked <a href="/questions/15598438/how-can-i-use-model-in-javascript/?lastactivity" target="_blank" class="started-link js-link"><span title="2013-03-24 12:27:00Z" class="relativetime">Mar 24, 2013 at 12:27</span></a> by <a href="/users/2204438/user2204438" target="_blank">user2204438</a></div>
+                    </div>
+                </div>
+                <div class="question-summary sm:pr0 sm:fd-row">
+                    <div class="statscontainer ta-center">
+                        <div class="flex--item bar-sm py6 px6 mb48 fc-green-400 ba bc-green-4 bg-white" title="7 answers">
+                            <div class="fs-body1">
+                                <span title="7 answers">7</span>
+                            </div>
+                            <div class="fs-fine">answers</div>
+                        </div>
+                    </div>
+                    <div class="summary flex--item mr8 js-similar-questions-data-track">
+                        <a href="/questions/1851995/can-i-use-php-in-javascript" class="js-gps-track js-link" target="_blank" data-gps-track="similarquestions.title_link_clicked">
+                            <h3 class="m0 mb6 s-link">Can I use php in javascript?</h3>
+                            <p class="mb0 s-link s-link__grayscale">Begginer's question.
+
+Can I use PHP in javascript?
+
+For example in jquery,
+
+...
+...
+triggers.eq(1).post('&lt;?php admin/categories/delete/'. $list['id']; ?&gt;);</p>
+                        </a>
+                        <div class="started fc-black-300">asked <a href="/questions/1851995/can-i-use-php-in-javascript/?lastactivity" target="_blank" class="started-link js-link"><span title="2009-12-05 11:46:06Z" class="relativetime">Dec 5, 2009 at 11:46</span></a> by <a href="/users/119198/shin" target="_blank">shin</a></div>
+                    </div>
+                </div>
+                <div class="question-summary sm:pr0 sm:fd-row">
+                    <div class="statscontainer ta-center">
+                        <div class="flex--item bar-sm py6 px6 mb48 fc-green-400 ba bc-green-4 bg-white" title="1 answer">
+                            <div class="fs-body1">
+                                <span title="1 answer">1</span>
+                            </div>
+                            <div class="fs-fine">answer</div>
+                        </div>
+                    </div>
+                    <div class="summary flex--item mr8 js-similar-questions-data-track">
+                        <a href="/questions/55682684/how-can-i-use-php-in-javascript" class="js-gps-track js-link" target="_blank" data-gps-track="similarquestions.title_link_clicked">
+                            <h3 class="m0 mb6 s-link">How can I use PHP in JavaScript?</h3>
+                            <p class="mb0 s-link s-link__grayscale">I have to show the contact num from database when user click on the button.. 
+but when I use php in javaScript it doesn't work for me...
+here is HTML 
+
+&lt;button name="showNo" id="phone1" onclick="myFunction()"&gt;&lt;span&gt;Show Phone No&lt;/span&gt;&lt;/button&gt;
+&lt;p ...</p>
+                        </a>
+                        <div class="started fc-black-300">asked <a href="/questions/55682684/how-can-i-use-php-in-javascript/?lastactivity" target="_blank" class="started-link js-link"><span title="2019-04-15 04:41:53Z" class="relativetime">Apr 15, 2019 at 4:41</span></a> by <a href="/users/10922307/muhammad-hassan" target="_blank">Muhammad Hassan</a></div>
+                    </div>
+                </div>
+                <div class="question-summary sm:pr0 sm:fd-row">
+                    <div class="statscontainer ta-center">
+                        <div class="flex--item bar-sm py6 px6 mb48 fc-white bg-green-400" title="One of the answers was accepted as the correct answer">
+                            <div class="fs-body1">
+                                <span title="1 answer">1</span>
+                            </div>
+                            <div class="fs-fine">answer</div>
+                        </div>
+                    </div>
+                    <div class="summary flex--item mr8 js-similar-questions-data-track">
+                        <a href="/questions/30723714/how-can-i-use-require-in-javascript" class="js-gps-track js-link" target="_blank" data-gps-track="similarquestions.title_link_clicked">
+                            <h3 class="m0 mb6 s-link">how can i use require(""); in javascript</h3>
+                            <p class="mb0 s-link s-link__grayscale">i want to use a plugin in Firefox that it is in this. in this plugin tutorial use require function, and it is: require("sdk/preferences/service"); 
+
+but i get error that require is not defined. so i search and download requireJS. but when attach this i get error module name ...</p>
+                        </a>
+                        <div class="started fc-black-300">asked <a href="/questions/30723714/how-can-i-use-require-in-javascript/?lastactivity" target="_blank" class="started-link js-link"><span title="2015-06-09 05:33:50Z" class="relativetime">Jun 9, 2015 at 5:33</span></a> by <a href="/users/4886643/amin-mirzaee" target="_blank">amin mirzaee</a></div>
+                    </div>
+                </div>
+                <div class="question-summary sm:pr0 sm:fd-row">
+                    <div class="statscontainer ta-center">
+                        <div class="flex--item bar-sm py6 px6 mb48 fc-white bg-green-400" title="One of the answers was accepted as the correct answer">
+                            <div class="fs-body1">
+                                <span title="2 answers">2</span>
+                            </div>
+                            <div class="fs-fine">answers</div>
+                        </div>
+                    </div>
+                    <div class="summary flex--item mr8 js-similar-questions-data-track">
+                        <a href="/questions/16505559/how-can-i-use-modulo-operator-in-javascript" class="js-gps-track js-link" target="_blank" data-gps-track="similarquestions.title_link_clicked">
+                            <h3 class="m0 mb6 s-link">How can I use modulo operator (%) in JavaScript?</h3>
+                            <p class="mb0 s-link s-link__grayscale">How can I use modulo operator (%) in calculation of numbers for JavaScript projects?</p>
+                        </a>
+                        <div class="started fc-black-300">asked <a href="/questions/16505559/how-can-i-use-modulo-operator-in-javascript/?lastactivity" target="_blank" class="started-link js-link"><span title="2013-05-12 08:34:15Z" class="relativetime">May 12, 2013 at 8:34</span></a> by <a href="/users/1940895/ziyaddin-sadigov" target="_blank">Ziyaddin Sadigov</a></div>
+                    </div>
+                </div>
+                <div class="question-summary sm:pr0 sm:fd-row">
+                    <div class="statscontainer ta-center">
+                        <div class="flex--item bar-sm py6 px6 mb48 fc-green-400 ba bc-green-4 bg-white" title="0 answers">
+                            <div class="fs-body1">
+                                <span title="0 answers">0</span>
+                            </div>
+                            <div class="fs-fine">answers</div>
+                        </div>
+                    </div>
+                    <div class="summary flex--item mr8 js-similar-questions-data-track">
+                        <a href="/questions/54104905/how-can-i-use-param-in-javascript-functions" class="js-gps-track js-link" target="_blank" data-gps-track="similarquestions.title_link_clicked">
+                            <h3 class="m0 mb6 s-link">How can I use param in javascript functions?</h3>
+                            <p class="mb0 s-link s-link__grayscale">How to pass value for params and how can I use those values inside the function?</p>
+                        </a>
+                        <div class="started fc-black-300">asked <a href="/questions/54104905/how-can-i-use-param-in-javascript-functions/?lastactivity" target="_blank" class="started-link js-link"><span title="2019-01-09 07:14:28Z" class="relativetime">Jan 9, 2019 at 7:14</span></a> by <a href="/users/10742717/deepan-chelliah" target="_blank">Deepan Chelliah</a></div>
+                    </div>
+                </div>
+                <div class="question-summary sm:pr0 sm:fd-row">
+                    <div class="statscontainer ta-center">
+                        <div class="flex--item bar-sm py6 px6 mb48 fc-white bg-green-400" title="One of the answers was accepted as the correct answer">
+                            <div class="fs-body1">
+                                <span title="6 answers">6</span>
+                            </div>
+                            <div class="fs-fine">answers</div>
+                        </div>
+                    </div>
+                    <div class="summary flex--item mr8 js-similar-questions-data-track">
+                        <a href="/questions/18239269/how-can-i-use-linebreaks-in-javascript" class="js-gps-track js-link" target="_blank" data-gps-track="similarquestions.title_link_clicked">
+                            <h3 class="m0 mb6 s-link">How can I use linebreaks in javascript?</h3>
+                            <p class="mb0 s-link s-link__grayscale">This piece of code gives error:
+
+var test = '1
+2
+3
+4';
+What if I want to nicely structure a code in javascript, like this:
+
+var return = '
+&lt;div&gt;
+   content
+&lt;/div&gt;
+';
+How do I do that?</p>
+                        </a>
+                        <div class="started fc-black-300">asked <a href="/questions/18239269/how-can-i-use-linebreaks-in-javascript/?lastactivity" target="_blank" class="started-link js-link"><span title="2013-08-14 18:16:12Z" class="relativetime">Aug 14, 2013 at 18:16</span></a> by <a href="/users/616855/frantisek" target="_blank">Frantisek</a></div>
+                    </div>
+                </div>
+                <div class="question-summary sm:pr0 sm:fd-row">
+                    <div class="statscontainer ta-center">
+                        <div class="flex--item bar-sm py6 px6 mb48 fc-green-400 ba bc-green-4 bg-white" title="3 answers">
+                            <div class="fs-body1">
+                                <span title="3 answers">3</span>
+                            </div>
+                            <div class="fs-fine">answers</div>
+                        </div>
+                    </div>
+                    <div class="summary flex--item mr8 js-similar-questions-data-track">
+                        <a href="/questions/49768223/how-can-i-use-javascript-in-katalon-studio" class="js-gps-track js-link" target="_blank" data-gps-track="similarquestions.title_link_clicked">
+                            <h3 class="m0 mb6 s-link">How can I use JavaScript in Katalon Studio?</h3>
+                            <p class="mb0 s-link s-link__grayscale">Sometimes, I encounter an element which I'm unable to click with a normal Selenium script so I have to use javascript to execute my script.
+
+How can I use JavaScript in Katalon Studio?</p>
+                        </a>
+                        <div class="started fc-black-300">asked <a href="/questions/49768223/how-can-i-use-javascript-in-katalon-studio/?lastactivity" target="_blank" class="started-link js-link"><span title="2018-04-11 06:43:49Z" class="relativetime">Apr 11, 2018 at 6:43</span></a> by <a href="/users/8514740/chris-smith" target="_blank">Chris Smith</a></div>
+                    </div>
+                </div>
+                <div class="question-summary sm:pr0 sm:fd-row">
+                    <div class="statscontainer ta-center">
+                        <div class="flex--item bar-sm py6 px6 mb48 fc-white bg-green-400" title="One of the answers was accepted as the correct answer">
+                            <div class="fs-body1">
+                                <span title="16 answers">16</span>
+                            </div>
+                            <div class="fs-fine">answers</div>
+                        </div>
+                    </div>
+                    <div class="summary flex--item mr8 js-similar-questions-data-track">
+                        <a href="/questions/9751207/how-can-i-use-goto-in-javascript" class="js-gps-track js-link" target="_blank" data-gps-track="similarquestions.title_link_clicked">
+                            <h3 class="m0 mb6 s-link">How can I use goto in Javascript?</h3>
+                            <p class="mb0 s-link s-link__grayscale">I have some code that I absolutely must implement using goto. For example, I want to write a program like this:
+
+start:
+alert("RINSE");
+alert("LATHER");
+repeat: goto start
+Is there a way to do that in Javascript?</p>
+                        </a>
+                        <div class="started fc-black-300">asked <a href="/questions/9751207/how-can-i-use-goto-in-javascript/?lastactivity" target="_blank" class="started-link js-link"><span title="2012-03-17 15:28:08Z" class="relativetime">Mar 17, 2012 at 15:28</span></a> by <a href="/users/546661/peter-olson" target="_blank">Peter Olson</a></div>
+                    </div>
+                </div>
+                <div class="question-summary sm:pr0 sm:fd-row">
+                    <div class="statscontainer ta-center">
+                        <div class="flex--item bar-sm py6 px6 mb48 fc-white bg-green-400" title="One of the answers was accepted as the correct answer">
+                            <div class="fs-body1">
+                                <span title="1 answer">1</span>
+                            </div>
+                            <div class="fs-fine">answer</div>
+                        </div>
+                    </div>
+                    <div class="summary flex--item mr8 js-similar-questions-data-track">
+                        <a href="/questions/33331282/how-can-i-use-form-items-in-javascript" class="js-gps-track js-link" target="_blank" data-gps-track="similarquestions.title_link_clicked">
+                            <h3 class="m0 mb6 s-link">How Can I use form items in javascript</h3>
+                            <p class="mb0 s-link s-link__grayscale">I want to use HTML form elements in JavaScript. I used them like this but it doesn't work:
+
+&lt;form name="M"&gt;
+  &lt;input name="in1" type="text" id="in1"&gt;
+  &lt;input type="button" name="btn1" id="btn1" value="Check" onclick="f1()"&gt;
+&lt;/form&gt;
+&lt;script ...</p>
+                        </a>
+                        <div class="started fc-black-300">asked <a href="/questions/33331282/how-can-i-use-form-items-in-javascript/?lastactivity" target="_blank" class="started-link js-link"><span title="2015-10-25 15:13:51Z" class="relativetime">Oct 25, 2015 at 15:13</span></a> by <a href="/users/5485318/doruk-ayar" target="_blank">Doruk Ayar</a></div>
+                    </div>
+                </div>
+                <div class="question-summary sm:pr0 sm:fd-row">
+                    <div class="statscontainer ta-center">
+                        <div class="flex--item bar-sm py6 px6 mb48 fc-green-400 ba bc-green-4 bg-white" title="1 answer">
+                            <div class="fs-body1">
+                                <span title="1 answer">1</span>
+                            </div>
+                            <div class="fs-fine">answer</div>
+                        </div>
+                    </div>
+                    <div class="summary flex--item mr8 js-similar-questions-data-track">
+                        <a href="/questions/14429122/how-can-i-use-hyperlinks-in-javascript" class="js-gps-track js-link" target="_blank" data-gps-track="similarquestions.title_link_clicked">
+                            <h3 class="m0 mb6 s-link">How can I use hyperlinks in JavaScript?</h3>
+                            <p class="mb0 s-link s-link__grayscale">Here is a list off images I am rotating;
+
+How can I hyperlink each one of these images individually?
+
+In an ideal sense I want to use something like this to link each of the images below, a html link I would use below:
+
+&lt;a ...</p>
+                        </a>
+                        <div class="started fc-black-300">asked <a href="/questions/14429122/how-can-i-use-hyperlinks-in-javascript/?lastactivity" target="_blank" class="started-link js-link"><span title="2013-01-20 20:46:34Z" class="relativetime">Jan 20, 2013 at 20:46</span></a> by <a href="/users/1972567/keith-griffiths" target="_blank">Keith Griffiths</a></div>
+                    </div>
+                </div>
+                <div class="question-summary sm:pr0 sm:fd-row">
+                    <div class="statscontainer ta-center">
+                        <div class="flex--item bar-sm py6 px6 mb48 fc-green-400 ba bc-green-4 bg-white" title="0 answers">
+                            <div class="fs-body1">
+                                <span title="0 answers">0</span>
+                            </div>
+                            <div class="fs-fine">answers</div>
+                        </div>
+                    </div>
+                    <div class="summary flex--item mr8 js-similar-questions-data-track">
+                        <a href="/questions/55333935/how-can-i-restart-countdown-in-javascript-using-button" class="js-gps-track js-link" target="_blank" data-gps-track="similarquestions.title_link_clicked">
+                            <h3 class="m0 mb6 s-link">How can I restart countdown in javascript using button</h3>
+                            <p class="mb0 s-link s-link__grayscale">I have problem I don't know how can I restart the countdown in javascript using button and the countdown is in the localstorage.
+How can I restart the countdown using button and it will be not restart if the countdown is not finished. Thank you .
+
+
+
+var hoursleft = 0;
+var ...</p>
+                        </a>
+                        <div class="started fc-black-300">asked <a href="/questions/55333935/how-can-i-restart-countdown-in-javascript-using-button/?lastactivity" target="_blank" class="started-link js-link"><span title="2019-03-25 08:40:00Z" class="relativetime">Mar 25, 2019 at 8:40</span></a> by <a href="/users/11253721/raf-gres" target="_blank">raf gres</a></div>
+                    </div>
+                </div>
+                <div class="question-summary sm:pr0 sm:fd-row">
+                    <div class="statscontainer ta-center">
+                        <div class="flex--item bar-sm py6 px6 mb48 fc-green-400 ba bc-green-4 bg-white" title="9 answers">
+                            <div class="fs-body1">
+                                <span title="9 answers">9</span>
+                            </div>
+                            <div class="fs-fine">answers</div>
+                        </div>
+                    </div>
+                    <div class="summary flex--item mr8 js-similar-questions-data-track">
+                        <a href="/questions/20610109/how-can-i-use-a-php-variable-in-javascript" class="js-gps-track js-link" target="_blank" data-gps-track="similarquestions.title_link_clicked">
+                            <h3 class="m0 mb6 s-link">How can I use a php variable in javascript</h3>
+                            <p class="mb0 s-link s-link__grayscale">If I have created a variable in php, say $test, how can I set a variable in javascript, say var test, to be equal to it.
+
+I have already tried var test = &lt;?php $test ?&gt;</p>
+                        </a>
+                        <div class="started fc-black-300">asked <a href="/questions/20610109/how-can-i-use-a-php-variable-in-javascript/?lastactivity" target="_blank" class="started-link js-link"><span title="2013-12-16 11:43:18Z" class="relativetime">Dec 16, 2013 at 11:43</span></a> by <a href="/users/2390329/daniel-franklin" target="_blank">Daniel Franklin</a></div>
+                    </div>
+                </div>
+                <div class="question-summary sm:pr0 sm:fd-row">
+                    <div class="statscontainer ta-center">
+                        <div class="flex--item bar-sm py6 px6 mb48 fc-green-400 ba bc-green-4 bg-white" title="1 answer">
+                            <div class="fs-body1">
+                                <span title="1 answer">1</span>
+                            </div>
+                            <div class="fs-fine">answer</div>
+                        </div>
+                    </div>
+                    <div class="summary flex--item mr8 js-similar-questions-data-track">
+                        <a href="/questions/26984488/how-can-i-use-javascript-onblur-in-html-div" class="js-gps-track js-link" target="_blank" data-gps-track="similarquestions.title_link_clicked">
+                            <h3 class="m0 mb6 s-link">How can I use JavaScript OnBlur() in HTML div?</h3>
+                            <p class="mb0 s-link s-link__grayscale">I have a menu and I can open and close the menu clicking on a tag. It works. 
+Also I use OnBlur(). Actually it works too but When I click a div in the menu, OnBlur active, menu closes and div's onclick doesn't works. How can I fix this problem ?
+
+In JavaScript Codes;
+
+...</p>
+                        </a>
+                        <div class="started fc-black-300">asked <a href="/questions/26984488/how-can-i-use-javascript-onblur-in-html-div/?lastactivity" target="_blank" class="started-link js-link"><span title="2014-11-18 00:23:29Z" class="relativetime">Nov 18, 2014 at 0:23</span></a> by <a href="/users/2399353/burak-kaya" target="_blank">Burak Kaya</a></div>
+                    </div>
+                </div>
+                <div class="question-summary sm:pr0 sm:fd-row">
+                    <div class="statscontainer ta-center">
+                        <div class="flex--item bar-sm py6 px6 mb48 fc-white bg-green-400" title="One of the answers was accepted as the correct answer">
+                            <div class="fs-body1">
+                                <span title="2 answers">2</span>
+                            </div>
+                            <div class="fs-fine">answers</div>
+                        </div>
+                    </div>
+                    <div class="summary flex--item mr8 js-similar-questions-data-track">
+                        <a href="/questions/61637863/how-can-i-concatenate-using-javascript" class="js-gps-track js-link" target="_blank" data-gps-track="similarquestions.title_link_clicked">
+                            <h3 class="m0 mb6 s-link">How can i concatenate using javascript?</h3>
+                            <p class="mb0 s-link s-link__grayscale">Here method is dynamic based on user input method value will be change 
+
+var method = 'GetActiveUserData';
+How can i concatenate  ? please help below expected output added 
+
+var result =  ...</p>
+                        </a>
+                        <div class="started fc-black-300">asked <a href="/questions/61637863/how-can-i-concatenate-using-javascript/?lastactivity" target="_blank" class="started-link js-link"><span title="2020-05-06 14:32:44Z" class="relativetime">May 6, 2020 at 14:32</span></a> by <a href="/users/5584934/martin-kumar" target="_blank">martin kumar</a></div>
+                    </div>
+                </div>
+                <div class="question-summary sm:pr0 sm:fd-row">
+                    <div class="statscontainer ta-center">
+                        <div class="flex--item bar-sm py6 px6 mb48 fc-white bg-green-400" title="One of the answers was accepted as the correct answer">
+                            <div class="fs-body1">
+                                <span title="3 answers">3</span>
+                            </div>
+                            <div class="fs-fine">answers</div>
+                        </div>
+                    </div>
+                    <div class="summary flex--item mr8 js-similar-questions-data-track">
+                        <a href="/questions/1880550/can-i-use-resolveurl-in-javascript" class="js-gps-track js-link" target="_blank" data-gps-track="similarquestions.title_link_clicked">
+                            <h3 class="m0 mb6 s-link">Can i use resolveurl in javascript</h3>
+                            <p class="mb0 s-link s-link__grayscale">&lt;script language="javascript" type="text/javascript"&gt;
+                                                   banner2.add("FLASH", "../Banners/1.swf", 10, 60, 468,"http://www.techpint.com","_blank");
+                        banner2.add("FLASH", "../Banners/2.swf", 10, 60, ...</p>
+                        </a>
+                        <div class="started fc-black-300">asked <a href="/questions/1880550/can-i-use-resolveurl-in-javascript/?lastactivity" target="_blank" class="started-link js-link"><span title="2009-12-10 12:07:17Z" class="relativetime">Dec 10, 2009 at 12:07</span></a> by <a href="/users/203262/shantanu-gupta" target="_blank">Shantanu Gupta</a></div>
+                    </div>
+                </div>
+                <div class="question-summary sm:pr0 sm:fd-row">
+                    <div class="statscontainer ta-center">
+                        <div class="flex--item bar-sm py6 px6 mb48 fc-white bg-green-400" title="One of the answers was accepted as the correct answer">
+                            <div class="fs-body1">
+                                <span title="1 answer">1</span>
+                            </div>
+                            <div class="fs-fine">answer</div>
+                        </div>
+                    </div>
+                    <div class="summary flex--item mr8 js-similar-questions-data-track">
+                        <a href="/questions/30763200/how-can-i-use-image-tag-in-a-javascript-response" class="js-gps-track js-link" target="_blank" data-gps-track="similarquestions.title_link_clicked">
+                            <h3 class="m0 mb6 s-link">How can I use image_tag in a javascript response?</h3>
+                            <p class="mb0 s-link s-link__grayscale">I'm trying to realize following:
+
+$(".share-icon").html("&lt;%= image_tag(@card.photo.url(:small)) %&gt;");
+This is obviously not working but how can I use image_tagin a JS response?
+
+Thanks</p>
+                        </a>
+                        <div class="started fc-black-300">asked <a href="/questions/30763200/how-can-i-use-image-tag-in-a-javascript-response/?lastactivity" target="_blank" class="started-link js-link"><span title="2015-06-10 17:23:12Z" class="relativetime">Jun 10, 2015 at 17:23</span></a> by <a href="/users/425285/cojones" target="_blank">Cojones</a></div>
+                    </div>
+                </div>
+                <div class="question-summary sm:pr0 sm:fd-row">
+                    <div class="statscontainer ta-center">
+                        <div class="flex--item bar-sm py6 px6 mb48 fc-white bg-green-400" title="One of the answers was accepted as the correct answer">
+                            <div class="fs-body1">
+                                <span title="1 answer">1</span>
+                            </div>
+                            <div class="fs-fine">answer</div>
+                        </div>
+                    </div>
+                    <div class="summary flex--item mr8 js-similar-questions-data-track">
+                        <a href="/questions/26204660/how-can-i-use-html-tag-in-this-javascript" class="js-gps-track js-link" target="_blank" data-gps-track="similarquestions.title_link_clicked">
+                            <h3 class="m0 mb6 s-link">How can I use html tag in this javascript?</h3>
+                            <p class="mb0 s-link s-link__grayscale">How can I use html tag in this javascript?
+
+First of all, why &lt;br&gt; doesn't work in prompt.  Secondly, why can't I use tags for this code (poundOne.pound) to make the font larger by using css or html code such as &lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;... or &lt;div ...</p>
+                        </a>
+                        <div class="started fc-black-300">asked <a href="/questions/26204660/how-can-i-use-html-tag-in-this-javascript/?lastactivity" target="_blank" class="started-link js-link"><span title="2014-10-05 16:23:35Z" class="relativetime">Oct 5, 2014 at 16:23</span></a> by <a href="/users/3842901/tohid" target="_blank">Tohid</a></div>
+                    </div>
+                </div>
+                <div class="question-summary sm:pr0 sm:fd-row">
+                    <div class="statscontainer ta-center">
+                        <div class="flex--item bar-sm py6 px6 mb48 fc-green-400 ba bc-green-4 bg-white" title="2 answers">
+                            <div class="fs-body1">
+                                <span title="2 answers">2</span>
+                            </div>
+                            <div class="fs-fine">answers</div>
+                        </div>
+                    </div>
+                    <div class="summary flex--item mr8 js-similar-questions-data-track">
+                        <a href="/questions/41295128/how-can-i-use-the-javascript-value-in-php" class="js-gps-track js-link" target="_blank" data-gps-track="similarquestions.title_link_clicked">
+                            <h3 class="m0 mb6 s-link">How can I use the javaScript value in php</h3>
+                            <p class="mb0 s-link s-link__grayscale">I have a question about using javaScript value in PHP:
+
+var i; &lt;br&gt;
+for(i=0;i&lt;4;i++){ &lt;br&gt;
+    alert("echo $MarkA[i]");&lt;br&gt;
+}
+$MarkA is a PHP array
+I want to know that how can I using the javascript value 'i' in PHP code.
+Thanks.</p>
+                        </a>
+                        <div class="started fc-black-300">asked <a href="/questions/41295128/how-can-i-use-the-javascript-value-in-php/?lastactivity" target="_blank" class="started-link js-link"><span title="2016-12-23 04:18:37Z" class="relativetime">Dec 23, 2016 at 4:18</span></a> by <a href="/users/5359113/formula-g" target="_blank">Formula-G</a></div>
+                    </div>
+                </div>
+                <div class="question-summary sm:pr0 sm:fd-row">
+                    <div class="statscontainer ta-center">
+                        <div class="flex--item bar-sm py6 px6 mb48 fc-green-400 ba bc-green-4 bg-white" title="2 answers">
+                            <div class="fs-body1">
+                                <span title="2 answers">2</span>
+                            </div>
+                            <div class="fs-fine">answers</div>
+                        </div>
+                    </div>
+                    <div class="summary flex--item mr8 js-similar-questions-data-track">
+                        <a href="/questions/27333291/how-can-i-use-jsp-in-javascript" class="js-gps-track js-link" target="_blank" data-gps-track="similarquestions.title_link_clicked">
+                            <h3 class="m0 mb6 s-link">How can i use jsp in javascript?</h3>
+                            <p class="mb0 s-link s-link__grayscale">I have a jsp file that makes connection with my neo4j database. It also can print queries on the webpage. This is my code:
+
+&lt;%!
+public void test(JspWriter out)  
+throws IOException  
+{  
+GraphDatabaseService graphDb = new ...</p>
+                        </a>
+                        <div class="started fc-black-300">asked <a href="/questions/27333291/how-can-i-use-jsp-in-javascript/?lastactivity" target="_blank" class="started-link js-link"><span title="2014-12-06 15:40:24Z" class="relativetime">Dec 6, 2014 at 15:40</span></a> by <a href="/users/2959870/user2959870" target="_blank">user2959870</a></div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+
+<script>
+    StackExchange.ready(function () {
+        $('.js-_39b25520-0652-448f-810b-c088ce798e79-8F6FCE1155AB0B2069419A929BD2056F').find('.js-similar-questions-title')
+            .on('s-expandable-control:show s-expandable-control:hide', function () {
+                $(this).find(".js-arrow-down").toggleClass("d-none");
+                $(this).find(".js-arrow-up").toggleClass("d-none");
+            })
+            .on('s-expandable-control:show', function () {
+                StackExchange.using("gps", function () { StackExchange.gps.track("similarquestions.results_collapse_toggle", { is_collapsed: false }); });
+                $(this).removeClass('bbw0').addClass('bbrr0 bblr0');
+            })
+            .on('s-expandable-control:hide', function() {
+                StackExchange.using("gps", function () { StackExchange.gps.track("similarquestions.results_collapse_toggle", { is_collapsed: true }); });
+                $(this).addClass('bbw0').removeClass('bbrr0 bblr0');
+            });
+    });
+</script>
+
+                    
+
+    <script>
+        StackExchange.ifUsing("editor", function () {
+            StackExchange.using("externalEditor", function () {
+                StackExchange.using("snippets", function () {
+                    StackExchange.snippets.init();
+                });
+            });
+        }, "code-snippets");
+    </script>
+
+
+<script>
+    StackExchange.ready(function() {
+            StackExchange.using("tagEditor", function () { StackExchange.tagEditor.ready.done(initFadingHelpText); });
+        var channelOptions = {
+            tags: "".split(" "),
+            id: "1"
+        };
+        initTagRenderer("".split(" "), "".split(" "), channelOptions);
+
+        StackExchange.using("externalEditor", function() {
+            // Have to fire editor after snippets, if snippets enabled
+            if (StackExchange.settings.snippets.snippetsEnabled) {
+                StackExchange.using("snippets", function() {
+                    createEditor();
+                });
+            }
+            else {
+                createEditor();
+            }
+        });
+
+        function createEditor() {
+            StackExchange.prepareEditor({
+                useStacksEditor: false,
+                heartbeatType: 'ask',
+                autoActivateHeartbeat: false,
+                convertImagesToLinks: true,
+                noModals: true,
+                showLowRepImageUploadWarning: true,
+                reputationToPostImages: 10,
+                bindNavPrevention: true,
+                postfix: "",
+                imageUploader: {
+                    brandingHtml: "Powered by \u003ca href=\"https://imgur.com/\"\u003e\u003csvg class=\"svg-icon\" width=\"50\" height=\"18\" viewBox=\"0 0 50 18\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"\u003e\u003ctitle\u003eImgur Logo\u003c/title\u003e\u003cpath d=\"M46.1709 9.17788C46.1709 8.26454 46.2665 7.94324 47.1084 7.58816C47.4091 7.46349 47.7169 7.36433 48.0099 7.26993C48.9099 6.97997 49.672 6.73443 49.672 5.93063C49.672 5.22043 48.9832 4.61182 48.1414 4.61182C47.4335 4.61182 46.7256 4.91628 46.0943 5.50789C45.7307 4.9328 45.2525 4.66231 44.6595 4.66231C43.6264 4.66231 43.1481 5.28821 43.1481 6.59048V11.9512C43.1481 13.2535 43.6264 13.8962 44.6595 13.8962C45.6924 13.8962 46.1709 13.2535 46.1709 11.9512V9.17788Z\"/\u003e\u003cpath d=\"M32.492 10.1419C32.492 12.6954 34.1182 14.0484 37.0451 14.0484C39.9723 14.0484 41.5985 12.6954 41.5985 10.1419V6.59049C41.5985 5.28821 41.1394 4.66232 40.1061 4.66232C39.0732 4.66232 38.5948 5.28821 38.5948 6.59049V9.60062C38.5948 10.8521 38.2696 11.5455 37.0451 11.5455C35.8209 11.5455 35.4954 10.8521 35.4954 9.60062V6.59049C35.4954 5.28821 35.0173 4.66232 34.0034 4.66232C32.9703 4.66232 32.492 5.28821 32.492 6.59049V10.1419Z\" /\u003e\u003cpath fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M25.6622 17.6335C27.8049 17.6335 29.3739 16.9402 30.2537 15.6379C30.8468 14.7755 30.9615 13.5579 30.9615 11.9512V6.59049C30.9615 5.28821 30.4833 4.66231 29.4502 4.66231C28.9913 4.66231 28.4555 4.94978 28.1109 5.50789C27.499 4.86533 26.7335 4.56087 25.7005 4.56087C23.1369 4.56087 21.0134 6.57349 21.0134 9.27932C21.0134 11.9852 23.003 13.913 25.3754 13.913C26.5612 13.913 27.4607 13.4902 28.1109 12.6616C28.1109 12.7229 28.1161 12.7799 28.121 12.8346C28.1256 12.8854 28.1301 12.9342 28.1301 12.983C28.1301 14.4373 27.2502 15.2321 25.777 15.2321C24.8349 15.2321 24.1352 14.9821 23.5661 14.7787C23.176 14.6393 22.8472 14.5218 22.5437 14.5218C21.7977 14.5218 21.2429 15.0123 21.2429 15.6887C21.2429 16.7375 22.9072 17.6335 25.6622 17.6335ZM24.1317 9.27932C24.1317 7.94324 24.9928 7.09766 26.1024 7.09766C27.2119 7.09766 28.0918 7.94324 28.0918 9.27932C28.0918 10.6321 27.2311 11.5116 26.1024 11.5116C24.9737 11.5116 24.1317 10.6491 24.1317 9.27932Z\"/\u003e\u003cpath d=\"M16.8045 11.9512C16.8045 13.2535 17.2637 13.8962 18.2965 13.8962C19.3298 13.8962 19.8079 13.2535 19.8079 11.9512V8.12928C19.8079 5.82936 18.4879 4.62866 16.4027 4.62866C15.1594 4.62866 14.279 4.98375 13.3609 5.88013C12.653 5.05154 11.6581 4.62866 10.3573 4.62866C9.34336 4.62866 8.57809 4.89931 7.9466 5.5079C7.58314 4.9328 7.10506 4.66232 6.51203 4.66232C5.47873 4.66232 5.00066 5.28821 5.00066 6.59049V11.9512C5.00066 13.2535 5.47873 13.8962 6.51203 13.8962C7.54479 13.8962 8.0232 13.2535 8.0232 11.9512V8.90741C8.0232 7.58817 8.44431 6.91179 9.53458 6.91179C10.5104 6.91179 10.893 7.58817 10.893 8.94108V11.9512C10.893 13.2535 11.3711 13.8962 12.4044 13.8962C13.4375 13.8962 13.9157 13.2535 13.9157 11.9512V8.90741C13.9157 7.58817 14.3365 6.91179 15.4269 6.91179C16.4027 6.91179 16.8045 7.58817 16.8045 8.94108V11.9512Z\"/\u003e\u003cpath d=\"M3.31675 6.59049C3.31675 5.28821 2.83866 4.66232 1.82471 4.66232C0.791758 4.66232 0.313354 5.28821 0.313354 6.59049V11.9512C0.313354 13.2535 0.791758 13.8962 1.82471 13.8962C2.85798 13.8962 3.31675 13.2535 3.31675 11.9512V6.59049Z\" /\u003e\u003cpath d=\"M1.87209 0.400291C0.843612 0.400291 0 1.1159 0 1.98861C0 2.87869 0.822846 3.57676 1.87209 3.57676C2.90056 3.57676 3.7234 2.87869 3.7234 1.98861C3.7234 1.1159 2.90056 0.400291 1.87209 0.400291Z\" fill=\"#1BB76E\"/\u003e\u003c/svg\u003e\u003c/a\u003e",
+                    contentPolicyHtml: "User contributions licensed under \u003ca href=\"https://stackoverflow.com/help/licensing\"\u003ecc by-sa\u003c/a\u003e \u003ca href=\"https://stackoverflow.com/legal/content-policy\"\u003e(content policy)\u003c/a\u003e",
+                    allowUrls: true
+                },
+                onDemand: false,
+                discardSelector: ".discard-question"
+                ,immediatelyShowMarkdownHelp:true,userId:19546538,enableTables:true,enableSnippets:true
+            });
+                    }
+    });
+</script>
+<div id="post-editor" class="post-editor js-post-editor mt0 mb16">
+
+
+        <div class="ps-relative">
+                <label class="s-label mb4 d-block" for="wmd-input">
+                    Body
+
+                        <p class="s-description mt2">Include all the information someone would need to answer your question</p>
+                </label>
+            <div class="wmd-container mb8">
+                <div id="wmd-button-bar" class="wmd-button-bar btr-sm mt0"><ul id="wmd-button-row" class="wmd-button-row"><li class="wmd-button" id="wmd-bold-button" title="Strong <strong> Ctrl+B"><span style="background-position: 0px 0px;"></span></li><li class="wmd-button" id="wmd-italic-button" title="Emphasis <em> Ctrl+I"><span style="background-position: -20px 0px;"></span></li><li class="wmd-spacer wmd-spacer1" id="wmd-spacer1"></li><li class="wmd-button" id="wmd-link-button" title="Hyperlink <a> Ctrl+L"><span style="background-position: -40px 0px;"></span></li><li class="wmd-button" id="wmd-quote-button" title="Blockquote <blockquote> Ctrl+Q"><span style="background-position: -60px 0px;"></span></li><li class="wmd-button" id="wmd-code-button" title="Code Sample <pre><code> Ctrl+K"><span style="background-position: -80px 0px;"></span></li><li class="wmd-button" id="wmd-image-button" title="Image <img> Ctrl+G"><span style="background-position: -100px 0px;"></span></li><li class="wmd-button wmd-snippet-button" id="wmd-snippet-button" title="JavaScript/HTML/CSS snippet Ctrl-M"><span></span></li><li class="wmd-spacer wmd-spacer2" id="wmd-spacer2"></li><li class="wmd-button" id="wmd-olist-button" title="Numbered List <ol> Ctrl+O"><span style="background-position: -120px 0px;"></span></li><li class="wmd-button" id="wmd-ulist-button" title="Bulleted List <ul> Ctrl+U"><span style="background-position: -140px 0px;"></span></li><li class="wmd-button" id="wmd-heading-button" title="Heading <h1>/<h2> Ctrl+H"><span style="background-position: -160px 0px;"></span></li><li class="wmd-button" id="wmd-hr-button" title="Horizontal Rule <hr> Ctrl+R"><span style="background-position: -180px 0px;"></span></li><li class="wmd-spacer wmd-spacer3" id="wmd-spacer3"></li><li class="wmd-button" id="wmd-undo-button" title="Undo - Ctrl+Z"><span style="background-position: -200px 0px;"></span></li><li class="wmd-button" id="wmd-redo-button" title="Redo - Ctrl+Shift+Z"><span style="background-position: -220px -20px;"></span></li><li class="wmd-spacer wmd-spacer-max"></li><li class="s-btn s-btn__muted s-btn__sm as-center active-help is-selected" id="wmd-help-button" title="Markdown Editing Help" style="right: 0px;">Hide formatting tips</li></ul></div><div id="mdhelp" class="mdhelp bg-black-025  bl br bc-black-200" style="">
+    <ul id="mdhelp-tabs" class="mdhelp-tabs bg-black-025 d-flex overflow-x-auto overflow-y-hidden">
+        <li data-tab="mdhelp-links" data-buttons="link" data-gps-track="mdhelp.click({ help_type: 1 })" class="bg-black-025 js-gps-track">Links</li>
+        <li data-tab="mdhelp-images" data-buttons="image" data-gps-track="mdhelp.click({ help_type: 2 })" class="bg-black-025 js-gps-track">Images</li>
+        <li data-tab="mdhelp-styles" data-buttons="bold,italic,heading" data-gps-track="mdhelp.click({ help_type: 3 })" class="bg-black-025 js-gps-track">Styling/Headers</li>
+        <li data-tab="mdhelp-lists" data-buttons="olist,ulist" data-gps-track="mdhelp.click({ help_type: 4 })" class="bg-black-025 js-gps-track">Lists</li>
+        <li data-tab="mdhelp-blockquotes" data-buttons="quote" data-gps-track="mdhelp.click({ help_type: 5 })" class="bg-black-025 js-gps-track">Blockquotes</li>
+        <li data-tab="mdhelp-code" data-buttons="code" data-gps-track="mdhelp.click({ help_type: 6 })" class="bg-black-025 js-gps-track">Code</li>
+        <li data-tab="mdhelp-html" class="bg-black-025 js-gps-track" data-gps-track="mdhelp.click({ help_type: 7 })"> HTML </li>
+ <li data-tab="mdhelp-tables" class="bg-black-025 js-gps-track" data-gps-track="mdhelp.click({ help_type: 9 })"> Tables </li>         <li>
+            <a href="/editing-help" target="_blank" data-gps-track="mdhelp.click({ help_type: 8 })" class="bg-black-025 js-gps-track">
+                <div class="d-flex">
+                    <div class="flex--item mr4">More</div>
+                    <div class="flex--item"><svg aria-hidden="true" class="va-middle svg-icon iconShareSm" width="14" height="14" viewBox="0 0 14 14"><path d="M5 1H3a2 2 0 0 0-2 2v8c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V9h-2v2H3V3h2V1Zm2 0h6v6h-2V4.5L6.5 9 5 7.5 9.5 3H7V1Z"></path></svg></div>
+                </div>
+            </a>
+        </li>
+    </ul>
+
+    <div class="mdhelp-tab bg-white bt bc-black-200" id="mdhelp-links">
+        <div class="mdhelp-tab--content">
+            <div>
+                <p class="fw-bold my8">Use angle brackets to force linking</p>
+                <div class="pl12 my8 ff-mono">
+                    &lt;https://stackoverflow.com&gt;
+                </div>
+                <p class="fw-bold">Create inline text links with Markdown</p>
+                <div class="pl12 my8 ff-mono">
+                    [Text](https://stackoverflow.com)
+                </div>
+                <p class="fw-bold my8">Add alt attributes to links by adding a double space and text after the URL</p>
+                <div class="pl12 my8 ff-mono">
+                    [Text](https://stackoverflow.com<code class="bg-black-050">&nbsp;&nbsp;</code>"this text appears on mouseover")
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mdhelp-tab bg-white bt bc-black-200" id="mdhelp-images">
+        <div class="mdhelp-tab--content">
+            <div>
+                <p class="fw-bold my8">Add inline images</p>
+
+                <div class="pl12 my8 ff-mono">
+                    ![Text](https://stackoverflow.com/image.jpg)
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mdhelp-tab bg-white bt bc-black-200" id="mdhelp-styles">
+        <div class="mdhelp-tab--content">
+            <div>
+                <p class="fw-bold my8">Use some text styling to make your post more readable</p>
+                <div class="pl12 ff-mono">
+                    <div class="my8">
+                        Line breaks: double space or <code class="ba bc-black-800 px4 py2 bar-sm bg-black-050 fc-black-800 ff-mono">&lt;br /&gt;</code> at the end of each line
+                    </div>
+                    <div class="my8">
+                        <span class="fs-italic">Italics:</span> *asterisks* or _underscores_
+                    </div>
+                    <div class="my8">
+                        <span class="fw-bold">Bold: </span> **double asterisks** or __double underscores__
+                    </div>
+
+                </div>
+                <p class="fw-bold my8">Create sections with headers</p>
+                <pre class="pl12 py0 my8 bg-transparent ws-pre-wrap">A Large Header
+==============
+
+Smaller Subheader
+-----------------</pre>
+
+                <p class="fw-bold my8">Use hash marks for multiple levels of headers</p>
+                <pre class="pl12 py0 my8 bg-transparent ws-pre-wrap"># Header 1 #
+## Header 2 ##
+### Header 3 ###</pre>
+            </div>
+        </div>
+    </div>
+
+    <div class="mdhelp-tab bg-white bt bc-black-200" id="mdhelp-lists">
+        <div class="mdhelp-tab--content">
+            <div>
+                <p class="fw-bold my8">Create bulleted and numbered lists</p>
+                <pre class="pl12 py0 my8 bg-transparent ws-pre-wrap">- Create bullets with minus sign
++ or plus sign
+* or an asterisk
+1. or sequential numbers</pre>
+
+                <p class="fw-bold my8">Use 4 or 8 spaces to create nested lists</p>
+                <pre class="pl12 py0 my8 bg-transparent ws-pre-wrap">1. List item
+<span class="bg-black-050">    </span>- Item A, four spaces
+<span class="bg-black-050">        </span>* Item B, eight spaces</pre>
+            </div>
+        </div>
+    </div>
+
+    <div class="mdhelp-tab bg-white bt bc-black-200" id="mdhelp-blockquotes">
+        <div class="mdhelp-tab--content">
+            <div>
+                <p class="fw-bold my8">Add &gt; to the beginning of each line to create a blockquote</p>
+                <pre class="pl12 py0 my8 bg-transparent ws-pre-wrap">&gt; A standard blockquote is indented
+&gt; &gt; A nested blockquote is indented more
+&gt; &gt; &gt; &gt; You can nest to any depth.</pre>
+            </div>
+        </div>
+    </div>
+
+    <div class="mdhelp-tab bg-white bt bc-black-200" id="mdhelp-code">
+        <div class="mdhelp-tab--content">
+            <div>
+                <p class="fw-bold my8">Create code fences by placing your code between sets of 3 backticks ` or use CTRL + K</p>
+                <div class="pl12 ff-mono my8">
+                    <code class="d-inline-block mln4 p4 bg-black-050 fc-black-800 ff-mono ws2">```
+like so
+```</code>
+                </div>
+                <p class="fw-bold my8">Create inline code spans by placing text between single backticks</p>
+                <div class="pl12 ff-mono my8">
+                    <code class="d-inline-block mln4 p4 bg-black-050 fc-black-800 ff-mono ws2">`like so`</code>
+                </div>
+                <p class="fw-bold my8">Add a preformatted block within a list with eight spaces</p>
+                <pre class="pl12 py0 my8 bg-transparent ws-pre-wrap">1. This is normal text
+2. This is a list item
+<span class="bg-black-050"> </span>
+<span class="bg-black-050">        </span>Skip a line and indent eight spaces.
+<span class="bg-black-050">        </span>Eight spaces will trigger the code block.</pre>
+            </div>
+        </div>
+    </div>
+
+    <div class="mdhelp-tab bg-white bt bc-black-200" id="mdhelp-html">
+        <div class="mdhelp-tab--content">
+            <div>
+                <p class="my8">
+                    <b>Use HTML in combination with Markdown</b> (<a href="https://meta.stackexchange.com/questions/1777/what-html-tags-are-allowed" target="_blank">What's supported? Note: We advise against mixing HTML and Markdown.</a>)
+                </p>
+                <pre class="pl12 py0 my8 bg-transparent ws-pre-wrap">&lt;strike&gt;Markdown works * fine* in here.&lt;/strike&gt;</pre>
+
+                <p class="fw-bold my8">Block-level HTML elements have restrictions</p>
+                <div class="pl12 my8">
+                    <pre class="p0 m0 bg-transparent ws-pre-wrap">1. Use blank lines to separate them from surrounding text
+2. The opening and closing tags of the outermost block elements must not be indented
+
+</pre>
+                    <pre class="d-inline-block mln4 my0 p4 bg-black-050 fc-black-800 ws-pre-wrap">&lt;pre&gt;
+    You &lt;em&gt;cannot&lt;/em&gt; use Markdown here
+&lt;/pre&gt;</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="mdhelp-tab bg-white bt bc-black-200" id="mdhelp-tables">
+            <div class="mdhelp-tab--content">
+                <p class="my8">
+                    <b>Create tables using the <a href="https://github.github.com/gfm/#tables-extension-">GitHub-flavored markdown format</a></b>
+                </p>
+                <pre class="my8 p4 bg-transparent ws-pre-wrap">| A header | Another header |
+| -------- | -------------- |
+| First    | row            |
+| Second   | row            |</pre>
+
+                <p class="my8">
+                    A header row is required and must be followed by a separator row with the same number of cells. Cells are separated by a pipe (<code>|</code>) symbol.
+                </p>
+
+                <p class="my8">
+                    <b>Set the alignment of a table column by placing a <code>:</code> on the left, right, or both sides of a separator in the separator line</b>
+                </p>
+                <pre class="my8 p4 bg-transparent ws-pre-wrap">| left | center | right |
+|:---- |:------:| -----:|
+| One  | Two    | Three |</pre>
+            </div>
+        </div>
+
+    <div class="cbt"></div>
+</div>
+                <div class="js-stacks-validation">
+                    <div class="ps-relative">
+                        <textarea id="wmd-input" name="post-text" class="wmd-input s-input bar0 js-post-body-field processed" data-post-type-id="1" cols="92" rows="15" tabindex="101" data-min-length="">I wanted to use selenium in javascript,
+but I there are some error codes when I ran the code.
+In python, I avoid this errors by this code:
+
+```
+options = wd.ChromeOptions()
+options.add_experimental_option("excludeSwitches", ["enable-logging"])
+```
+Is there any way to solve this problem in javascript?
+This is our error code:
+```
+[33448:11152:0715/135211.483:ERROR:device_event_log_impl.cc(214)] [13:52:11.483] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection:
+```
+</textarea>
+                    <div class="grippie bbr-sm" style="margin-right: 0px;"></div></div>
+                    <div class="s-input-message mt4 d-none js-stacks-validation-message"></div>
+                </div>
+            </div>
+        </div>
+
+    <aside class="d-flex ai-start jc-space-between js-answer-help s-notice s-notice__warning pb0 pr4 pt4 mb8 d-none" role="status" aria-hidden="true">
+    <div class="flex--item pt8">
+        <p>Thanks for contributing an answer to Stack Overflow!</p><ul><li>Please be sure to <em>answer the question</em>. Provide details and share your research!</li></ul><p>But <em>avoid</em> …</p><ul><li>Asking for help, clarification, or responding to other answers.</li><li>Making statements based on opinion; back them up with references or personal experience.</li></ul><p>To learn more, see our <a href="/help/how-to-answer">tips on writing great answers</a>.</p>
+    </div>
+    <button class="flex--item js-answer-help-close-btn s-btn s-btn__muted fc-dark">
+        <svg aria-hidden="true" class="svg-icon iconClear" width="18" height="18" viewBox="0 0 18 18"><path d="M15 4.41 13.59 3 9 7.59 4.41 3 3 4.41 7.59 9 3 13.59 4.41 15 9 10.41 13.59 15 15 13.59 10.41 9 15 4.41Z"></path></svg>
+    </button>
+</aside>
+
+        <aside class="d-flex ai-start jc-space-between js-answer-ban s-notice s-notice__danger pb0 pr4 pt4 mb8 d-none" role="status" aria-hidden="true">
+    <div class="flex--item pt8">
+        <p>Some of your past answers have not been well-received, and you're in danger of being <a href="/help/answer-bans">blocked from answering</a>.</p><p>Please pay close attention to the following guidance:</p><ul><li>Please be sure to <em>answer the question</em>. Provide details and share your research!</li></ul><p>But <em>avoid</em> …</p><ul><li>Asking for help, clarification, or responding to other answers.</li><li>Making statements based on opinion; back them up with references or personal experience.</li></ul><p>To learn more, see our <a href="/help/how-to-answer">tips on writing great answers</a>.</p>
+    </div>
+    <button class="flex--item js-answer-ban-close-btn s-btn s-btn__muted fc-dark">
+        <svg aria-hidden="true" class="svg-icon iconClear" width="18" height="18" viewBox="0 0 18 18"><path d="M15 4.41 13.59 3 9 7.59 4.41 3 3 4.41 7.59 9 3 13.59 4.41 15 9 10.41 13.59 15 15 13.59 10.41 9 15 4.41Z"></path></svg>
+    </button>
+</aside>
+
+
+        <div class="d-flex pb12 fc-light fs-caption gs8">
+            <div class="flex--item">
+                ``` <code class="ba bc-black-800 px4 py2 bar-sm bg-black-050 fc-black-800 ff-mono">code</code> ```
+            </div>
+            <div class="flex--item fw-bold">
+                **bold**
+            </div>
+            <div class="flex--item fs-italic">
+                *italic*
+            </div>
+            <div class="flex--item">
+                &gt;quote
+            </div>
+        </div>
+
+    <div>
+        <div id="draft-saved" class="fc-success h24" style="display:none;">Draft saved</div>
+        <div id="draft-discarded" class="fc-error h24" style="display:none;">Draft discarded</div>
+    </div>
+
+
+            <div id="wmd-preview" class="s-prose mb16 wmd-preview js-wmd-preview"><p>I wanted to use selenium in javascript,
+but I there are some error codes when I ran the code.
+In python, I avoid this errors by this code:</p>
+<pre><code>options = wd.ChromeOptions()
+options.add_experimental_option("excludeSwitches", ["enable-logging"])
+</code></pre>
+<p>Is there any way to solve this problem in javascript?
+This is our error code:</p>
+<pre><code>[33448:11152:0715/135211.483:ERROR:device_event_log_impl.cc(214)] [13:52:11.483] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection:
+</code></pre>
+</div>
+            <div></div>
+
+        <div class="edit-block">
+            <input id="fkey" name="fkey" type="hidden" value="30a3ab7e3261b7b8e72fd1071608b2b70e4fb58c673173fad9b87a61261f632c">
+            <input id="author" name="author" type="text">
+        <input type="hidden" name="i1l" value="b9tIQh4TyXvx/HPLl/SWNfnE8smQqPrwk28r/WQQjBM="></div>
+
+</div>
+
+
+                    <div class="ps-relative" id="tag-editor">
+                        
+<script>
+StackExchange.using("tagEditor", function () {
+    var channelOptions = {
+        tags: "".split(" "),
+        id: "1"
+    };
+    initTagRenderer("".split(" "), "".split(" "), channelOptions);
+    StackExchange.tagEditor($("#tagnames"), {
+        responsiveIsh: true,
+        useStacksClasses: true,
+        columns: 3
+    });
+    StackExchange.tagEditor.ready.then(function () {
+        StackExchange.using("beginEditEvent", function () {
+            StackExchange.beginEditEvent.init();
+        });
+    });
+});
+</script>
+
+<div class="ps-relative">
+    <div class="form-item p0 js-stacks-validation js-tag-editor-container">
+        <div class="d-flex ai-center jc-space-between">
+            <label for="tageditor-replacing-tagnames--input" class="s-label mb4 d-block flex--item fl1 ">
+                Tags
+                    <div class="s-description mt2">Add up to 5 tags to describe what your question is about</div>
+            </label>
+                <a class="flex--item s-btn p8" aria-controls="how-to-tag-popover" aria-label="How" to="" tag="" data-controller="s-popover" data-action="click->s-popover#toggle" data-s-popover-placement="top-end" aria-expanded="false">
+                    <svg aria-hidden="true" class="svg-icon iconHelpSm" width="14" height="14" viewBox="0 0 14 14"><path d="M7 1C3.74 1 1 3.77 1 7c0 3.26 2.77 6 6 6 3.27 0 6-2.73 6-6s-2.73-6-6-6Zm1.06 9.06c-.02.63-.48 1.02-1.1 1-.57-.02-1.03-.43-1.01-1.06.02-.63.5-1.04 1.08-1.02.6.02 1.05.45 1.03 1.08Zm.73-3.07-.47.3c-.2.15-.36.36-.44.6a3.6 3.6 0 0 0-.08.65c0 .04-.03.14-.16.14h-1.4c-.14 0-.16-.09-.16-.13-.01-.5.11-.99.36-1.42A4.6 4.6 0 0 1 7.7 6.07c.15-.1.21-.21.3-.33.18-.2.28-.47.28-.74.01-.67-.53-1.14-1.18-1.14-.9 0-1.18.7-1.18 1.46H4.2c0-1.17.31-1.92.98-2.36a3.5 3.5 0 0 1 1.83-.44c.88 0 1.58.16 2.2.62.58.42.88 1.02.88 1.82 0 .5-.17.9-.43 1.24-.15.2-.44.47-.86.79h-.01Z"></path></svg>
+                </a>
+                <div class="s-popover" id="how-to-tag-popover" role="menu">
+                    <div class="s-popover--arrow"></div>
+                    <div class="fs-body3 mb8">How to tag</div>
+
+                        <p>Tags help the right people find and answer your question.</p>
+                        <ul>
+                            <li>Identify your tags by completing the sentence, "My question is about…"</li>
+                                <li>Include tags that are crucial to your question only, like <div class="s-tag va-baseline">c#</div></li>
+                                <li>Only include version numbers, like <div class="s-tag va-baseline">c#-4.0</div>, when absolutely necessary</li>
+                            <li>
+                                Use existing <a href="/tags" target="_blank">popular tags</a>
+                            </li>
+                        </ul>
+
+                    <div class="fs-body2 mb8">If you can’t find a tag:</div>
+
+<a href="/help/privileges/create-tags" target="_blank">Create new tags</a> or post without it and <a href="https://meta.stackoverflow.com" target="_blank">ask the community</a> to create one for you.                </div>
+        </div>
+        <div class="d-flex fd-column g4 ps-relative">
+            <div class="ps-relative">
+                <input id="tagnames" class="s-input box-border js-post-tags-field" name="tagnames" type="text" size="60" value="" tabindex="103" placeholder="e.g. (ruby-on-rails c xcode)" style="display: none;"><div class="js-tag-editor tag-editor multi-line s-input" style="padding: 0px 9.1px; box-sizing: border-box; margin-top: 0px; margin-bottom: 0px; width: 100%;"><span></span><input type="text" autocomplete="off" tabindex="103" placeholder="" id="tageditor-replacing-tagnames--input" class="s-input js-tageditor-replacing" style="width: 46px;"><span></span></div>
+            </div>
+                <div class="js-community-icons"></div>
+        </div>
+        <div class="s-input-message d-none js-stacks-validation-message"></div>
+    </div>
+</div>
+
+                            <div class="js-tag-suggestions hmn0"></div>
+
+
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="js-visible-before-review" style="display: none;">
+                <div class="d-flex gsx gs4 ai-center mt32">
+                    <button class="flex--item s-btn s-btn__primary s-btn__icon ws-nowrap js-begin-review-button js-gps-track is-loading" type="button" tabindex="120" data-gps-track="askpage.review_click">
+                        Review your question
+                    </button>
+                    <button class="flex--item s-btn s-btn__danger ws-nowrap discard-question ">Discard draft</button>
+                </div>
+            </div>
+            <div class="js-visible-during-review" style="display: block;">
+                <div class="js-show-on-question-only js-show-on-question-and-answer">
+                        
+
+                </div>
+
+                <div class="js-show-on-question-only">
+                    <div class="d-flex gsx gs4 ai-center mt16">
+                        <button id="submit-button" class="flex--item s-btn s-btn__primary s-btn__icon ws-nowrap js-submit-button" type="submit" tabindex="120" autocomplete="off">
+                            Post your question
+                        </button>
+                        <button class="flex--item s-btn s-btn__danger ws-nowrap discard-question ">Discard draft</button>
+                    </div>
+                </div>
+                <div class="js-show-on-question-and-answer dno">
+                    <div class="d-flex gsx gs4 ai-center mt16">
+                        <button id="submit-button-42" class="flex--item s-btn s-btn__primary s-btn__icon ws-nowrap js-submit-button" type="submit" tabindex="120" autocomplete="off">
+                            Post your question and answer
+                        </button>
+                        <button class="flex--item s-btn s-btn__danger ws-nowrap discard-question ">Discard draft</button>
+                    </div>
+                </div>
+                <div class="js-show-on-question-only js-show-on-question-and-answer">
+                    <div class="js-general-error pt16 fs-body1 fw-bold fc-red-600 mbn16 validation-error"><div class="message message-error" style="display: inline-block; margin-bottom: 10px;"><div class="message-inner"><div class="message-text">This post appears to be a duplicate of <a href="/questions/73014310/how-can-i-make-screenshots-while-using-selenium" class="question-hyperlink" target="_blank">How can I make screenshots while using selenium?</a></div></div></div></div>
+                </div>
+            </div>
+        <input name="distinctErrorCount" type="hidden" value="0"><input name="distinctWarningCount" type="hidden" value="0"><input name="unresolvedWarningCount" type="hidden" value="0"><input type="hidden" name="tag-suggestions" value=""></form>
+    </div>
+
+    <aside class="fl-shrink0">
+        
+<div class="ws3 ml24 md:d-none" data-controller="right-rail" data-action="s-expandable-control:show->right-rail#onShow s-expandable-control:hide->right-rail#onHide">
+    <div class="s-sidebarwidget s-anchors mb24 js-visible-before-review" style="display: none;">
+        <div class="s-sidebarwidget--header">
+            Step 1: Draft your question
+        </div>
+        <div class="s-sidebarwidget--content d-block bg-white pb0 bbr-sm" id="how-to-ask" data-is-here-when="lg">
+            <div class="mb16">
+                <p>The community is here to help you with specific coding, algorithm, or language problems.</p>
+<p>Avoid asking opinion-based questions.</p>
+            </div>
+                <ol class="list-reset mxn16">
+                        <li class="bb bc-black-075">
+                            <button class="s-btn s-btn__unset d-flex px16 py12 js-gps-track w100 c-pointer" type="button" data-controller="s-expandable-control" data-right-rail-target="step" aria-expanded="true" aria-controls="ask-guidance-expandable-0" data-gps-track="askpage.open_how_to_ask_step({ number: 1 })">
+                                <div class="flex--item fl1 d-flex ai-center">
+                                    <div class="flex--item fc-blue-500">
+                                        <svg aria-hidden="true" class="svg-icon iconOne" width="18" height="18" viewBox="0 0 18 18"><path d="M11 16H9V6.97L6 7.8V5.56L10.5 4h.5v12Zm5.25-1a1.25 1.25 0 1 1-2.5 0 1.25 1.25 0 0 1 2.5 0Z" opacity=".2"></path><path d="M9 15H7V5.97L4 6.8V4.56L8.5 3H9v12Zm5.25-1a1.25 1.25 0 1 1-2.5 0 1.25 1.25 0 0 1 2.5 0Z"></path></svg>
+                                    </div>
+                                    <span class="flex--item ml8 fw-bold">Summarize the problem</span>
+                                </div>
+                                <div>
+                                    <div class="d-none js-arrow-down"><svg aria-hidden="true" class="svg-icon iconArrowDownAlt" width="18" height="18" viewBox="0 0 18 18"><path d="m16.01 7.43-1.4-1.41L9 11.6 3.42 6l-1.4 1.42 7 7 7-7Z"></path></svg></div>
+                                    <div class=" js-arrow-up "><svg aria-hidden="true" class="svg-icon iconArrowUpAlt" width="18" height="18" viewBox="0 0 18 18"><path d="m16.01 10.62-1.4 1.4L9 6.45l-5.59 5.59-1.4-1.41 7-7 7 7Z"></path></svg></div>
+                                </div>
+                            </button>
+                            <div class="s-expandable is-expanded mx16" id="ask-guidance-expandable-0">
+                                <div class="s-expandable--content pb12 ml16 pl4">
+                                    <ul class="ml24 mb0"><li><p>Include details about your goal</p></li><li><p>Describe expected and actual results</p></li><li><p class="mb0">Include any error messages</p></li></ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="bb bc-black-075">
+                            <button class="s-btn s-btn__unset d-flex px16 py12 js-gps-track w100 c-pointer" type="button" data-controller="s-expandable-control" data-right-rail-target="step" aria-expanded="false" aria-controls="ask-guidance-expandable-1" data-gps-track="askpage.open_how_to_ask_step({ number: 2 })">
+                                <div class="flex--item fl1 d-flex ai-center">
+                                    <div class="flex--item fc-blue-500">
+                                        <svg aria-hidden="true" class="svg-icon iconTwo" width="18" height="18" viewBox="0 0 18 18"><path d="M17.25 15a1.25 1.25 0 1 1-2.5 0 1.25 1.25 0 0 1 2.5 0Zm-4.29 1h-7.8v-1.55l3.68-3.92a9.2 9.2 0 0 0 1.12-1.44c.25-.42.37-.8.37-1.18 0-.5-.13-.9-.38-1.18-.26-.3-.62-.44-1.1-.44-.5 0-.91.18-1.2.53-.3.35-.45.64-.45 1.21H4.94c0-.7.16-1.15.49-1.73a3.5 3.5 0 0 1 1.4-1.34c.61-.33 1.3-.5 2.06-.5 1.17 0 2.08.29 2.73.85a3 3 0 0 1 .97 2.39 3.8 3.8 0 0 1-.43 1.71c-.3.59-.8 1.27-1.5 2.04l-2.59 2.73h4.9V16Z" opacity=".2"></path><path d="M10.96 15h-7.8v-1.55l3.68-3.92a9.2 9.2 0 0 0 1.12-1.44c.25-.42.42-.93.42-1.3 0-.4 0-.88-.34-1.27-.26-.3-.71-.54-1.19-.54-.5 0-.91.18-1.2.54-.3.34-.45.94-.45 1.51H2.94c0-.7.16-1.59.49-2.16a3.5 3.5 0 0 1 1.4-1.35c.61-.32 1.3-.49 2.06-.49 1.17 0 2.07.4 2.72.95.65.57.98 1.69.98 2.72a3.8 3.8 0 0 1-.43 1.71c-.3.59-.8 1.27-1.5 2.04l-2.59 2.73h4.9V15Zm4.29-1a1.25 1.25 0 1 1-2.5 0 1.25 1.25 0 0 1 2.5 0Z"></path></svg>
+                                    </div>
+                                    <span class="flex--item ml8 fw-bold">Describe what you’ve tried</span>
+                                </div>
+                                <div>
+                                    <div class=" js-arrow-down"><svg aria-hidden="true" class="svg-icon iconArrowDownAlt" width="18" height="18" viewBox="0 0 18 18"><path d="m16.01 7.43-1.4-1.41L9 11.6 3.42 6l-1.4 1.42 7 7 7-7Z"></path></svg></div>
+                                    <div class="d-none js-arrow-up "><svg aria-hidden="true" class="svg-icon iconArrowUpAlt" width="18" height="18" viewBox="0 0 18 18"><path d="m16.01 10.62-1.4 1.4L9 6.45l-5.59 5.59-1.4-1.41 7-7 7 7Z"></path></svg></div>
+                                </div>
+                            </button>
+                            <div class="s-expandable mx16" id="ask-guidance-expandable-1">
+                                <div class="s-expandable--content pb12 ml16 pl12">
+                                    Show what you’ve tried and tell us what you found (on this site or elsewhere) and why it didn’t meet your needs. You can get better answers when you provide research.
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <button class="s-btn s-btn__unset d-flex px16 py12 js-gps-track w100 c-pointer" type="button" data-controller="s-expandable-control" data-right-rail-target="step" aria-expanded="false" aria-controls="ask-guidance-expandable-2" data-gps-track="askpage.open_how_to_ask_step({ number: 3 })">
+                                <div class="flex--item fl1 d-flex ai-center">
+                                    <div class="flex--item fc-blue-500">
+                                        <svg aria-hidden="true" class="svg-icon iconThree" width="18" height="18" viewBox="0 0 18 18"><path d="M8.07 9.23h1.2c.58 0 1-.14 1.28-.43.27-.28.41-.66.41-1.14 0-.45-.14-.81-.41-1.07a1.58 1.58 0 0 0-1.13-.38c-.43 0-.8.12-1.08.36-.3.23-.44.54-.44.92H5.64c0-.6.16-1.12.48-1.6.32-.47.77-.84 1.34-1.1.58-.27 1.21-.4 1.9-.4 1.21 0 2.15.29 2.84.87a2.93 2.93 0 0 1 1.02 2.37c0 .52-.16 1-.48 1.44a3.1 3.1 0 0 1-1.25 1 2.8 2.8 0 0 1 1.43 1.04c.32.46.48 1 .48 1.62a3 3 0 0 1-1.11 2.43c-.74.61-1.7.92-2.92.92-1.14 0-2.07-.3-2.8-.9A2.94 2.94 0 0 1 5.5 12.8h2.26c0 .43.16.78.47 1.05.33.27.72.4 1.2.4.53 0 .95-.13 1.25-.41.3-.29.46-.67.46-1.14 0-1.13-.62-1.7-1.87-1.7h-1.2V9.23ZM17.25 15a1.25 1.25 0 1 1-2.5 0 1.25 1.25 0 0 1 2.5 0Z" opacity=".2"></path><path d="M6.07 7.83h1.2c.58 0 1-.15 1.28-.43.27-.29.41-.67.41-1.14 0-.46-.14-.82-.41-1.07a1.58 1.58 0 0 0-1.13-.39c-.43 0-.8.12-1.08.36-.3.24-.44.55-.44.93H3.64c0-.6.16-1.13.48-1.6.32-.47.77-.84 1.34-1.1.58-.27 1.21-.4 1.9-.4 1.21 0 2.15.28 2.84.86a2.93 2.93 0 0 1 1.02 2.38 2.92 2.92 0 0 1-1.73 2.61c.64.23 1.12.81 1.43 1.27.32.46.48 1 .48 1.62a3 3 0 0 1-1.11 2.43c-.74.61-1.7.92-2.92.92-1.14 0-2.07-.3-2.8-.9A2.94 2.94 0 0 1 3.5 11.8h2.26c0 .43.16.78.47 1.05.33.27.72.4 1.2.4.53 0 .95-.13 1.25-.41.3-.29.46-.67.46-1.14 0-1.13-.62-1.7-1.87-1.7h-1.2V7.83ZM15.25 14a1.25 1.25 0 1 1-2.5 0 1.25 1.25 0 0 1 2.5 0Z"></path></svg>
+                                    </div>
+                                    <span class="flex--item ml8 fw-bold">Show some code</span>
+                                </div>
+                                <div>
+                                    <div class=" js-arrow-down"><svg aria-hidden="true" class="svg-icon iconArrowDownAlt" width="18" height="18" viewBox="0 0 18 18"><path d="m16.01 7.43-1.4-1.41L9 11.6 3.42 6l-1.4 1.42 7 7 7-7Z"></path></svg></div>
+                                    <div class="d-none js-arrow-up "><svg aria-hidden="true" class="svg-icon iconArrowUpAlt" width="18" height="18" viewBox="0 0 18 18"><path d="m16.01 10.62-1.4 1.4L9 6.45l-5.59 5.59-1.4-1.41 7-7 7 7Z"></path></svg></div>
+                                </div>
+                            </button>
+                            <div class="s-expandable mx16" id="ask-guidance-expandable-2">
+                                <div class="s-expandable--content pb12 ml16 pl12">
+                                    When appropriate, share the minimum amount of code others need to reproduce your problem (also called a <a href="/help/minimal-reproducible-example" target="_blank">minimum, reproducible example</a>)
+                                </div>
+                            </div>
+                        </li>
+                </ol>
+        </div>
+    </div>
+        <div class="s-sidebarwidget s-anchors mb24 js-visible-before-review" style="display: none;">
+            <div class="s-sidebarwidget--header bbr-sm js-widget-header">
+                <button class="s-btn s-btn__unset d-flex js-gps-track w100 c-pointer" type="button" data-controller="s-expandable-control" aria-expanded="false" aria-controls="other-site-links" data-gps-track="askpage.open_guidance_section({number: 2})">
+                    <div class="flex--item fl1 ta-left">
+                        Have a non-programming question?
+                    </div>
+                    <div class="flex--item">
+                        <div class="js-arrow-down s-link s-link__inherit"><svg aria-hidden="true" class="svg-icon iconArrowDownAlt" width="18" height="18" viewBox="0 0 18 18"><path d="m16.01 7.43-1.4-1.41L9 11.6 3.42 6l-1.4 1.42 7 7 7-7Z"></path></svg></div>
+                        <div class="d-none js-arrow-up s-link s-link__inherit"><svg aria-hidden="true" class="svg-icon iconArrowUpAlt" width="18" height="18" viewBox="0 0 18 18"><path d="m16.01 10.62-1.4 1.4L9 6.45l-5.59 5.59-1.4-1.41 7-7 7 7Z"></path></svg></div>
+                    </div>
+                </button>
+            </div>
+            <div class="s-expandable" id="other-site-links">
+                <div class="s-expandable--content">
+                    <div class="s-sidebarwidget--content d-block bg-white bbr-sm">
+                        <p>
+                            <a class="js-gps-track" data-gps-track="askpage.click_guidance_link({target: 'superuser'})" href="https://superuser.com/help/on-topic" target="_blank">Super user</a><br>
+                            Troubleshooting hardware and software issues
+                        </p>
+                        <p>
+                            <a class="js-gps-track" data-gps-track="askpage.click_guidance_link({target: 'softwareengineering'})" href="https://softwareengineering.stackexchange.com" target="_blank">Software engineering</a><br>
+                            For software development methods and process questions
+                        </p>
+                        <p>
+                            <a class="js-gps-track" data-gps-track="askpage.click_guidance_link({target: 'hardwarerecs'})" href="https://hardwarerecs.stackexchange.com/help/on-topic" target="_blank">Hardware recommendations</a>
+                        </p>
+                        <p>
+                            <a class="js-gps-track" data-gps-track="askpage.click_guidance_link({target: 'softwarerecs'})" href="https://softwarerecs.stackexchange.com/help/on-topic" target="_blank">Software recommendations</a>
+                        </p>
+                        <p class="mb0">Ask questions about the site on <a class="js-gps-track" data-gps-track="askpage.click_guidance_link({target: 'meta'})" href="https://meta.stackoverflow.com" target="_blank">meta</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="s-sidebarwidget s-anchors js-visible-before-review" style="display: none;">
+            <div class="s-sidebarwidget--header bbr-sm js-widget-header">
+                <button class="s-btn s-btn__unset d-flex js-gps-track w100 c-pointer" type="button" data-controller="s-expandable-control" aria-expanded="false" aria-controls="more-helpful-links" data-gps-track="askpage.open_guidance_section({number: 3})">
+                    <div class="flex--item fl1 ta-left">
+More helpful links                    </div>
+                    <div class="flex--item">
+                        <div class="js-arrow-down s-link s-link__inherit"><svg aria-hidden="true" class="svg-icon iconArrowDownAlt" width="18" height="18" viewBox="0 0 18 18"><path d="m16.01 7.43-1.4-1.41L9 11.6 3.42 6l-1.4 1.42 7 7 7-7Z"></path></svg></div>
+                        <div class="js-arrow-up d-none s-link s-link__inherit"><svg aria-hidden="true" class="svg-icon iconArrowUpAlt" width="18" height="18" viewBox="0 0 18 18"><path d="m16.01 10.62-1.4 1.4L9 6.45l-5.59 5.59-1.4-1.41 7-7 7 7Z"></path></svg></div>
+                    </div>
+                </button>
+            </div>
+            <div class="s-expandable" id="more-helpful-links">
+                <div class="s-expandable--content">
+                    <div class="s-sidebarwidget--content d-block bg-white bbr-sm">
+                        <p>
+                            Find more information about <a class="js-gps-track" data-gps-track="askpage.click_guidance_link({target: 'how-to-ask'})" href="/help/how-to-ask" target="_blank">how to ask a good question here</a>
+                        </p>
+                        <p class="mb0">
+                            Visit the <a class="js-gps-track" data-gps-track="askpage.click_guidance_link({target: 'help'})" href="/help" target="_blank">help center</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <div class="js-post-review-summary-container s-sidebarwidget s-anchors js-visible-during-review" style="display: block;">
+        <div class="s-sidebarwidget--header">
+            Step 2: Review your question
+        </div>
+        <div class="s-sidebarwidget--content d-block bg-white bbr-sm" id="review-your-question" data-is-here-when="lg">
+            <div class="js-post-review-summary">
+                <div class="js-loading-message d-none">
+                    <p class="mb0">Loading…</p>
+                </div>
+                <div class="js-success-no-warnings d-flex">
+                    <div class="flex--item mr16">
+                        <img width="20" height="20" src="https://cdn.sstatic.net/Img/ask/success.svg?v=b9c8125e2f1c" alt="Success">
+                    </div>
+                    <div class="flex--item mr4">
+                        <div class="d-flex ai-center fw-bold" style="min-height: 20px">
+                            <div>Your question is ready to publish!</div>
+                        </div>
+                        <p class="mt6 mb0">Our automated system checked for ways to improve your question and found none.</p>
+                    </div>
+                </div>
+                <div class="js-error-container d-flex d-none">
+                    <div class="flex--item mr16">
+                        <img width="20" height="20" src="https://cdn.sstatic.net/Img/ask/error.svg?v=b373711635d0" alt="Error">
+                    </div>
+                    <div class="flex--item mr4">
+                        <div class="d-flex ai-center fw-bold" style="min-height: 20px">
+                            <div>Your question couldn’t be submitted</div>
+                        </div>
+                        <p class="js-error-message mt6 mb0"></p>
+                    </div>
+                </div>
+                <div class="js-warning-and-error-separator mxn16 my16 bb bc-black-075 d-none"></div>
+                <div class="js-warning-container d-none">
+                    <p class="js-unresolved-warnings-message d-none">Tips to fix your question and improve your chances of getting answers:</p>
+                    <p class="js-resolved-warnings-message">Looks like you’re ready to publish!</p>
+                    <div class="js-warning-list"></div>
+                    <script class="js-warning-template" type="text/html">
+                        <div class="js-separator mxn16 my16 bb bc-black-075"></div>
+                        <div class="d-flex">
+                            <div class="flex--item mr16">
+                                <img class="js-success-icon" width="20" height="20" src="https://cdn.sstatic.net/Img/ask/success.svg?v=b9c8125e2f1c" alt="Resolved issue" />
+                                <img class="js-warning-icon" width="20" height="20" src="https://cdn.sstatic.net/Img/ask/warning.svg?v=336fe0dd3be2" alt="Unresolved issue" />
+                            </div>
+                            <div class="flex--item mr4">
+                                <div class="d-flex ai-center fw-bold" style="min-height: 20px">
+                                    <div class="js-guidance-title"></div>
+                                </div>
+                                <div class="pt6 js-guidance-body d-flex fd-column gsy gs8"></div>
+                            </div>
+                        </div>
+                    </script>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="s-expandable"><div class="s-expandable--content"></div></div>
+</div>
+
+<script>
+    StackExchange.ready(function () {
+
+        Stacks.addController('right-rail', {
+
+            targets: ['step'],
+
+            onShow: function (evt) {
+                this.update($(evt.target), true);
+
+                if (this.stepTargets.indexOf(evt.target !== -1)) {
+                    this.stepTargets.forEach(function (step) {
+                        if (step !== evt.target && step.getAttribute('aria-expanded') === 'true') {
+                            // DOM click
+                            step.click();
+                        }
+                    });
+                }
+            },
+
+            onHide: function (evt) {
+                this.update($(evt.target), false);
+            },
+
+            update: function ($target, visible) {
+                $target.find('.js-arrow-up').toggleClass('d-none', !visible);
+                $target.find('.js-arrow-down').toggleClass('d-none', !!visible);
+                $target.closest('.js-widget-header').toggleClass('bbr-sm', !visible);
+            }
+        });
+    });
+</script>
+
+    </aside>
+</div>
+
+<br class="cbt">
+<div style="display:none" id="js-codeblock-lang"></div>
+
+
+        </div>
+    </div>
+
+
+            <footer id="footer" class="site-footer js-footer" role="contentinfo">
+        <div class="site-footer--container">
+                <div class="site-footer--logo">
+                    
+                    <a href="https://stackoverflow.com"><svg aria-hidden="true" class="native svg-icon iconLogoGlyphMd" width="32" height="37" viewBox="0 0 32 37"><path d="M26 33v-9h4v13H0V24h4v9h22Z" fill="#BCBBBB"></path><path d="m21.5 0-2.7 2 9.9 13.3 2.7-2L21.5 0ZM26 18.4 13.3 7.8l2.1-2.5 12.7 10.6-2.1 2.5ZM9.1 15.2l15 7 1.4-3-15-7-1.4 3Zm14 10.79.68-2.95-16.1-3.35L7 23l16.1 2.99ZM23 30H7v-3h16v3Z" fill="#F48024"></path></svg></a>
+                </div>
+            <nav class="site-footer--nav">
+                    <div class="site-footer--col">
+                        <h5 class="-title"><a href="https://stackoverflow.com" class="js-gps-track" data-gps-track="footer.click({ location: 3, link: 15})">Stack Overflow</a></h5>
+                        <ul class="-list js-primary-footer-links">
+                            <li><a href="/questions" class="js-gps-track -link" data-gps-track="footer.click({ location: 3, link: 16})">Questions</a></li>
+                                <li><a href="/help" class="js-gps-track -link" data-gps-track="footer.click({ location: 3, link: 3 })">Help</a></li>
+                        </ul>
+                    </div>
+                    <div class="site-footer--col">
+                        <h5 class="-title"><a href="https://stackoverflow.com/?products" class="js-gps-track" data-gps-track="footer.click({ location: 3, link: 19 })">Products</a></h5>
+                        <ul class="-list">
+                            <li><a href="https://stackoverflow.co/teams" class="js-gps-track -link" data-ga="[&quot;teams traffic&quot;,&quot;footer - site nav&quot;,&quot;stackoverflow.com/teams&quot;,null,{&quot;dimension4&quot;:&quot;teams&quot;}]" data-gps-track="footer.click({ location: 3, link: 29 })">Teams</a></li>
+                            <li><a href="https://stackoverflow.co/advertising" class="js-gps-track -link" data-gps-track="footer.click({ location: 3, link: 21 })">Advertising</a></li>
+                            <li><a href="https://stackoverflow.co/collectives" class="js-gps-track -link" data-gps-track="footer.click({ location: 3, link: 40 })">Collectives</a></li>
+                            <li><a href="https://stackoverflow.co/talent" class="js-gps-track -link" data-gps-track="footer.click({ location: 3, link: 20 })">Talent</a></li>
+                        </ul>
+                    </div>
+                <div class="site-footer--col">
+                    <h5 class="-title"><a class="js-gps-track" data-gps-track="footer.click({ location: 3, link: 1 })" href="https://stackoverflow.co/">Company</a></h5>
+                    <ul class="-list">
+                            <li><a class="js-gps-track -link" data-gps-track="footer.click({ location: 3, link: 1 })" href="https://stackoverflow.co/">About</a></li>
+                        <li><a class="js-gps-track -link" data-gps-track="footer.click({ location: 3, link: 27 })" href="https://stackoverflow.co/company/press">Press</a></li>
+                            <li><a class="js-gps-track -link" data-gps-track="footer.click({ location: 3, link: 9 })" href="https://stackoverflow.co/company/work-here">Work Here</a></li>
+                        <li><a class="js-gps-track -link" data-gps-track="footer.click({ location: 3, link: 7 })" href="https://stackoverflow.com/legal">Legal</a></li>
+                        <li><a class="js-gps-track -link" data-gps-track="footer.click({ location: 3, link: 8 })" href="https://stackoverflow.com/legal/privacy-policy">Privacy Policy</a></li>
+                        <li><a class="js-gps-track -link" data-gps-track="footer.click({ location: 3, link: 37 })" href="https://stackoverflow.com/legal/terms-of-service">Terms of Service</a></li>
+                            <li><a class="js-gps-track -link" data-gps-track="footer.click({ location: 3, link: 13 })" href="https://stackoverflow.co/company/contact">Contact Us</a></li>
+                            <li class="" id="consent-footer-link"><a class="js-gps-track -link js-cookie-settings" data-gps-track="footer.click({ location: 3, link: 38 })" href="#" data-consent-popup-loader="footer">Cookie Settings</a></li>
+                        <li><a class="js-gps-track -link" data-gps-track="footer.click({ location: 3, link: 39 })" href="https://stackoverflow.com/legal/cookie-policy">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                <div class="site-footer--col site-footer--categories-nav">
+                    <div>
+                        <h5 class="-title"><a href="https://stackexchange.com" data-gps-track="footer.click({ location: 3, link: 30 })">Stack Exchange Network</a></h5>
+                        <ul class="-list">
+                            <li>
+                                <a href="https://stackexchange.com/sites#technology" class="-link js-gps-track" data-gps-track="footer.click({ location: 3, link: 24 })">
+                                    Technology
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://stackexchange.com/sites#culturerecreation" class="-link js-gps-track" data-gps-track="footer.click({ location: 3, link: 24 })">
+                                    Culture &amp; recreation
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://stackexchange.com/sites#lifearts" class="-link js-gps-track" data-gps-track="footer.click({ location: 3, link: 24 })">
+                                    Life &amp; arts
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://stackexchange.com/sites#science" class="-link js-gps-track" data-gps-track="footer.click({ location: 3, link: 24 })">
+                                    Science
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://stackexchange.com/sites#professional" class="-link js-gps-track" data-gps-track="footer.click({ location: 3, link: 24 })">
+                                    Professional
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://stackexchange.com/sites#business" class="-link js-gps-track" data-gps-track="footer.click({ location: 3, link: 24 })">
+                                    Business
+                                </a>
+                            </li>
+
+                            <li class="mt16 md:mt0">
+                                <a href="https://api.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 3, link: 24 })">
+                                    API
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://data.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 3, link: 24 })">
+                                    Data
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="site-footer--copyright fs-fine md:mt24">
+                <ul class="-list -social md:mb8">
+                    <li><a class="js-gps-track -link" data-gps-track="footer.click({ location: 3, link:4 })" href="https://stackoverflow.blog?blb=1">Blog</a></li>
+                    <li><a href="https://www.facebook.com/officialstackoverflow/" class="-link js-gps-track" data-gps-track="footer.click({ location: 3, link: 31 })">Facebook</a></li>
+                    <li><a href="https://twitter.com/stackoverflow" class="-link js-gps-track" data-gps-track="footer.click({ location: 3, link: 32 })">Twitter</a></li>
+                    <li><a href="https://linkedin.com/company/stack-overflow" class="-link js-gps-track" data-gps-track="footer.click({ location: 3, link: 33 })">LinkedIn</a></li>
+                    <li><a href="https://www.instagram.com/thestackoverflow" class="-link js-gps-track" data-gps-track="footer.click({ location: 3, link: 36 })">Instagram</a></li>
+                </ul>
+
+                <p class="md:mb0">
+Site design / logo © 2022 Stack Exchange Inc; user contributions licensed under <a href="https://stackoverflow.com/help/licensing">cc by-sa</a>.                    <span id="svnrev">rev&nbsp;2022.7.15.42606</span>
+                </p>
+            </div>
+        </div>
+
+    <img style="display:none" src="//stackexchange.com/users/login/universal.gif?authToken=Fuxmbp3G7NyahEdwEcl1wuPTj4tvVaqu2qcqqMzedOKeLepXr11JoZBYlzL6pPKD9Lvk8qfoeYnySGdw5pk%2B5WXx7l8lpbj9qw480YwkeWffux2y3TPW3SAk9Ys89tNMcxeXGH0y4AZFMoZDX6kKPgn59saipEEDuNZeYEn6t5I38ozLf80r0yNAxuf81ubef0%2BLs%2FffVMQ9yXiMAbl%2B6nXvrAIupitMeQ18fWLWSW7ja7aLFcrKWM56iLwvNY5E3abLmvB4EFcMxXcUgcmWpTWobQMJAogN3PEL2uiLU4T19ot3UpkdF6r3B4JlApOj&amp;nonce=G%2B7UYgAAAAB0yi%2F7EFZ99g%3D%3D" crossorigin="use-credentials"><img style="display:none" src="//serverfault.com/users/login/universal.gif?authToken=KjgEWXjzw73noFkaWdPamVFyTAlX7L5%2BTkJtXlXZGfD9ju9PVygixKdSiDVvbEShmxANxNRiArsUU0wXW1OTPmKAYQYApMUkEtmKCLBTuouO0i5oHJdHOuyiuFzSXoXJlDlJCdXwJBw5G2MryzJG3cdO63lUCG35q5nuGL5%2FPALwc4t6cQ0EGX4cQ3ZhkJ5inOZ2mEOxTbFye%2FuOG57YGEYPxgRH2mbu3ze8trhXBor%2BbcG1XGLQYEJK9qUHlJZT3nmkhkvAp%2FV%2BBE93XlFmD2DIfVaVad24Teiv3E0chbA%3D&amp;nonce=G%2B7UYgAAAADnG0wbRpwDSg%3D%3D" crossorigin="use-credentials"><img style="display:none" src="//superuser.com/users/login/universal.gif?authToken=P0TUgvkIogeSxexPuk6yGcxNja8ay4OIllQjOlXpQfkCF1vwYJvzdIHsiFfYqb%2Bp0JYtAP6zekPqalB90K%2BzQ60ZEIbRmGw1HTbmGpDV7ReAS1I1vwLQPVVONFuZvRupOPaHstYPP7xKKz94YyKxGBI0Nl4gHvETKEHuqSAyu01b0sFwXGE%2B%2FJwz4acfTgfjVXiafixOLEKXnvzWKV1wksmCcf9XZI%2FXwJNWMOuR4TB8uRe1SGT%2BB1Uha5JLIWCzkmMzm%2Fpxfv5Is4rGrPuACHzthLk0OOf8ToAmwPKK2xw%3D&amp;nonce=HO7UYgAAAABOoTGdcuRGkg%3D%3D" crossorigin="use-credentials"><img style="display:none" src="//askubuntu.com/users/login/universal.gif?authToken=RRGDUuLiSDs3acptKKVlIM%2FAg7%2FTnNSZa6dKAw10HzOIVi03icSj69PQni8mhLvBmz0DEkMXu%2FvpEoJXXkCZ%2Bfmydu82TVnsyT1r4QcEw2ZllgSQngfLKU%2BwCe7OUhHLHi4l%2FT30uzVNj4dwZQLB5GXwm0zg3VoQSiVgo4C5MblucbjH2nYU3lH5h%2FC4nXIIRlnujF6Oq7wYOIycJMxBfxEfvtEqnlWkKuwQIHt4p7Us7NqsFlW8s7crMmR%2BdNMz%2B%2FYr41w9wlCUeeIl33J683oG6NtyaC8nWclBK4KoJok%3D&amp;nonce=HO7UYgAAAAB9BJPgLSkcZA%3D%3D" crossorigin="use-credentials"><img style="display:none" src="//stackapps.com/users/login/universal.gif?authToken=tqsDPFTUgL4N%2FKCxZM7mepn%2FaeuLY2QeH%2BOwJp7eF6%2F8iZNsAt6WdU1iFINqd9rmHlg9TgWYH8M8dXhuHPlNUESKTuU4a0tMl8VCUVBlvl0Iph6T7ExgCjqkIs2DsoNT5Mz1QiIJZQuHE2Itoq7v8NutTFYUxdedniQiRpnrZSaZykBIZSyLtDwoCj%2FMrQ%2FFYbmTQiQH0sSc3AOMABhv64mNlpwJBVzaJRB%2B0wAVXsp9j9k56J5zEFYxhCvg1uo6EaZXXenGA5%2BHuY8bgOzDfbJEm%2FqoeOG7wbe11nwS5sI%3D&amp;nonce=HO7UYgAAAAAouLPfW3IM%2BQ%3D%3D" crossorigin="use-credentials"><img style="display:none" src="//mathoverflow.net/users/login/universal.gif?authToken=RIJflP6lgz2z5xmCp2iBgru2O1PDPOEXrX6EG87eTPVhwk%2FbPDH8xAAEBnyvUA5%2FaO5mRUK2XTCaGQU4zVJ28rnKIEpIb2AnfFBhmeUNRK%2BLn6h559uG5vAwS8np0R2fcponZqTtNGks%2BfwHBEWI4oDS%2BT%2B9aKkdcLxxOxEZwM8yqu8jNoGJWnUKGDDzzT2LcqwO3WKp5Mjei%2BZytb5POYTQtXRR9V2Bh6G1Mu9OqCO4A5rVAuENxHD0mOCWzByu4u%2B%2Fzdjv7FO6GGIt4djOSlN9bVeT79lpz1UqURSbrCaPMlmJWk0VgrlJz3QUJ60r&amp;nonce=HO7UYgAAAABvyY%2Fj%2BR5ptA%3D%3D" crossorigin="use-credentials"></footer>
+
+
+        <script>
+    </script>
+
+        
+    <div id="onetrust-consent-sdk" class="d-none"></div>
+    <div id="onetrust-banner-sdk" data-controller="s-modal"></div>
+    <div id="ot-pc-content" class="d-none"></div>
+    <div id="onetrust-style" class="d-none">&nbsp;</div>
+    <div class="d-none js-consent-banner-version" data-consent-banner-version="baseline"></div>
+
+    
+    
+    
+</body></html>
