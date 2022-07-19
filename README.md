@@ -48,6 +48,7 @@
 ## 1. 글목록
 
 <img src="https://user-images.githubusercontent.com/68576681/179735267-ced24f4a-ba23-47e1-a0f3-5b787a41e1e4.PNG" width="320" height="180">  
+
 ### Major Features
 * 로그인한 유저가 업로드한 게시글 목록이 표시됩니다.
 * 날짜와 게시글 제목 정보가 테이블에 함께 표시됩니다.
@@ -58,7 +59,7 @@
 
 ## 2. 글쓰기
 
-<img src="https://user-images.githubusercontent.com/89140546/178481699-a31c1c6e-3691-4c3f-a686-1688657e5875.jpg" width="200" height="400">  <img src="https://user-images.githubusercontent.com/89140546/178481701-b0db7f1c-15ec-4833-b5fb-b67780273a2d.jpg" width="200" height="400">
+<img src="https://user-images.githubusercontent.com/68576681/179735275-d206835a-5f48-4136-9d62-800bb6b04eac.PNG" width="320" height="180">
 ### Major Features
 * 새로운 게시글을 작성할 수 있습니다.
 * 텍스트 서식을 지정하고 사진 등 추가적인 미디어를 업로드할 수 있습니다.
@@ -75,9 +76,9 @@
 * 사이트의 component는 id, xpath, classname을 이용하여 인식합니다.
 * 사이트의 봇 업로드 차단 기능을 회피하기 위해 각 문자 입력 전에 임의의 시간만큼 대기합니다.
 
-## 3. 글 내용
+## 3. 글 내용보기
 
-<img src="https://user-images.githubusercontent.com/89140546/178483273-b345b152-bb3e-429a-ac53-cc61c562fc9d.jpg" width="200" height="400">  <img src="https://user-images.githubusercontent.com/89140546/178483279-48dd2699-5cc5-400e-8f81-fe00b334ba4a.jpg" width="200" height="400">  <img src="https://user-images.githubusercontent.com/89140546/178483286-e3974b8b-0335-4bf7-81e3-e2f60bddd5ce.jpg" width="200" height="400"> 
+<img src="https://user-images.githubusercontent.com/68576681/179735272-82a9414c-368d-4543-a24d-d46009141cb8.PNG" width="320" height="180">  
 
 ### Major Features
 * 게시글 제목과 내용이 출력됩니다.
@@ -92,7 +93,7 @@
 
 ## 4. 글 수정
 
-<img src="https://user-images.githubusercontent.com/89140546/178483278-ddd9934e-433b-45e9-a7ba-4687eb74166c.jpg" width="200" height="400"> 
+<img src="https://user-images.githubusercontent.com/68576681/179735281-0d312ab9-60af-4522-ac2a-fe6122b88ae5.PNG" width="320" height="180"> <img src="https://user-images.githubusercontent.com/68576681/179735282-cc7ad56b-89a0-4e81-9a9e-4083f0bf1702.PNG" width="320" height="180"> 
 
 ### Major Features
 * 게시글의 제목과 내용을 수정할 수 있습니다.
