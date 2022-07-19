@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Table, Button } from "react-bootstrap";
+import { Table, Button, Form } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import axios from "axios";
 axios.defaults.withCredentials = true;
@@ -56,7 +56,7 @@ class BoardDetail extends Component {
           console.log(returnData.data.board[0])
           const board = (
             <div>
-              <Table striped bordered hover>
+              <Table bordered>
                 <thead>
                   <tr>
                     <th>{returnData.data.board[0].title}</th>
@@ -65,11 +65,34 @@ class BoardDetail extends Component {
                 <tbody>
                   <tr>
                     <td
+                      height = {300}
                       dangerouslySetInnerHTML={{
                         __html: returnData.data.board[0].content
                       }}
                     ></td>
                   </tr>
+                  {returnData.data.board[0].stackoverflow &&
+                  <tr>  
+                    <td> <img src="img/stackoverflow.png" alt="stackoverflow" height={30}/> {": "+returnData.data.board[0].stackoverflow} </td> 
+                  </tr>  }
+                  {returnData.data.board[0].serverfault &&
+                  <tr>
+                    <td> <img src="img/serverfault.png" alt="serverfault" height={30}/> {": "+returnData.data.board[0].serverfault} </td> 
+                  </tr>  }
+                  {returnData.data.board[0].superuser &&
+                  <tr>      
+                    <td> <img src="img/superuser.png" alt="superuser" height={30}/> {": "+returnData.data.board[0].superuser} </td> 
+                  </tr>  }
+                  {returnData.data.board[0].askubuntu &&
+                  <tr>
+                    <td> <img src="img/askubuntu.png" alt="askubuntu" height={30}/> {": "} <a href={returnData.data.board[0].askubuntu}>{returnData.data.board[0].askubuntu}</a> </td> 
+                  </tr>  }
+                  {returnData.data.board[0].askdifferent &&
+                  <tr>
+                    <td> <img src="img/askdifferent.png" alt="askdifferent" height={30}/> {": "+returnData.data.board[0].askdifferent} </td> 
+                  </tr>  }
+                  
+                  
                 </tbody>
               </Table>
               <div>
@@ -106,6 +129,9 @@ class BoardDetail extends Component {
                 >
                   글 삭제
                 </Button>
+                <Form.Text> 1. 질문에 성공했을 경우 게시된 링크가 올라가게 됩니다. </Form.Text>
+                <Form.Text> 2. 질문을 자세히 보려면 링크 혹은 글 수정 버튼을 클릭해주세요. </Form.Text>
+                
               </div>
             </div>
           );

@@ -46,7 +46,7 @@ class Header extends Component {
     return (
       <div>
         <Navbar>
-          <Navbar.Brand href="/">Today I Learned</Navbar.Brand>
+          <Navbar.Brand href="/"> Question Megaphone   <Image src="./img/megaphone.png" width={30}/> </Navbar.Brand>
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
             {/* <NavLink to="/mypage">

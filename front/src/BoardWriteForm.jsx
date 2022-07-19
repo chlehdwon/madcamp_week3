@@ -1,8 +1,8 @@
-import React, { Component, useState} from "react";
+import React, { Component} from "react";
 import CKEditor from "ckeditor4-react";
 import MDEditor from '@uiw/react-md-editor';
 import { Button, Form, Row, Col} from "react-bootstrap";
-import {Checkbox, Radio, Switch} from 'pretty-checkbox-react';
+import {Checkbox} from 'pretty-checkbox-react';
 import '@djthoms/pretty-checkbox';
 import axios from "axios";
 import $ from "jquery";
@@ -44,11 +44,11 @@ class BoardWriteForm extends Component {
       this.setState({
         data: this.props.location.query.content,
         markdown: this.props.location.query.qcontent,
-        stack_disable: this.props.location.query.stackoverflow!="",
-        server_disable: this.props.location.query.serverfault!="",
-        superuser_disable: this.props.location.query.superuser!="",
-        ubuntu_disable: this.props.location.query.askubuntu!="",
-        different_disable: this.props.location.query.askdifferent!="",
+        stack_disable: this.props.location.query.stackoverflow!=="",
+        server_disable: this.props.location.query.serverfault!=="",
+        superuser_disable: this.props.location.query.superuser!=="",
+        ubuntu_disable: this.props.location.query.askubuntu!=="",
+        different_disable: this.props.location.query.askdifferent!=="",
       });
     }
   }
@@ -127,41 +127,43 @@ class BoardWriteForm extends Component {
       };
 
     }
+    console.log("send_param: "+send_param)
 
     axios
       .post(url, send_param)
       //정상 수행
       .then(returnData => {
+        var status, msg;
         console.log(returnData.data)
         if (returnData.data.message) {
           alert(returnData.data.message);
           if(returnData.data.stackoverflow){
-            var status = returnData.data.stackoverflow.status;
-            var msg = returnData.data.stackoverflow.message;
+            status = returnData.data.stackoverflow.status;
+            msg = returnData.data.stackoverflow.message;
             if(status) alert("Stackoverflow posted at : "+msg);
             else alert("Stackoverflow error message : "+msg)
           }
           if(returnData.data.serverfault){
-            var status = returnData.data.serverfault.status;
-            var msg = returnData.data.serverfault.message;
+            status = returnData.data.serverfault.status;
+            msg = returnData.data.serverfault.message;
             if(status) alert("Serverfault posted at : "+msg);
             else alert("Serverfault error message : "+msg)
           }
           if(returnData.data.superuser){
-            var status = returnData.data.superuser.status;
-            var msg = returnData.data.superuser.message;
+            status = returnData.data.superuser.status;
+            msg = returnData.data.superuser.message;
             if(status) alert("Superuser posted at : "+msg);
             else alert("Superuser error message : "+msg)
           }
           if(returnData.data.askubuntu){
-            var status = returnData.data.askubuntu.status;
-            var msg = returnData.data.askubuntu.message;
+            status = returnData.data.askubuntu.status;
+            msg = returnData.data.askubuntu.message;
             if(status) alert("Askubuntu posted at : "+msg);
             else alert("Askubuntu error message : "+msg)
           }
           if(returnData.data.askdifferent){
-            var status = returnData.data.askdifferent.status;
-            var msg = returnData.data.askdifferent.message;
+            status = returnData.data.askdifferent.status;
+            msg = returnData.data.askdifferent.message;
             if(status) alert("Askdifferent posted at : "+msg);
             else alert("Askdifferent error message : "+msg)
           }
@@ -197,9 +199,6 @@ class BoardWriteForm extends Component {
     };
     const buttonStyle = {
       marginTop: 5
-    };
-    const textBoxStyle = {
-      margin: 5
     };
 
     return (
@@ -269,7 +268,7 @@ class BoardWriteForm extends Component {
           
           <Checkbox
             icon={
-                <img src="img/stackoverflow.png"/>
+                <img src="img/stackoverflow.png" alt="stackoverflow"/>
             }
             animation="jelly"
             disabled={this.state.stack_disable}
@@ -278,7 +277,7 @@ class BoardWriteForm extends Component {
           </Checkbox>
           <Checkbox
             icon={
-                <img src="img/serverfault.png"/>
+                <img src="img/serverfault.png" alt="serverfault"/>
             }
             animation="jelly"
             disabled={this.state.server_disable}
@@ -287,7 +286,7 @@ class BoardWriteForm extends Component {
           </Checkbox>
           <Checkbox
             icon={
-                <img src="img/superuser.png"/>
+                <img src="img/superuser.png" alt="superuser"/>
             }
             animation="jelly"
             disabled={this.state.superuser_disable}
@@ -296,7 +295,7 @@ class BoardWriteForm extends Component {
           </Checkbox>
           <Checkbox
             icon={
-                <img src="img/askubuntu.png"/>
+                <img src="img/askubuntu.png" alt="askubuntu"/>
             }
             animation="jelly"
             disabled={this.state.ubuntu_disable}
@@ -305,7 +304,7 @@ class BoardWriteForm extends Component {
           </Checkbox>
           <Checkbox
             icon={
-                <img src="img/askdifferent.png"/>
+                <img src="img/askdifferent.png" alt="askdifferent"/>
             }
             animation="jelly"
             disabled={this.state.different_disable}
