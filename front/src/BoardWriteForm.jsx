@@ -127,6 +127,7 @@ class BoardWriteForm extends Component {
       };
 
     }
+    console.log("send_param: "+send_param)
 
     axios
       .post(url, send_param)
