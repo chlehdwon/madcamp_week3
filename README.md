@@ -36,7 +36,7 @@
 # Service Information
 ## 0. 로그인/회원가입 화면
 
-<img src="https://user-images.githubusercontent.com/68576681/179735287-308404fe-71f9-4195-8af4-722020c384e1.PNG" width="320" height="180"> <img src="https://user-images.githubusercontent.com/68576681/179735285-cb7b59b9-eb11-453a-b790-5bd4ecf5b240.png" width="320" height="180">
+<img src="https://user-images.githubusercontent.com/68576681/179735287-308404fe-71f9-4195-8af4-722020c384e1.PNG" width="480" height="360"> <img src="https://user-images.githubusercontent.com/68576681/179735285-cb7b59b9-eb11-453a-b790-5bd4ecf5b240.png" width="480" height="360">
 ### Major Features
 * 이메일과 비밀번호를 입력하여 회원가입을 할 수 있습니다.
 * 회원가입 시 입력한 이메일과 비밀번호를 이용하여 로그인을 할 수 있습니다.
@@ -47,7 +47,7 @@
 
 ## 1. 글목록
 
-<img src="https://user-images.githubusercontent.com/68576681/179735267-ced24f4a-ba23-47e1-a0f3-5b787a41e1e4.PNG" width="320" height="180">  
+<img src="https://user-images.githubusercontent.com/68576681/179735267-ced24f4a-ba23-47e1-a0f3-5b787a41e1e4.PNG" width="480" height="360">  
 
 ### Major Features
 * 로그인한 유저가 업로드한 게시글 목록이 표시됩니다.
@@ -59,7 +59,7 @@
 
 ## 2. 글쓰기
 
-<img src="https://user-images.githubusercontent.com/68576681/179735275-d206835a-5f48-4136-9d62-800bb6b04eac.PNG" width="320" height="180">
+<img src="https://user-images.githubusercontent.com/68576681/179735275-d206835a-5f48-4136-9d62-800bb6b04eac.PNG" width="480" height="360">
 ### Major Features
 * 새로운 게시글을 작성할 수 있습니다.
 * 텍스트 서식을 지정하고 사진 등 추가적인 미디어를 업로드할 수 있습니다.
@@ -78,7 +78,7 @@
 
 ## 3. 글 내용보기
 
-<img src="https://user-images.githubusercontent.com/68576681/179735272-82a9414c-368d-4543-a24d-d46009141cb8.PNG" width="320" height="180">  
+<img src="https://user-images.githubusercontent.com/68576681/179735272-82a9414c-368d-4543-a24d-d46009141cb8.PNG" width="480" height="360">  
 
 ### Major Features
 * 게시글 제목과 내용이 출력됩니다.
@@ -93,7 +93,7 @@
 
 ## 4. 글 수정
 
-<img src="https://user-images.githubusercontent.com/68576681/179735281-0d312ab9-60af-4522-ac2a-fe6122b88ae5.PNG" width="320" height="180"> <img src="https://user-images.githubusercontent.com/68576681/179735282-cc7ad56b-89a0-4e81-9a9e-4083f0bf1702.PNG" width="320" height="180"> 
+<img src="https://user-images.githubusercontent.com/68576681/179735281-0d312ab9-60af-4522-ac2a-fe6122b88ae5.PNG" width="480" height="360"> <img src="https://user-images.githubusercontent.com/68576681/179735282-cc7ad56b-89a0-4e81-9a9e-4083f0bf1702.PNG" width="480" height="360"> 
 
 ### Major Features
 * 게시글의 제목과 내용을 수정할 수 있습니다.
