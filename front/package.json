@@ -27,7 +27,7 @@
     "testing-library": "^0.0.2"
   },
   "scripts": {
-    "start": "set PORT=3001 && react-scripts start",
+    "start": "export PORT=80 && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

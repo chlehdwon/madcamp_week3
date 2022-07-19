@@ -34,43 +34,49 @@ def boardApi(request, id):
                 return JsonResponse({"message": False})
 
         elif id == 'update':
-            # try:
-            result = multi_poster(board_data)
-            print('---------------------result----------------------')
-            print(result)
+            try:
+                response = {"message": False}
 
-            obj = {
-                '_id': board_data['_id'],
-                'title': board_data['title'],
-                'content': board_data['content'],
-                'user_id': board_data['user_id'],
-                'user_pwd': board_data['user_pwd'],
-                'qtitle': board_data['qtitle'],
-                'qcontent': board_data['qcontent'],
-                'qtag': board_data['qtag'],
-            }
+                result = multi_poster(board_data)
+                print('---------------------result----------------------')
+                print(result)
 
-            for site in result.keys():
-                if result[site]['status']==True:
-                    obj[site] = result[site]['message']
+                obj = {
+                    '_id': board_data['_id'],
+                    'title': board_data['title'],
+                    'content': board_data['content'],
+                    'user_id': board_data['user_id'],
+                    'user_pwd': board_data['user_pwd'],
+                    'qtitle': board_data['qtitle'],
+                    'qcontent': board_data['qcontent'],
+                    'qtag': board_data['qtag'],
+                }
 
-            print('-------------------obj--------------------')
-            print(obj)
-            
-            board = Board.objects.get(_id=board_data['_id'])
-            board_serializer = BoardSerializer(board, data=obj, partial=True)
-            if board_serializer.is_valid():
-                board_serializer.save()
-                response = {"message": "게시글이 수정 되었습니다."}
-                response.update(result)
+                for site in result.keys():
+                    if result[site]['status'] == True:
+                        obj[site] = result[site]['message']
 
-            print('--------------------------response---------------------------')
-            print(response)
-            return JsonResponse(response)
+                print('-------------------obj--------------------')
+                print(obj)
 
-            # except Exception as e:
-            #     print(e)
-            #     return JsonResponse({"message": False})
+                board = Board.objects.get(_id=board_data['_id'])
+                board_serializer = BoardSerializer(
+                    board, data=obj, partial=True)
+
+                if board_serializer.is_valid():
+                    board_serializer.save()
+                    response = {"message": "게시글이 수정 되었습니다."}
+                    response.update(result)
+
+                print(
+                    '--------------------------response---------------------------')
+                print(response)
+                return JsonResponse(response)
+
+            except Exception as e:
+                print('-------------gaesibal---------------')
+                print(e)
+                return JsonResponse({"message": False})
 
         elif id == 'write':
             try:
@@ -84,15 +90,22 @@ def boardApi(request, id):
                     'qcontent': board_data['qcontent'],
                     'qtag': board_data['qtag'],
                 }
+                print('---------------------obj----------------------')
+                print(obj)
+
                 board_serializer = BoardSerializer(data=obj)
                 if board_serializer.is_valid():
+                    print('------------------valid--------------------')
                     board_serializer.save()
                     response = {"message": "게시글이 업로드 되었습니다."}
+                else:
+                    print('------------------invalid--------------------')
+
             except Exception as e:
                 print('------------sibal--------------')
                 print(e)
                 return JsonResponse({"message": False})
-            
+
             try:
                 result = multi_poster(board_data)
                 print('---------------------result----------------------')
@@ -100,15 +113,21 @@ def boardApi(request, id):
 
                 obj = {}
                 for site in result.keys():
-                    if result[site]['status']==True:
+                    if result[site]['status'] == True:
                         obj[site] = result[site]['message']
 
                 board = Board.objects.get(_id=board_serializer.data['_id'])
-                board_serializer = BoardSerializer(board, data=obj, partial=True)
+
+                print('---------------------obj----------------------')
+                print(obj)
+
+                board_serializer = BoardSerializer(
+                    board, data=obj, partial=True)
+
                 if board_serializer.is_valid():
                     board_serializer.save()
                     response.update(result)
-                
+
                 return JsonResponse(response)
 
             except Exception as e:
@@ -140,6 +159,7 @@ def boardApi(request, id):
             except Exception as e:
                 print(e)
                 return JsonResponse({"message": False})
+
 
 @csrf_exempt
 def memberApi(request, id):
