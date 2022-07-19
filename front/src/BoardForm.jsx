@@ -1,11 +1,13 @@
+import "./BoardForm.css";
 import React, { Component } from "react";
 import { Table } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import axios from "axios";
 import $ from "jquery";
-import {} from "jquery.cookie";
+import { } from "jquery.cookie";
 axios.defaults.withCredentials = true;
 const headers = { withCredentials: true };
+
 
 class BoardRow extends Component {
   render() {
@@ -66,7 +68,8 @@ class BoardForm extends Component {
         } else {
           boardList = (
             <tr>
-              <td colSpan="2">작성한 게시글이 존재하지 않습니다.</td>
+              <td colSpan="2">아이 작성한 게시글이 존재하지 않습니다.</td>
+              <div className="FontStyle">무야호</div>
             </tr>
           );
           this.setState({
@@ -91,8 +94,8 @@ class BoardForm extends Component {
           <Table striped bordered hover>
             <thead>
               <tr>
-                <th>날짜</th>
-                <th>글 제목</th>
+                <th>날짜짜</th>
+                <th>글 제목목</th>
               </tr>
             </thead>
             <tbody>{this.state.boardList}</tbody>
