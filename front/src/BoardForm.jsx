@@ -68,8 +68,7 @@ class BoardForm extends Component {
         } else {
           boardList = (
             <tr>
-              <td colSpan="2">아이 작성한 게시글이 존재하지 않습니다.</td>
-              <div className="FontStyle">무야호</div>
+              <td colSpan="2">작성한 게시글이 존재하지 않습니다.</td>
             </tr>
           );
           this.setState({
@@ -94,8 +93,8 @@ class BoardForm extends Component {
           <Table striped bordered hover>
             <thead>
               <tr>
-                <th>날짜짜</th>
-                <th>글 제목목</th>
+                <th>날짜</th>
+                <th>글 제목</th>
               </tr>
             </thead>
             <tbody>{this.state.boardList}</tbody>
