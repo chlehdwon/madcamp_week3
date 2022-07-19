@@ -36,7 +36,7 @@
 # Service Information
 ## 0. 로그인/회원가입 화면
 
-<img src="https://user-images.githubusercontent.com/68576681/179735287-308404fe-71f9-4195-8af4-722020c384e1.PNG" width="400" height="300"> <img src="https://user-images.githubusercontent.com/68576681/179735264-d9f2816d-2a80-4f6c-901c-851d9d6458fd.png" width="400" height="300">
+<img src="https://user-images.githubusercontent.com/68576681/179735287-308404fe-71f9-4195-8af4-722020c384e1.PNG" width="640" height="360"> <img src="https://user-images.githubusercontent.com/68576681/179735285-cb7b59b9-eb11-453a-b790-5bd4ecf5b240.png" width="640" height="360">
 ### Major Features
 * 이메일과 비밀번호를 입력하여 회원가입을 할 수 있습니다.
 * 회원가입 시 입력한 이메일과 비밀번호를 이용하여 로그인을 할 수 있습니다.
@@ -47,7 +47,7 @@
 
 ## 1. 글목록
 
-<img src="https://user-images.githubusercontent.com/89140546/178481691-703589c5-24d0-4cb4-81bc-1d975641e8fa.jpg" width="200" height="400">  <img src="https://user-images.githubusercontent.com/89140546/178481696-bc3c2ec9-4693-4a25-b68a-56524f977ef8.jpg" width="200" height="400">  
+<img src="https://user-images.githubusercontent.com/68576681/179735267-ced24f4a-ba23-47e1-a0f3-5b787a41e1e4.PNG" width="640" height="360">  <img src="https://user-images.githubusercontent.com/89140546/178481696-bc3c2ec9-4693-4a25-b68a-56524f977ef8.jpg" width="200" height="400">  
 ### Major Features
 * 로그인한 유저가 업로드한 게시글 목록이 표시됩니다.
 * 날짜와 게시글 제목 정보가 테이블에 함께 표시됩니다.
