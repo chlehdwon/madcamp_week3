@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Navbar, Button, Image } from "react-bootstrap";
+import { Navbar, Button, Image, Form } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import axios from "axios";
 import $ from "jquery";
@@ -46,7 +46,7 @@ class Header extends Component {
     return (
       <div>
         <Navbar>
-          <Navbar.Brand href="/"> Question Megaphone   <Image src="./img/megaphone.png" width={30}/> </Navbar.Brand>
+          <Navbar.Brand href="/"> 도와줘요 스택오버플로우!   <Image src="./img/megaphone.png" width={30}/> </Navbar.Brand>
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
             {/* <NavLink to="/mypage">
@@ -64,6 +64,7 @@ class Header extends Component {
                 글쓰기
               </Button>
             </NavLink>
+            
             <Button style={buttonStyle} onClick={this.logout} variant="primary">
               로그아웃
             </Button>

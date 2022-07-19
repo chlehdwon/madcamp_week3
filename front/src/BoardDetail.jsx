@@ -151,7 +151,7 @@ class BoardDetail extends Component {
   //onClick={this.getBoard.bind(null,this.props._id)}
   render() {
     const divStyle = {
-      margin: 50
+      margin: 75
     };
     return <div style={divStyle}>{this.state.board}</div>;
   }

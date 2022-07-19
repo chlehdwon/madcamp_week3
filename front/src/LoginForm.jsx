@@ -132,52 +132,19 @@ class LoginForm extends Component {
 
     return (
       <Form style={formStyle}>
-        <Form.Group controlId="joinForm">
-          <Form.Label>Email address</Form.Label>
+        <h2> 로그인 </h2> 
+        <Form.Group controlId="loginForm" className="mb-5">
+          <Form.Label>이메일</Form.Label>
           <Form.Control
-            type="email"
-            maxLength="100"
-            ref={ref => (this.joinEmail = ref)}
-            placeholder="Enter email"
-          />
-          <Form.Text className="text-muted">
-            We'll never share your email with anyone else.
-          </Form.Text>
-          <Form.Label>name</Form.Label>
-          <Form.Control
-            type="text"
-            maxLength="20"
-            ref={ref => (this.joinName = ref)}
-            placeholder="name"
-          />
-          <Form.Label>Password</Form.Label>
-          <Form.Control
-            type="password"
-            maxLength="64"
-            ref={ref => (this.joinPw = ref)}
-            placeholder="Password"
-          />
-          <Button
-            style={buttonStyle}
-            onClick={this.join}
-            variant="primary"
-            type="button"
-            block
-          >
-            회원가입
-          </Button>
-        </Form.Group>
-
-        <Form.Group controlId="loginForm">
-          <Form.Label>Email address</Form.Label>
-          <Form.Control
+            className="mb-3"
             type="email"
             maxLength="100"
             ref={ref => (this.loginEmail = ref)}
             placeholder="Enter email"
           />
-          <Form.Label>Password</Form.Label>
+          <Form.Label>비밀번호</Form.Label>
           <Form.Control
+            className="mb-3"
             type="password"
             maxLength="20"
             ref={ref => (this.loginPw = ref)}
@@ -198,6 +165,47 @@ class LoginForm extends Component {
             로그인
           </Button>
         </Form.Group>
+
+        
+        <h10> 아이디가 없다면... </h10>
+        <h2> 회원가입 </h2> 
+        <Form.Group controlId="joinForm">
+          <Form.Label>이메일 주소</Form.Label>
+          <Form.Control
+            className="mb-3"
+            type="email"
+            maxLength="100"
+            ref={ref => (this.joinEmail = ref)}
+            placeholder="Enter email"
+          />
+          <Form.Label>이름</Form.Label>
+          <Form.Control
+            className="mb-3"
+            type="text"
+            maxLength="20"
+            ref={ref => (this.joinName = ref)}
+            placeholder="name"
+          />
+          <Form.Label>비밀번호</Form.Label>
+          <Form.Control
+            className="mb-3"
+            type="password"
+            maxLength="64"
+            ref={ref => (this.joinPw = ref)}
+            placeholder="Password"
+          />
+          <Button
+            style={buttonStyle}
+            onClick={this.join}
+            variant="primary"
+            type="button"
+            block
+          >
+            회원가입
+          </Button>
+        </Form.Group>
+
+        
       </Form>
     );
   }

@@ -1,6 +1,8 @@
 import React, { Component} from "react";
 import CKEditor from "ckeditor4-react";
 import MDEditor from '@uiw/react-md-editor';
+import {Bounce} from "react-activity"
+import "react-activity/dist/library.css";
 import { Button, Form, Row, Col} from "react-bootstrap";
 import {Checkbox} from 'pretty-checkbox-react';
 import '@djthoms/pretty-checkbox';
@@ -27,6 +29,7 @@ class BoardWriteForm extends Component {
     superuser_disable: false,
     ubuntu_disable: false,
     different_disable: false,
+    waiting: false,
   };
 
   componentDidMount() {
@@ -53,10 +56,16 @@ class BoardWriteForm extends Component {
     }
   }
 
+  startWaiting = () => {
+    this.setState({
+      waiting: true
+    });
+  }
+
   writeBoard = () => {
     let url;
     let send_param;
-
+    this.setState({waiting: true});
     const boardTitle = this.boardTitle.value;
     const boardContent = this.state.data;
     const userID = this.userID.value;
@@ -167,8 +176,10 @@ class BoardWriteForm extends Component {
             if(status) alert("Askdifferent posted at : "+msg);
             else alert("Askdifferent error message : "+msg)
           }
+          setTimeout(()=>{this.setState({waiting: false})},1000);
           window.location.href = "/";
         } else {
+          setTimeout(()=>{this.setState({waiting: false})},1000);
           alert("글쓰기 실패");
         }
       })
@@ -176,6 +187,7 @@ class BoardWriteForm extends Component {
       .catch(err => {
         console.log(err);
       });
+
   };
 
   onEditorChange = evt => {
@@ -191,6 +203,8 @@ class BoardWriteForm extends Component {
   };
 
   render() {
+    const loading = this.state.waiting;
+
     const divStyle = {
       margin: 75
     };
@@ -198,8 +212,10 @@ class BoardWriteForm extends Component {
       marginBottom: 5
     };
     const buttonStyle = {
-      marginTop: 5
+      marginTop: 5,
+      AlignItem: "center"
     };
+    
 
     return (
       <div style={divStyle} className="App mb-3">
@@ -313,8 +329,9 @@ class BoardWriteForm extends Component {
           </Checkbox>
         </div>
  
-        <Button className="mt-3" style={buttonStyle} onClick={this.writeBoard} block>
-          저장하기
+        <Button className="mt-3" disable={loading} style={buttonStyle} onClick={this.writeBoard} block>
+          {loading ? "작성중입니다  " : "작성하기"}
+          {loading && <Bounce color="white" size={15} speed={1} animating={true} />}
         </Button>
       </div>
     );
