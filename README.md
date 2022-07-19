@@ -60,6 +60,7 @@
 ## 2. 글쓰기
 
 <img src="https://user-images.githubusercontent.com/68576681/179735275-d206835a-5f48-4136-9d62-800bb6b04eac.PNG" width="480" height="360">
+
 ### Major Features
 * 새로운 게시글을 작성할 수 있습니다.
 * 텍스트 서식을 지정하고 사진 등 추가적인 미디어를 업로드할 수 있습니다.
