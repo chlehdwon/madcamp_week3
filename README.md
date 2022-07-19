@@ -28,7 +28,7 @@
 # Development Environment
 * OS: Linux(Ubuntu)
 * Frontend: React.js, CSS, HTML, JQuery
-* Backend: Django(server)
+* Backend: Django, Serializer
 * Database: MySQL
 * Target Device: All device
 ***
