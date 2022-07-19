@@ -1,120 +1,111 @@
-# <img src="https://user-images.githubusercontent.com/68576681/177258571-64e4855d-bdca-4335-b221-e23d54708cbe.jpg" width="30" height="30"> 몰켓몬스터
-> 2분반 1주차(2022.07.06~07.12) By 전이준, 최동원
+# <img src="https://user-images.githubusercontent.com/68576681/177258571-64e4855d-bdca-4335-b221-e23d54708cbe.jpg" width="30" height="30"> 도와줘요 스택오버플로우
+> 2분반 3주차(2022.07.13~07.19) By 최동원, 윤창호
 # Table Of Contents
 * [Project Summary](#project-summary)
 * [Developer Information](#developer-information)
 * [Development Environment](#development-environment)
 * [Application Information](#application-information)
-  * [0. Loding & Login & SignUp](#0-loding--login--signup)
-  * [1. RoomScreen](#1-roomscreen)
-  * [2. SelectScreen](#2-selectscreen)
-  * [3. BattleScreen](#3-battlescreen)
-  * [4. EndScreen](#4-endscreen)
-  * [5. Future Work(언젠가)](#5-future-work언젠가)
+  * [0. 로그인/회원가입 화면](#0.-로그인/회원가입-화면)
+  * [1. 글목록](# 1. 글목록)
+  * [2. 글쓰기](# 2. 글쓰기)
+  * [3. 글 내용](# 3. 글 내용)
+  * [4. 글 수정](# 4. 글 수정)
+  * [5. 언젠가](# 5. 언젠가)
 ***
 
 # Project Summary
-* 포켓몬스터 주제의 1대1 게임 어플리케이션입니다
+* 코딩 관련 질문을 관리해주는 웹 게시판 서비스입니다.
 * 데이터베이스에서 사용자의 고유한 정보를 불러와 로그인 할 수 있습니다.
 * 카카오톡 계정을 연동하여 데이터베이스에 저장할 수 있습니다.
-* 각 포켓몬별 포켓몬스터 공식 상성과 스킬을 사용합니다.
-* soket을 통해 게임 내에서 서로간에 1대1 정보 교환을 할 수 있습니다.
+* 내부 게시판에 코딩중 발생한 궁금증을 1차적으로 포스팅할 수 있습니다.
+* 외부 게시판(stackoverflow.com 등)에 질문을 자동으로 업로드하고 링크를 관리할 수 있습니다.
 ***
 
 # Developer Information
-* [전이준](https://github.com/Yijun-Jeon) (성균관대학교 글로벌경영학과) 
 * [최동원](https://github.com/chlehdwon) (KAIST 전기및전자공학부) 
+* [윤창호](https://github.com/ho9938) (UNIST 전기전자컴퓨터공학부) 
 ***
 
 # Development Environment
-* OS: Android & IOS
+* OS: Linux(Ubuntu)
 * Language: JavaScript
-* Framework: React Native (Expo)
-* Server: Node.js, Express, Socket.io, Axios
-* Database: MySQL, Sequelize
+* Framework: Django
+* Server: React.js
+* Database: MySQL
 * Target Device: All device
 ***
 
-# Application Information
-## 0. Loding & Login & SignUp
+# Service Information
+## 0. 로그인/회원가입 화면
 
 <img src="https://user-images.githubusercontent.com/89140546/178481682-cdc9b49d-1ae3-4772-af0b-73e135be01fc.jpg" width="200" height="400"> <img src="https://user-images.githubusercontent.com/89140546/178481705-bdda08f3-e06d-42b7-b6cf-ed3cea4c4731.jpg" width="200" height="400"> <img src="https://user-images.githubusercontent.com/89140546/178481706-0c754d17-279f-4c13-9a75-e01caa4d7660.jpg" width="200" height="400"> 
 ### Major Features
-* 이미지 데이터를 미리 받아오는 동안 로딩 이미지가 표시됩니다.
-* 이메일과 비밀번호를 입력받아 데이터 베이스의 사용자 정보와 비교흫 통해 로그인을 할 수 있습니다
-* 계정이 없을 시, SignUp을 통해 계정을 생성하여 데이터베이스에 저장할 수 있습니다.
-* 카카오 로그인을 누르면 카카오톡과 연동이 되어 카카오 계정 정보 또한 데이터베이스에 저장됩니다.
-* 인증된 사용자가 아닌 경우 로그인이 불가능합니다.
+* 이메일과 비밀번호를 입력하여 회원가입을 할 수 있습니다.
+* 회원가입 시 입력한 이메일과 비밀번호를 이용하여 로그인을 할 수 있습니다.
 
 ### Technology Used
-* MySQL 를 사용하여 모든 유저들의 정보를 서버에 저장해놓았습니다
+* MySQL Database에 유저 정보가 저장됩니다.
 * 따라서 다른 기기에서도 동일한 ID로 로그인 할 수 있습니다
-* 카카오톡 로그인의 경우 api key와 axios를 사용해 서버와 통신을 합니다
 
-## 1. RoomScreen
+## 1. 글목록
 
 <img src="https://user-images.githubusercontent.com/89140546/178481691-703589c5-24d0-4cb4-81bc-1d975641e8fa.jpg" width="200" height="400">  <img src="https://user-images.githubusercontent.com/89140546/178481696-bc3c2ec9-4693-4a25-b68a-56524f977ef8.jpg" width="200" height="400">  
 ### Major Features
-* 로그인 화면에서 사용자의 이름을 받아 유저 이름을 띄워 줍니다.
-* Exit 이미지 버튼을 누르면 로그인 화면으로 돌아가게 됩니다
-* CREATE ROOM 버튼으로 6자리 랜덤 숫자 코드를 가지는 방을 생성할 수 있습니다.
-* 코드를 입력하고 JOIN ROOM 버튼으로 특정 코드의 방으로 들어갈 수 있습니다.
-  * 코드는 항상 6자리 숫자로, 다른 형식의 코드를 입력하면 Join이 불가능합니다.
+* 로그인한 유저가 업로드한 게시글 목록이 표시됩니다.
+* 날짜와 게시글 제목 정보가 테이블에 함께 표시됩니다.
+* 게시글 제목을 클릭하면 게시글의 세부 정보를 확인할 수 있습니다. 
   
 ### Technology Used
-* Navigation을 사용해 스크린 간에 전환을 할 수 있습니다.
-* Navigate로 전달한 정보를 route로 받아서 사용할 수 있습니다.
-* TouchableOpacity로 이미지 자체를 클릭하여 이벤트 핸들링을 할 수 있게 했습니다.
+* 데이터베이스에서 게시글 목록 정보를 받아와서 화면에 출력합니다.
 
-## 2. SelectScreen
+## 2. 글쓰기
 
 <img src="https://user-images.githubusercontent.com/89140546/178481699-a31c1c6e-3691-4c3f-a686-1688657e5875.jpg" width="200" height="400">  <img src="https://user-images.githubusercontent.com/89140546/178481701-b0db7f1c-15ec-4833-b5fb-b67780273a2d.jpg" width="200" height="400">
 ### Major Features
-* 5가지 포켓몬 중에서 플레이 할 포켓몬을 정합니다.
-  * 특정 포켓몬 색깔에 따라 고유 색깔이 정해집니다.
-  * 포켓몬에 따라 기본 체력, 상성이 상이하여 게임 진행에 영향을 줍니다.
+* 새로운 게시글을 작성할 수 있습니다.
+* 텍스트 서식을 지정하고 사진 등 추가적인 미디어를 업로드할 수 있습니다.
+* 외부 게시판에 업로드할 질문을 작성할 수 있습니다.
+* 질문 작성 시 마크다운을 사용할 수 있습니다.
+* 체크리스트를 이용하여 질문을 업로드할 외부 게시판을 선택할 수 있습니다.
+* 업로드 성공 시 업로드된 게시물의 주소를 출력합니다.
+* 업로드 실패 시 업로드가 실패한 이유를 출력합니다.
 
 ### Technology Used
-* useState로 초기 색깔을 지정해주고 포켓몬 선택에 따라 상태를 바꾸어 줍니다.
-* gif 이미지를 통해 움직이는 포켓몬을 구현하였습니다.
+* ckeditor4 라이브러리를 활용하여 텍스트 서식을 지정할 수 있습니다.
+* react-md-editor 라이브러리를 활용하여 마크다운을 인식하고 출력합니다.
+* selenium 라이브러리를 활용하여 외부 게시판에 질문을 자동으로 업로드합니다.
+* 사이트의 component는 id, xpath, classname을 이용하여 인식합니다.
+* 사이트의 봇 업로드 차단 기능을 회피하기 위해 각 문자 입력 전에 임의의 시간만큼 대기합니다.
 
-## 3. BattleScreen
+## 3. 글 내용
 
 <img src="https://user-images.githubusercontent.com/89140546/178483273-b345b152-bb3e-429a-ac53-cc61c562fc9d.jpg" width="200" height="400">  <img src="https://user-images.githubusercontent.com/89140546/178483279-48dd2699-5cc5-400e-8f81-fe00b334ba4a.jpg" width="200" height="400">  <img src="https://user-images.githubusercontent.com/89140546/178483286-e3974b8b-0335-4bf7-81e3-e2f60bddd5ce.jpg" width="200" height="400"> 
 
 ### Major Features
-* 같은 방 코드에 상대방이 입장할 때까지 기다립니다.
-  * 상대방이 입장을 하면 게임이 시작이 되고 방 생성 유저에게 턴이 주어집니다.
-  * 각 플레이어가 선택한 포켓몬과 현재 체력/최대 체력, 공격 증가율/방어 증가율이 표현됩니다.
-* 턴은 각 플레이어의 매 선택마다 상대방에게 넘어가게 됩니다.
-  * 자신의 턴이 아닐 때에는 버튼이 비활성화되고 상대방의 선택을 기다립니다.
-* 모든 스킬의 데미지는 스킬 타입과 상대 포켓몬의 타입에 따라 변화합니다.
-  * 상성이 우세한 경우에는 2배의 데미지가 적용됩니다.
-  * 상성이 없을 경우에는 1배의 데미지가 적용됩니다.
-  * 상성이 열세한 경우에는 0.5배의 데미지가 적용됩니다.
-  * 공격으로 상대방의 체력을 감소시킨 경우에 깜빡이는 효과로 피격을 표현합니다.
-* 버프, 디버프 스킬로 상대방의 공격력과 방어력을 감소시킬 수 있습니다.
-* 현재 체력이 0 이하로 되면 게임 종료가 되고 승패가 결정됩니다.
+* 게시글 제목과 내용이 출력됩니다.
+* 자동 업로드된 게시물이 있을 경우 해당 게시물의 링크를 함께 출력합니다.
+* 링크를 클릭할 경우 해당 게시물로 리다이렉팅 됩니다.
+* 글 수정 버튼을 클릭할 경우 글 수정 페이지로 넘어갑니다.
+* 글 삭제 버튼을 클릭할 경우 글이 삭제됩니다.
 
 ### Technology Used
-* Socket을 사용해 client와 server의 통신을 구현하였습니다.
-* Blink를 import하여 에니메이션을 구현하였습니다.
+* 데이터베이스에서 게시글 상세정보를 불러와 출력합니다.
+* React Bootstrap의 table을 사용하여 테이블 레이아웃을 구현하였습니다.
 
-## 4. EndScreen
+## 4. 글 수정
 
 <img src="https://user-images.githubusercontent.com/89140546/178483278-ddd9934e-433b-45e9-a7ba-4687eb74166c.jpg" width="200" height="400"> 
 
 ### Major Features
-* 게임 결과 따라 Win, Lose가 결정됩니다.
-* Restart 버튼을 누르면 RoomScreen으로 돌아가서 다시 방을 생성할 수 있습니다.
+* 게시글의 제목과 내용을 수정할 수 있습니다.
+* 질문 제목과 내용을 수정하여 외부 게시판에 추가적으로 업로드할 수 있습니다.
+* 이미 질문을 업로드한 사이트는 업로드 대상에 포함할 수 없습니다.
+* 글쓰기 시에 입력한 사이트 ID/비밀번호, 질문 제목/내용은 자동으로 채워집니다.
 
 ### Technology Used
-* senderID와 userID를 통해 각 사용자에 해당하는 메세지들을 받아올 수 있습니다
-* ValueEventListener을 통해 변경사항이 생길 시 창을 업데이트 해줍니다
+* 데이터베이스에서 질문 업로드 정보를 받아와 사용합니다.
+* 데이터베이스에서 사이트 ID/비밀번호, 질문 제목/내용을 받아와 사용합니다.
 
 
-## 5. Future Work(언젠가)
-* 사용자의 전적 정보를 데이터베이스에 저장하여 불러올 수 있게 할 예정입니다.
-* RoomScreen에서 채팅기능을 구현하여 모든 사용자 간에 공유되는 채팅을 구현할 예정입니다.
- * 방 생성시 생성된 코드가 자동으로 채팅창에 전달이 되어 모르는 사용자 간에도 게임 참여가 가능하게 할 예정입니다.
-* RoomSceen에서 Tab을 추가하여 현재 진행되는 특정 코드의 방의 게임을 관전할 수 있게 할 예정입니다.
+## 5. 언젠가
+* 다른 유저가 작성한 게시글을 확인하는 기능 구현할 예정입니다.
