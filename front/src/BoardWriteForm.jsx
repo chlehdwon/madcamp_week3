@@ -1,8 +1,8 @@
-import React, { Component, useState} from "react";
+import React, { Component} from "react";
 import CKEditor from "ckeditor4-react";
 import MDEditor from '@uiw/react-md-editor';
 import { Button, Form, Row, Col} from "react-bootstrap";
-import {Checkbox, Radio, Switch} from 'pretty-checkbox-react';
+import {Checkbox} from 'pretty-checkbox-react';
 import '@djthoms/pretty-checkbox';
 import axios from "axios";
 import $ from "jquery";
@@ -44,11 +44,11 @@ class BoardWriteForm extends Component {
       this.setState({
         data: this.props.location.query.content,
         markdown: this.props.location.query.qcontent,
-        stack_disable: this.props.location.query.stackoverflow!="",
-        server_disable: this.props.location.query.serverfault!="",
-        superuser_disable: this.props.location.query.superuser!="",
-        ubuntu_disable: this.props.location.query.askubuntu!="",
-        different_disable: this.props.location.query.askdifferent!="",
+        stack_disable: this.props.location.query.stackoverflow!=="",
+        server_disable: this.props.location.query.serverfault!=="",
+        superuser_disable: this.props.location.query.superuser!=="",
+        ubuntu_disable: this.props.location.query.askubuntu!=="",
+        different_disable: this.props.location.query.askdifferent!=="",
       });
     }
   }

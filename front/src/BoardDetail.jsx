@@ -65,11 +65,34 @@ class BoardDetail extends Component {
                 <tbody>
                   <tr>
                     <td
+                      height = {300}
                       dangerouslySetInnerHTML={{
                         __html: returnData.data.board[0].content
                       }}
                     ></td>
                   </tr>
+                  {returnData.data.board[0].stackoverflow &&
+                  <tr>  
+                    <td> <img src="img/stackoverflow.png" height={30}/> {": "+returnData.data.board[0].stackoverflow} </td> 
+                  </tr>  }
+                  {returnData.data.board[0].serverfault &&
+                  <tr>
+                    <td> <img src="img/serverfault.png" height={30}/> {": "+returnData.data.board[0].serverfault} </td> 
+                  </tr>  }
+                  {returnData.data.board[0].superuser &&
+                  <tr>      
+                    <td> <img src="img/superuser.png" height={30}/> {": "+returnData.data.board[0].superuser} </td> 
+                  </tr>  }
+                  {returnData.data.board[0].askubuntu &&
+                  <tr>
+                    <td> <img src="img/askubuntu.png" height={30}/> {": "} <a href={returnData.data.board[0].askubuntu}>{returnData.data.board[0].askubuntu}</a> </td> 
+                  </tr>  }
+                  {returnData.data.board[0].askdifferent &&
+                  <tr>
+                    <td> <img src="img/askdifferent.png" height={30}/> {": "+returnData.data.board[0].askdifferent} </td> 
+                  </tr>  }
+                  
+                  
                 </tbody>
               </Table>
               <div>
