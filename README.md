@@ -16,7 +16,6 @@
 # Project Summary
 * 코딩 관련 질문을 관리해주는 웹 게시판 서비스입니다.
 * 데이터베이스에서 사용자의 고유한 정보를 불러와 로그인 할 수 있습니다.
-* 카카오톡 계정을 연동하여 데이터베이스에 저장할 수 있습니다.
 * 내부 게시판에 코딩중 발생한 궁금증을 1차적으로 포스팅할 수 있습니다.
 * 외부 게시판(stackoverflow.com 등)에 질문을 자동으로 업로드하고 링크를 관리할 수 있습니다.
 ***
@@ -28,9 +27,8 @@
 
 # Development Environment
 * OS: Linux(Ubuntu)
-* Language: JavaScript
-* Framework: Django
-* Server: React.js
+* Frontend: React.js, CSS, HTML, JQuery
+* Backend: Django(server)
 * Database: MySQL
 * Target Device: All device
 ***
@@ -38,7 +36,7 @@
 # Service Information
 ## 0. 로그인/회원가입 화면
 
-<img src="https://user-images.githubusercontent.com/89140546/178481682-cdc9b49d-1ae3-4772-af0b-73e135be01fc.jpg" width="200" height="400"> <img src="https://user-images.githubusercontent.com/89140546/178481705-bdda08f3-e06d-42b7-b6cf-ed3cea4c4731.jpg" width="200" height="400"> <img src="https://user-images.githubusercontent.com/89140546/178481706-0c754d17-279f-4c13-9a75-e01caa4d7660.jpg" width="200" height="400"> 
+<img src="https://user-images.githubusercontent.com/68576681/179735287-308404fe-71f9-4195-8af4-722020c384e1.PNG" width="400" height="300"> <img src="https://user-images.githubusercontent.com/68576681/179735264-d9f2816d-2a80-4f6c-901c-851d9d6458fd.png" width="400" height="300">
 ### Major Features
 * 이메일과 비밀번호를 입력하여 회원가입을 할 수 있습니다.
 * 회원가입 시 입력한 이메일과 비밀번호를 이용하여 로그인을 할 수 있습니다.
